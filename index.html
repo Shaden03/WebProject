@@ -178,40 +178,44 @@
         <div class="container">
             <div class="row">
                 <!-- Top Catagory Area -->
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-4">
                     <div class="single-top-catagory">
                         <img src="img/bg-img/bg2.jpg" alt="">
                         <!-- Content -->
                         <div class="top-cta-content">
                             <h3> breakfast</h3>
                             <h6>Simple &amp; Delicios</h6>
-                            <a href="receipe-post.html" class="btn delicious-btn">See Full Receipe</a>
+                            <a href="#"></a>
+                            <button onclick="filterRecipes('breakfast')" class="btn delicious-btn" >Breakfast Receipies</button>
                         </div>
                     </div>
                 </div>
                 <!-- Top Catagory Area -->
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-4">
                     <div class="single-top-catagory">
                         <img src="img/bg-img/bg3.jpg" alt="">
                         <!-- Content -->
                         <div class="top-cta-content">
                             <h3> lunch</h3>
                             <h6>Simple &amp; Delicios</h6>
-                            <a href="receipe-post.html" class="btn delicious-btn">See Full Receipe</a>
+                            <a href="#"></a>
+                            <button onclick="filterRecipes('lunch')"class="btn delicious-btn">Lunch Receipies</button>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-4">
                     <div class="single-top-catagory">
                         <img src="img/bg-img/bg3.jpg" alt="">
                         <!-- Content -->
                         <div class="top-cta-content">
                             <h3>dinner </h3>
                             <h6>Simple &amp; Delicios</h6>
-                            <a href="receipe-post.html" class="btn delicious-btn">See Full Receipe</a>
+                            <a href="#"> </a>
+                            <button onclick="filterRecipes('dinner')"class="btn delicious-btn">Dinner Receipies</button>
                         </div>
                     </div>
                 </div>
+                <button onclick="showAllRecipes()" class="btn delicious-btn">All</button>
             </div>
         </div>
     </section>
@@ -732,6 +736,56 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
+    <script>
+        // Sample recipe data
+        var recipes = [
+            { name: "Sushi Easy Recipe", type: "lunch" },
+            { name: "Homemade Burger", type: "dinner" },
+            { name: "Vegan Smoothie", type: "breakfast" },
+            // Add more recipes with different types here
+        ];
+    
+        // Function to filter and display recipes based on category
+        function filterRecipes(category) {
+            var recipeListDiv = document.getElementById("recipeList");
+            recipeListDiv.innerHTML = ""; // Clear previous recipes
+    
+            recipes.forEach(function(recipe) {
+                if (recipe.type === category) {
+                    var recipeItem = document.createElement("div");
+                    recipeItem.classList.add("col-12", "col-sm-6", "col-lg-4");
+                    recipeItem.innerHTML = `
+                        <div class="single-best-receipe-area mb-30">
+                            <h5>${recipe.name}</h5>
+                            <!-- Add more recipe details as needed -->
+                        </div>
+                    `;
+                    recipeListDiv.appendChild(recipeItem);
+                }
+            });
+        }
+    
+        // Function to show all recipes
+        function showAllRecipes() {
+            var recipeListDiv = document.getElementById("recipeList");
+            recipeListDiv.innerHTML = ""; // Clear previous recipes
+    
+            recipes.forEach(function(recipe) {
+                var recipeItem = document.createElement("div");
+                recipeItem.classList.add("col-12", "col-sm-6", "col-lg-4");
+                recipeItem.innerHTML = `
+                    <div class="single-best-receipe-area mb-30">
+                        <h5>${recipe.name}</h5>
+                        <!-- Add more recipe details as needed -->
+                    </div>
+                `;
+                recipeListDiv.appendChild(recipeItem);
+            });
+        }
+    
+        // Initially show all recipes
+        showAllRecipes();
+    </script>
 </body>
 
 </html>
