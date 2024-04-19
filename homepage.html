@@ -103,7 +103,6 @@
                                 <ul>
                                     <li class="active"><a href="index.html">Home</a></li>
                                     <li><a href="receipe-post.html">Receipies</a></li>
-                                    <li><a href="blog-post.html">Blog</a></li>
                                     <li><a href="contact.html">Contact</a></li>
                                     <li><a href="about.html">About Us</a></li>  
                                 </ul>
@@ -132,7 +131,7 @@
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Home made Burger</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms"> descrpiton</p>
+                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur sem eget dui tristique, ac posuere arcu varius.</p>
                                 <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a>
                             </div>
                         </div>
@@ -147,7 +146,7 @@
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Home made Burger</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms">descrpiton </p>
+                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur sem eget dui tristique, ac posuere arcu varius.</p>
                                 <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a>
                             </div>
                         </div>
@@ -162,7 +161,7 @@
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Homemade Burger</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms">descrpiton</p>
+                                <p data-animation="fadeInUp" data-delay="700ms">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur sem eget dui tristique, ac posuere arcu varius.</p>
                                 <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a>
                             </div>
                         </div>
@@ -178,44 +177,40 @@
         <div class="container">
             <div class="row">
                 <!-- Top Catagory Area -->
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-6">
                     <div class="single-top-catagory">
                         <img src="img/bg-img/bg2.jpg" alt="">
                         <!-- Content -->
                         <div class="top-cta-content">
                             <h3> breakfast</h3>
                             <h6>Simple &amp; Delicios</h6>
-                            <a href="#"></a>
-                            <button onclick="filterRecipes('breakfast')" class="btn delicious-btn" >Breakfast Receipies</button>
+                            <a href="receipe-post.html" class="btn delicious-btn">See Full Receipe</a>
                         </div>
                     </div>
                 </div>
                 <!-- Top Catagory Area -->
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-6">
                     <div class="single-top-catagory">
                         <img src="img/bg-img/bg3.jpg" alt="">
                         <!-- Content -->
                         <div class="top-cta-content">
                             <h3> lunch</h3>
                             <h6>Simple &amp; Delicios</h6>
-                            <a href="#"></a>
-                            <button onclick="filterRecipes('lunch')"class="btn delicious-btn">Lunch Receipies</button>
+                            <a href="receipe-post.html" class="btn delicious-btn">See Full Receipe</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4">
+                <div class="col-12 col-lg-6">
                     <div class="single-top-catagory">
                         <img src="img/bg-img/bg3.jpg" alt="">
                         <!-- Content -->
                         <div class="top-cta-content">
                             <h3>dinner </h3>
                             <h6>Simple &amp; Delicios</h6>
-                            <a href="#"> </a>
-                            <button onclick="filterRecipes('dinner')"class="btn delicious-btn">Dinner Receipies</button>
+                            <a href="receipe-post.html" class="btn delicious-btn">See Full Receipe</a>
                         </div>
                     </div>
                 </div>
-                <button onclick="showAllRecipes()" class="btn delicious-btn">All</button>
             </div>
         </div>
     </section>
@@ -618,7 +613,7 @@
                                 <input type="email" name="email" placeholder="Subscribe to newsletter">
                                 <button type="submit" class="btn delicious-btn w-100">Subscribe</button>
                             </form>
-                            <p> description</p>
+                            <p>Fusce nec ante vitae lacus aliquet vulputate. Donec sceleri sque accumsan molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
                         </div>
                     </div>
                 </div>
@@ -736,56 +731,6 @@
     <script src="js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="js/active.js"></script>
-    <script>
-        // Sample recipe data
-        var recipes = [
-            { name: "Sushi Easy Recipe", type: "lunch" },
-            { name: "Homemade Burger", type: "dinner" },
-            { name: "Vegan Smoothie", type: "breakfast" },
-            // Add more recipes with different types here
-        ];
-    
-        // Function to filter and display recipes based on category
-        function filterRecipes(category) {
-            var recipeListDiv = document.getElementById("recipeList");
-            recipeListDiv.innerHTML = ""; // Clear previous recipes
-    
-            recipes.forEach(function(recipe) {
-                if (recipe.type === category) {
-                    var recipeItem = document.createElement("div");
-                    recipeItem.classList.add("col-12", "col-sm-6", "col-lg-4");
-                    recipeItem.innerHTML = `
-                        <div class="single-best-receipe-area mb-30">
-                            <h5>${recipe.name}</h5>
-                            <!-- Add more recipe details as needed -->
-                        </div>
-                    `;
-                    recipeListDiv.appendChild(recipeItem);
-                }
-            });
-        }
-    
-        // Function to show all recipes
-        function showAllRecipes() {
-            var recipeListDiv = document.getElementById("recipeList");
-            recipeListDiv.innerHTML = ""; // Clear previous recipes
-    
-            recipes.forEach(function(recipe) {
-                var recipeItem = document.createElement("div");
-                recipeItem.classList.add("col-12", "col-sm-6", "col-lg-4");
-                recipeItem.innerHTML = `
-                    <div class="single-best-receipe-area mb-30">
-                        <h5>${recipe.name}</h5>
-                        <!-- Add more recipe details as needed -->
-                    </div>
-                `;
-                recipeListDiv.appendChild(recipeItem);
-            });
-        }
-    
-        // Initially show all recipes
-        showAllRecipes();
-    </script>
 </body>
 
 </html>
