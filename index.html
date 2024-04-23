@@ -17,6 +17,79 @@
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
+    <style type="text/css">
+
+        .horizontal-box {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          height: 60px;
+          padding-top: 20px;
+        }
+        
+        .box {
+          width: 100px;
+          height: 100%; 
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        
+          .navhead a {
+              display: inline-block;
+              color: #000000;
+              font-size: 20px;
+              margin-right: 30px;
+              text-decoration: none;
+              font-weight: 700;
+              padding-left: 30px;
+              padding-right: 30px;
+        
+         }
+              .navhead a:last-child {
+                margin-right: 0; }
+                .navhead  a:hover  {
+                color: #a1cfdb; }
+                
+        .horizontal-line {
+            padding-top: 10px;
+          border-bottom: 1px solid #cacaca; 
+          width: 100%; 
+        }
+        
+        .Maintext {
+            padding-left: 60px ;
+            font-size: 40px;
+        font-weight: bold;}
+        
+        .vertical-box {
+          display: flex;
+          flex-direction: column;
+          padding-bottom: 14px;
+        }
+        
+        .verbox {
+          width: 100px; 
+          height: 0.1px;
+        }
+        .Mainsmalltext {
+        font-size: 14px;
+        font-weight: bolder;
+        }
+        
+        .smalltext {
+            font-size: 14px;
+            font-weight: 900;
+            color: #919090;
+        }
+        .verticalline {
+          border-left: 2px solid #c2c2c2;
+          height: 40px;
+          padding-left: 120px;
+        }
+
+         </style>
+
 </head>
 
 <body>
@@ -83,7 +156,8 @@
                     <nav class="classy-navbar justify-content-between" id="deliciousNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                        <!-- change logo  -->
+                        <!-- <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a> -->
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -125,7 +199,7 @@
     <!-- ##### Hero Area Start ##### -->
     <section class="hero-area">
         <div class="hero-slides owl-carousel">
-            <!-- Single Hero Slide -->
+            <!--  1 Single Hero Slide -->
             <div class="single-hero-slide bg-img" style="background-image: url(img/bg-img/bg1.jpg);">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -140,7 +214,7 @@
                 </div>
             </div>
 
-            <!-- Single Hero Slide -->
+            <!-- 2 Single Hero Slide -->
             <div class="single-hero-slide bg-img" style="background-image: url(img/bg-img/bg6.jpg);">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -155,7 +229,7 @@
                 </div>
             </div>
 
-            <!-- Single Hero Slide -->
+            <!-- 3 Single Hero Slide -->
             <div class="single-hero-slide bg-img" style="background-image: url(img/bg-img/bg7.jpg);">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -177,7 +251,7 @@
     <section class="top-catagory-area section-padding-80-0">
         <div class="container">
             <div class="row">
-                <!-- Top Catagory Area -->
+                <!-- 1 Top Catagory Area -->
                 <div class="col-12 col-lg-4">
                     <div class="single-top-catagory">
                         <img src="img/bg-img/bg2.jpg" alt="">
@@ -190,7 +264,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- Top Catagory Area -->
+                <!-- 2 Top Catagory Area -->
                 <div class="col-12 col-lg-4">
                     <div class="single-top-catagory">
                         <img src="img/bg-img/bg3.jpg" alt="">
@@ -203,6 +277,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- 3 Top Catagory Area -->
                 <div class="col-12 col-lg-4">
                     <div class="single-top-catagory">
                         <img src="img/bg-img/bg3.jpg" alt="">
@@ -605,26 +680,33 @@
     <!-- ##### Small Receipe Area End ##### -->
 
     <!-- ##### Quote Subscribe Area Start ##### -->
-    <section class="quote-subscribe-adds">
-        <div class="container">
-            <div class="row align-items-end">
-                <!-- Newsletter -->
-                <div class="col-12 col-lg-4">
-                    <div class="newsletter-area">
-                        <h4>Subscribe to our newsletter</h4>
-                        <!-- Form -->
-                        <div class="newsletter-form bg-img bg-overlay" style="background-image: url(img/bg-img/bg1.jpg);">
-                            <form action="#" method="post">
-                                <input type="email" name="email" placeholder="Subscribe to newsletter">
-                                <button type="submit" class="btn delicious-btn w-100">Subscribe</button>
-                            </form>
-                            <p> description</p>
+    <div class="horizontal-box" style="padding-left: 320px; padding-top: 1150px; border-radius: 20px;">
+        <div class="box" style="width: 1400px; height: 400px; background-color: #e7f9ff; border-radius: 20px; ">
+            <div class="vertical-box" >
+    
+                    <p class="Mainsmalltext" style="font-size: 50px;  text-align: center;">Deliciousness to your inbox</p>
+                    <p class="smalltext" style="font-size: 20px;  text-align: center;">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim </p>
+                    <div class="horizontal-box" style="padding-left: 330px; padding-top: 30px; ">
+                        <div class="box" style="width: 500px; height: 100px; background-color: rgb(255, 255, 255); border-radius: 20px; ">
+                            <div class="horizontal-box" style="padding-left: 100px; padding-bottom: 20px; ">
+                                <form class="box" method="post" action="https//www.deitel.com" style="padding-right: 90px;">
+                                    <p>
+                                        <label>
+                                            <input type="email" placeholder="Your email address..." required>
+                                        </label>
+                                    </p>
+                                </form>
+    
+                                    <input type="submit" value="Subscribe">
+    
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                  
         </div>
-    </section>
+      
+    </div>
+    </div>
     <!-- ##### Quote Subscribe Area End ##### -->
 
     <!-- ##### Follow Us Instagram Area Start ##### -->
@@ -717,7 +799,8 @@
                     </div>
                     <!-- Footer Logo -->
                     <div class="footer-logo">
-                        <a href="index.html"><img src="img/core-img/logo.png" alt=""></a>
+                        <!-- change logo -->
+                        <!-- <a href="index.html"><img src="img/core-img/logo.png" alt=""></a> -->
                     </div>
                 </div>
             </div>
