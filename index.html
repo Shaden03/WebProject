@@ -17,6 +17,7 @@
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
 
+   
     <style type="text/css">
 
         .horizontal-box {
@@ -87,17 +88,74 @@
           height: 40px;
           padding-left: 120px;
         }
-
-         </style>
+        .line-through {
+                    text-decoration: line-through;
+                }
+        
+                .black-text {
+                    color: #000000;
+                }
+        
+                input[type="email"] {
+                    width: 200px;
+                    padding: 8px;
+                    border: none;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                }
+                input[type="email"]:focus {
+                    outline: none;
+                }
+                input[type="email"]::placeholder {
+                    color: #999;
+                }
+                input[type="email"]:required {
+                    background-color: #fff;
+                }
+        
+        
+                
+                input[type="search"] {
+                    width: 300px;
+                    padding: 8px;
+                    border: none;
+                    border-radius: 5px;
+                    box-sizing: border-box;
+                }
+                input[type="search"]:focus {
+                    outline: none;
+                }
+                input[type="search"]::placeholder {
+                    color: #999;
+                }
+                input[type="search"]:required {
+                    background-color: #fff;
+                }
+        
+                input[type="submit"] {
+                    border: none;
+                    background-color: #000000; 
+                    color: #fff;
+                    padding: 10px 20px;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    width: 200px;
+                    height: 70px;
+                }
+        
+                input[type="submit"]:hover {
+                    background-color: #999; 
+                }
+                body{
+                    width: 90%;
+                }
+            </style>
 
 </head>
 
 <body>
     <!-- Preloader -->
-    <div id="preloader">
-        <i class="circle-preloader"></i>
-        <img src="img/core-img/salad.png" alt="">
-    </div>
+   
 
     <!-- Search Wrapper -->
     <div class="search-wrapper">
@@ -117,83 +175,36 @@
     </div>
 
     <!-- ##### Header Area Start ##### -->
-    <header class="header-area">
-
-        <!-- Top Header Area -->
-        <div class="top-header-area">
-            <div class="container h-100">
-                <div class="row h-100 align-items-center justify-content-between">
-                    <!-- Breaking News -->
-                    <div class="col-12 col-sm-6">
-                        <div class="breaking-news">
-                            <div id="breakingNewsTicker" class="ticker">
-                                <ul>
-                                    <li><a href="#">Hello World!</a></li>
-                                    <li><a href="#">Welcome to Foodieland Family.</a></li>
-                                    <li><a href="#">Hello Foodieland!</a></li>
-                                </ul>
+     <!-- Nav Start -->
+                           <!-- shaden -->
+                           <div class="horizontal-box">
+                            <div class="box" style="padding-left: 60px ; padding-right: 270px;">
+                                <img src="img/FoodieLand.png" width ="150" height="50" alt="logo IMg" >
+                            </div>
+                            <div class="box, navhead">
+                    
+                                <a href="#">Home<i class="fa" aria-hidden="true"></i></a>
+                                <a href="#">Recipes<i class="fa" aria-hidden="true"></i></a>
+                                <a href="#">Blog<i class="fa" aria-hidden="true"></i></a>
+                                <a href="#">Contact<i class="fa" aria-hidden="true"></i></a>
+                                <a href="#">About us<i class="fa" aria-hidden="true"></i></a>
+                            </div>
+                            <div class="box" style="padding-left: 300px ;">
+                                <a href="#"><img src="img/facebook.png" alt="facebook logo"></i></a>
+                                <a href="#"><img src="img/Twitter.png" alt="facebook logo"></i></a>
+                                <a href="#"><img src="img/Linkedin.png" alt="facebook logo"></i></a>
                             </div>
                         </div>
+                        <div class="horizontal-line"></div> 
+                    
+                    
+                    <div class="vertical-box " style="width: 900px;  padding-left: 60px; padding-top: 200px;">
+                        <img src="img/FoodieLand.png" style="width: 200px; height: 70px; ">
+                    <p style="width: 500px; height: 10px;  padding-left: 20px;">description, </p>
                     </div>
-
-                    <!-- Top Social Info -->
-                    <div class="col-12 col-sm-6">
-                        <div class="top-social-info text-right">
-                            <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Navbar Area -->
-        <div class="delicious-main-menu">
-            <div class="classy-nav-container breakpoint-off">
-                <div class="container">
-                    <!-- Menu -->
-                    <nav class="classy-navbar justify-content-between" id="deliciousNav">
-
-                        <!-- Logo -->
-                        <!-- change logo  -->
-                        <!-- <a class="nav-brand" href="index.html"><img src="img/core-img/logo.png" alt=""></a> -->
-
-                        <!-- Navbar Toggler -->
-                        <div class="classy-navbar-toggler">
-                            <span class="navbarToggler"><span></span><span></span><span></span></span>
-                        </div>
-
-                        <!-- Menu -->
-                        <div class="classy-menu">
-
-                            <!-- close btn -->
-                            <div class="classycloseIcon">
-                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                            </div>
-
-                            <!-- Nav Start -->
-                            <div class="classynav">
-                                <ul>
-                                    <li class="active"><a href="index.html">Home</a></li>
-                                    <li><a href="receipe-post.html">Receipies</a></li>
-                                    <li><a href="blog-post.html">Blog</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
-                                    <li><a href="about.html">About Us</a></li>  
-                                </ul>
-                                <!-- Newsletter Form -->
-                                <div class="search-btn">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </div>
-
-                            </div>
-                            <!-- Nav End -->
-                        </div>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
+                    
+                    <div class="horizontal-line" ></div>
+                 <!-- Nav End -->
     <!-- ##### Header Area End ##### -->
 
     <!-- ##### Hero Area Start ##### -->
