@@ -123,7 +123,7 @@ font-weight: bolder;
 <body>
 
     <div class="horizontal-box">
-        <div class="box" style="padding-left: 60px ; padding-right: 270px;">
+        <div style="padding-left: 60px ; padding-right: 270px;">
             <img src="img/FoodieLand.png" width ="150" height="50" alt="logo IMg" >
         </div>
         <div class="box, navhead">
@@ -150,11 +150,11 @@ font-weight: bolder;
           <label for="username">Username:</label>
           <input type="text" id="username" placeholder="Enter your username" required>
           <label for="password">Password:</label>
-          <input type="password" id="password" placeholder="Enter your password" required>
+          <input type="password" id="password" placeholder="Enter your password" required><br>
           <button type="submit">Login</button>
         </form>
         <!-- change page for Forgot Password? -->
-        <p><a  class="smalltext" href="signup.html">Forgot Password?</a></p>
+        <p><a href="signup.html">Forgot Password?</a></p>
    
       </div>
     
@@ -175,3 +175,56 @@ font-weight: bolder;
 
         </body>
 </html>
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

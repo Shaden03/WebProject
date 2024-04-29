@@ -40,10 +40,6 @@
       padding-right: 30px;
 
  }
-      .navhead a:last-child {
-        margin-right: 0; }
-        .navhead  a:hover  {
-        color: #a1cfdb; }
         
 .horizontal-line {
     padding-top: 10px;
@@ -52,20 +48,12 @@
 }
 
 .Maintext {
-    padding-left: 60px ;
+    padding: 60px ;
     font-size: 40px;
-font-weight: bold;}
+font-weight: bold;
 
-.vertical-box {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 14px;
 }
 
-.verbox {
-  width: 100px; 
-  height: 0.1px;
-}
 .Mainsmalltext {
 font-size: 14px;
 font-weight: bolder;
@@ -76,72 +64,36 @@ font-weight: bolder;
     font-weight: 900;
     color: #919090;
 }
-.verticalline {
-  border-left: 2px solid #c2c2c2;
-  height: 40px;
-  padding-left: 120px;
-}
-.line-through {
-            text-decoration: line-through;
-        }
-
-        .black-text {
-            color: #000000;
-        }
-
-        input[type="email"] {
-            width: 200px;
-            padding: 8px;
-            border: none;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        input[type="email"]:focus {
-            outline: none;
-        }
-        input[type="email"]::placeholder {
-            color: #999;
-        }
-        input[type="email"]:required {
-            background-color: #fff;
-        }
-
-
-        
-        input[type="search"] {
-            width: 300px;
-            padding: 8px;
-            border: none;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        input[type="search"]:focus {
-            outline: none;
-        }
-        input[type="search"]::placeholder {
-            color: #999;
-        }
-        input[type="search"]:required {
-            background-color: #fff;
-        }
-
-        input[type="submit"] {
-            border: none;
-            background-color: #000000; 
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 15px;
-            cursor: pointer;
-            width: 200px;
-            height: 70px;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #999; 
-        }
      /* her style add recipe */
-     
-        
+
+     .login-container {
+    justify-content: center;
+    align-items: center;
+    
+  }
+  input[type="text"],
+  input[type="password"], 
+  input[type="number"],
+  input[type="date"]
+   {
+    width: 23%;
+    height: 40px;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    justify-content: left;
+    align-items: left;
+  } 
+  button {
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+  }
     </style>
 </head>
 
@@ -170,8 +122,13 @@ font-weight: bolder;
   <div class="add-recipe-container">
     <h2>Add Recipe</h2>
     <form id="addRecipeForm">
+      <input type="file" id="image" accept="image/*">
+      <img id="preview" src="#" alt="Recipe Image Preview" style="display: none; max-width: 200px;">
       <label for="recipeName">Recipe Name:</label>
       <input type="text" id="recipeName" placeholder="Enter recipe name" required>
+      <label for="time">Time:</label>
+      <input type="number" id="time"  placeholder="e.g.30 minutes " required>
+      <br>
       
       <label for="category">Category:</label>
       <select id="category" required>
@@ -181,15 +138,13 @@ font-weight: bolder;
         <option value="dinner">Dinner</option>
       </select>
       
-      <label for="time">Time:</label>
-      <input type="number" id="time"  placeholder="e.g.30 minutes " required>
-      
      
-      <input type="file" id="image" accept="image/*">
+   <br>  <br>
       
       <button type="submit">Add Recipe</button>
     </form>
   </div>
+
   
   <div class="vertical-box " style="width: 900px;  padding-left: 270px; padding-top: 300px;">
     <img src="img/FoodieLand.png" style="width: 200px; height: 70px; ">
@@ -208,55 +163,3 @@ font-weight: bolder;
 </html>
 
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .login-container {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h2 {
-    text-align: center;
-  }
-  
-  input[type="text"],
-  input[type="password"],
-  button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    box-sizing: border-box;
-    border-radius: 3px;
-    border: 1px solid #ccc;
-  }
-  
-  button {
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #007bff;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
