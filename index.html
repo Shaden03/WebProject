@@ -9,82 +9,189 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <!-- Title -->
-    <title>Foodieland| Home</title>
+    <title>Foodieland - Food Blog Template | Home</title>
+
     <!-- Favicon -->
-    <link rel="icon" href="img/FoodieLand.png">
+    <link rel="icon" href="img/core-img/favicon.ico">
+
     <!-- Core Stylesheet -->
+    <link rel="icon" href="img/FoodieLand.png">
+    <link rel="stylesheet" href="style.css">
+
 
     <style type="text/css">
+        .horizontal-box {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100vw;
+            height: 60px;
+            padding: 40px 80px;
+        }
 
-.horizontal-box {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 60px;
-  padding-top: 20px;
-}
 
-.box {
-  width: 100px;
-  height: 100%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+        .home-logo {
+            width: 120px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-  .navhead a {
-      display: inline-block;
-      color: #000000;
-      font-size: 20px;
-      margin-right: 30px;
-      text-decoration: none;
-      font-weight: 700;
-      padding-left: 30px;
-      padding-right: 30px;
+        }
 
- }
-      .navhead a:last-child {
-        margin-right: 0; }
-        .navhead  a:hover  {
-        color: #a1cfdb; }
-        
-.horizontal-line {
-    padding-top: 10px;
-  border-bottom: 1px solid #cacaca; 
-  width: 100%; 
-}
+        .home-logo img {
+            width: 100% !important;
+        }
 
-.Maintext {
-    padding-left: 60px ;
-    font-size: 40px;
-font-weight: bold;}
+        .social-links {
+            /* width: 200px*/
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-.vertical-box {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 14px;
-}
+        }
 
-.verbox {
-  width: 100px; 
-  height: 0.1px;
-}
-.Mainsmalltext {
-font-size: 14px;
-font-weight: bolder;
-}
+        .social-links a {
+            margin: 0 10px;
+        }
 
-.smalltext {
-    font-size: 14px;
-    font-weight: 900;
-    color: #919090;
-}
-.verticalline {
-  border-left: 2px solid #c2c2c2;
-  height: 40px;
-  padding-left: 120px;
-}
-.line-through {
+        .navhead {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+
+        }
+
+
+        .navhead a {
+            display: inline-block;
+            color: #000000;
+            font-size: 20px;
+            margin-right: 30px;
+            text-decoration: none;
+            font-weight: 700;
+
+        }
+
+        .navhead a:last-child {
+            margin-right: 0;
+        }
+
+        .navhead a:hover {
+            color: #a1cfdb;
+        }
+
+        .horizontal-line {
+            padding-top: 10px;
+            border-bottom: 1px solid #cacaca;
+            width: 100%;
+        }
+
+        .contact-box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 90vh;
+            margin-top: 200px;
+
+
+        }
+
+        .inner-div img {
+            position: absolute;
+        }
+
+        .salad1 {
+            left: 2px;
+            bottom: 0;
+        }
+
+        .salad2 {
+            right: 0;
+            bottom: 0;
+
+        }
+
+        .inner-div {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 100px 0;
+            width: 90%;
+            background-color: #e7f9ff;
+            border-radius: 20px;
+            position: relative;
+        }
+
+
+        .inner-div h2 {
+            color: #000000;
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 58.09px;
+            letter-spacing: -0.04em;
+            text-align: center;
+
+
+        }
+
+        .inner-div p {
+            width: 50%;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            text-align: center;
+
+        }
+
+
+        .email-box form .label input {
+            position: absolute;
+        }
+
+        .input-email {
+            padding: 60px;
+            width: 300px;
+        }
+
+        */ .Maintext {
+            padding-left: 60px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .vertical-box {
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 14px;
+        }
+
+        .verbox {
+            width: 100px;
+            height: 0.1px;
+        }
+
+        .Mainsmalltext {
+            font-size: 14px;
+            font-weight: bolder;
+        }
+
+        .smalltext {
+            font-size: 14px;
+            font-weight: 900;
+            color: #919090;
+        }
+
+        .verticalline {
+            border-left: 2px solid #c2c2c2;
+            height: 40px;
+            padding-left: 120px;
+        }
+
+        .line-through {
             text-decoration: line-through;
         }
 
@@ -92,81 +199,155 @@ font-weight: bolder;
             color: #000000;
         }
 
-        input[type="email"] {
-            width: 200px;
-            padding: 8px;
-            border: none;
-            border-radius: 5px;
-            box-sizing: border-box;
+        form,
+        .email-box,
+        .label {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
+
+        .label {
+            position: relative;
+            margin: 80px 0;
+
+
+
+        }
+
+        input[type="email"] {
+            width: 465px;
+            padding: 32px;
+            border: none;
+            border-radius: 20px;
+            box-sizing: border-box;
+            position: absolute;
+            z-index: 8;
+        }
+
         input[type="email"]:focus {
             outline: none;
         }
+
         input[type="email"]::placeholder {
             color: #999;
         }
+
         input[type="email"]:required {
             background-color: #fff;
         }
 
 
-        
+
         input[type="search"] {
             width: 300px;
             padding: 8px;
             border: none;
             border-radius: 5px;
             box-sizing: border-box;
+
         }
+
         input[type="search"]:focus {
             outline: none;
         }
+
         input[type="search"]::placeholder {
             color: #999;
         }
+
         input[type="search"]:required {
             background-color: #fff;
         }
 
         input[type="submit"] {
             border: none;
-            background-color: #000000; 
+            background-color: #000000;
             color: #fff;
             padding: 10px 20px;
             border-radius: 15px;
             cursor: pointer;
             width: 200px;
             height: 70px;
+            position: absolute;
+            z-index: 990;
+            left: 21px;
         }
 
         input[type="submit"]:hover {
-            background-color: #999; 
+            background-color: #999;
         }
-        body{
-            width: 90%;
+
+        .timing img {
+            margin-right: 8px;
+            border-bottom: none;
+        }
+
+        @media only screen and (max-width: 767px) {
+            .horizontal-box {
+                padding: 40px 20px;
+            }
+
+            .home-logo {
+                width: 120px !important;
+
+            }
+
+            .home-logo img {
+                width: 100% !important;
+            }
+
+            .navhead a {
+                font-size: 12px;
+                font-weight: 700;
+                margin-right: 20px;
+                display: none;
+            }
+
+        }
+
+        @media only screen and (max-width: 687px) {
+            .inner-div {
+                width: 93%;
+            }
+
+            input[type="email"] {
+                width: 349px;
+                padding: 23px;
+            }
+
+            input[type="submit"] {
+                width: 128px;
+                height: 46px;
+                left: 38px;
+            }
+
+            .inner-div h2 {
+                font-size: 35px;
+                font-weight: 600;
+            }
         }
     </style>
-<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- ##### Header Area Start ##### -->
-     <!-- Nav Start -->
-   <!-- shaden -->
-        <div class="horizontal-box">
-        <div class="box" style="padding-left: 60px ; padding-right: 270px;">
-            <img src="img/FoodieLand.png" width ="150" height="50" alt="logo IMg" >
+    <!-- Nav Start -->
+    <!-- shaden -->
+    <div class="horizontal-box">
+        <div class="home-logo">
+            <img src="img/FoodieLand.png" alt="logo IMg">
         </div>
-        <div class="box, navhead">
-
+        <div class="box navhead">
             <a href="#">Home<i class="fa" aria-hidden="true"></i></a>
             <a href="#">Recipes<i class="fa" aria-hidden="true"></i></a>
             <a href="#">Blog<i class="fa" aria-hidden="true"></i></a>
             <a href="#">Contact<i class="fa" aria-hidden="true"></i></a>
             <a href="#">About us<i class="fa" aria-hidden="true"></i></a>
         </div>
-        <div class="box" style="padding-left: 300px ;">
+        <div class="social-links ">
             <a href="#"><img src="img/facebook.png" alt="facebook logo"></i></a>
             <a href="#"><img src="img/Twitter.png" alt="facebook logo"></i></a>
             <a href="#"><img src="img/Linkedin.png" alt="facebook logo"></i></a>
@@ -176,6 +357,23 @@ font-weight: bolder;
 
 
     <!-- Nav End -->
+
+    <!-- Search Wrapper -->
+    <div class="search-wrapper">
+        <!-- Close Btn -->
+        <div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <form action="#" method="post">
+                        <input type="search" name="search" placeholder="Type any keywords...">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ##### Header Area End ##### -->
 
@@ -190,7 +388,8 @@ font-weight: bolder;
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Home made Burger</h2>
                                 <p data-animation="fadeInUp" data-delay="700ms"> descrpiton</p>
-                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a>
+                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See
+                                    Receipe</a>
                             </div>
                         </div>
                     </div>
@@ -205,7 +404,8 @@ font-weight: bolder;
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Home made Burger</h2>
                                 <p data-animation="fadeInUp" data-delay="700ms">descrpiton </p>
-                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a>
+                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See
+                                    Receipe</a>
                             </div>
                         </div>
                     </div>
@@ -220,7 +420,8 @@ font-weight: bolder;
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Homemade Burger</h2>
                                 <p data-animation="fadeInUp" data-delay="700ms">descrpiton</p>
-                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a>
+                                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See
+                                    Receipe</a>
                             </div>
                         </div>
                     </div>
@@ -233,7 +434,7 @@ font-weight: bolder;
     <!-- ##### Top Catagory Area Start ##### -->
     <section class="top-catagory-area section-padding-80-0">
         <div class="container">
-            <div class="row">
+            <div class="row" >
                 <!-- 1 Top Catagory Area -->
                 <div class="col-12 col-lg-4">
                     <div class="single-top-catagory">
@@ -243,7 +444,8 @@ font-weight: bolder;
                             <h3> breakfast</h3>
                             <h6>Simple &amp; Delicios</h6>
                             <a href="#"></a>
-                            <button onclick="filterRecipes('breakfast')" class="btn delicious-btn" >Breakfast Receipies</button>
+                            <button onclick="filterRecipes('breakfast')" class="btn delicious-btn">Breakfast
+                                Receipies</button>
                         </div>
                     </div>
                 </div>
@@ -256,7 +458,7 @@ font-weight: bolder;
                             <h3> lunch</h3>
                             <h6>Simple &amp; Delicios</h6>
                             <a href="#"></a>
-                            <button onclick="filterRecipes('lunch')"class="btn delicious-btn">Lunch Receipies</button>
+                            <button onclick="filterRecipes('lunch')" class="btn delicious-btn">Lunch Receipies</button>
                         </div>
                     </div>
                 </div>
@@ -269,7 +471,8 @@ font-weight: bolder;
                             <h3>dinner </h3>
                             <h6>Simple &amp; Delicios</h6>
                             <a href="#"> </a>
-                            <button onclick="filterRecipes('dinner')"class="btn delicious-btn">Dinner Receipies</button>
+                            <button onclick="filterRecipes('dinner')" class="btn delicious-btn">Dinner
+                                Receipies</button>
                         </div>
                     </div>
                 </div>
@@ -290,16 +493,25 @@ font-weight: bolder;
                 </div>
             </div>
 
-            <div class="row">
+            <div class="row"  id="recipeList">
                 <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-lg-3"  name="Sushi Easy Recipe"  type="lunch" >
                     <div class="single-best-receipe-area mb-30">
-                        <img src="img/bg-img/r1.jpg" alt=""
-                          href="receipe-post.html">
+                        <img src="img/bg-img/r1.jpg" alt="" href="receipe-post.html">
                         <div class="receipe-content">
                             <a href="receipe-post.html">
                                 <h5>Sushi Easy Receipy</h5>
                             </a>
+                            <div class="timing d-flex justify-content-between">
+                                <div class="delivey-time">
+                                    <img src="img/core-img/Time (1).png" alt="">
+                                    <span>30 Minutes</span>
+                                </div>
+                                <div class="food-catagory">
+                                    <img src="img/core-img/Time (2).png" alt="">
+                                    <span>Healthy</span>
+                                </div>
+                            </div>
                             <div class="ratings">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -312,13 +524,23 @@ font-weight: bolder;
                 </div>
 
                 <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-lg-3"  name="Homemade Burger"  type="dinner">
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r2.jpg" alt="">
                         <div class="receipe-content">
                             <a href="receipe-post.html">
                                 <h5>Homemade Burger</h5>
                             </a>
+                            <div class="timing d-flex justify-content-between">
+                                <div class="delivey-time">
+                                    <img src="img/core-img/Time (1).png" alt="">
+                                    <span>30 Minutes</span>
+                                </div>
+                                <div class="food-catagory">
+                                    <img src="img/core-img/Time (2).png" alt="">
+                                    <span>Healthy</span>
+                                </div>
+                            </div>
                             <div class="ratings">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -331,13 +553,23 @@ font-weight: bolder;
                 </div>
 
                 <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-lg-3"  name="Vegan Smoothie"  type="breakfast" >
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r3.jpg" alt="">
                         <div class="receipe-content">
                             <a href="receipe-post.html">
                                 <h5>Vegan Smoothie</h5>
                             </a>
+                            <div class="timing d-flex justify-content-between">
+                                <div class="delivey-time">
+                                    <img src="img/core-img/Time (1).png" alt="">
+                                    <span>30 Minutes</span>
+                                </div>
+                                <div class="food-catagory">
+                                    <img src="img/core-img/Time (2).png" alt="">
+                                    <span>Healthy</span>
+                                </div>
+                            </div>
                             <div class="ratings">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -350,13 +582,23 @@ font-weight: bolder;
                 </div>
 
                 <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-lg-3" name="Homemade Burger"  type="dinner">
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r4.jpg" alt="">
                         <div class="receipe-content">
                             <a href="receipe-post.html">
                                 <h5>Calabasa soup</h5>
                             </a>
+                            <div class="timing d-flex justify-content-between">
+                                <div class="delivey-time">
+                                    <img src="img/core-img/Time (1).png" alt="">
+                                    <span>30 Minutes</span>
+                                </div>
+                                <div class="food-catagory">
+                                    <img src="img/core-img/Time (2).png" alt="">
+                                    <span>Healthy</span>
+                                </div>
+                            </div>
                             <div class="ratings">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -369,13 +611,23 @@ font-weight: bolder;
                 </div>
 
                 <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-lg-3"  name="Homemade Breakfast"  type="breakfast">
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r5.jpg" alt="">
                         <div class="receipe-content">
                             <a href="receipe-post.html">
                                 <h5>Homemade Breakfast</h5>
                             </a>
+                            <div class="timing d-flex justify-content-between">
+                                <div class="delivey-time">
+                                    <img src="img/core-img/Time (1).png" alt="">
+                                    <span>30 Minutes</span>
+                                </div>
+                                <div class="food-catagory">
+                                    <img src="img/core-img/Time (2).png" alt="">
+                                    <span>Healthy</span>
+                                </div>
+                            </div>
                             <div class="ratings">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -388,13 +640,79 @@ font-weight: bolder;
                 </div>
 
                 <!-- Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
+                <div class="col-12 col-sm-6 col-lg-3" name="Healthy Fruit Desert"  type="lunch">
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r6.jpg" alt="">
                         <div class="receipe-content">
                             <a href="receipe-post.html">
                                 <h5>Healthy Fruit Desert</h5>
                             </a>
+                            <div class="timing d-flex justify-content-between">
+                                <div class="delivey-time">
+                                    <img src="img/core-img/Time (1).png" alt="">
+                                    <span>30 Minutes</span>
+                                </div>
+                                <div class="food-catagory">
+                                    <img src="img/core-img/Time (2).png" alt="">
+                                    <span>Healthy</span>
+                                </div>
+                            </div>
+                            <div class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Best Receipe Area -->
+                <div class="col-12 col-sm-6 col-lg-3"  name="Healthy Salad"  type="lunch">
+                    <div class="single-best-receipe-area mb-30">
+                        <img  class="img-fix"  src="img/bg-img/r6.jpg" alt="">
+                        <div class="receipe-content">
+                            <a href="receipe-post.html">
+                                <h5>Healthy Salad </h5>
+                            </a>
+                            <div class="timing d-flex justify-content-between">
+                                <div class="delivey-time">
+                                    <img src="img/bg-img/insta4.jpg" alt="">
+                                    <span>30 Minutes</span>
+                                </div>
+                                <div class="food-catagory">
+                                    <img src="img/core-img/Time (2).png" alt="">
+                                    <span>Healthy</span>
+                                </div>
+                            </div>
+                            <div class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Single Best Receipe Area -->
+                <div class="col-12 col-sm-6 col-lg-3"  name="Noodles"  type="dinner">
+                    <div class="single-best-receipe-area mb-30">
+                        <img class="img-fix" src="img/bg-img/insta2.jpg" alt="">
+                        <div class="receipe-content">
+                            <a href="receipe-post.html">
+                                <h5>Noodles</h5>
+                            </a>
+                            <div class="timing d-flex justify-content-between">
+                                <div class="delivey-time">
+                                    <img src="img/core-img/Time (1).png" alt="">
+                                    <span>30 Minutes</span>
+                                </div>
+                                <div class="food-catagory">
+                                    <img src="img/core-img/Time (2).png" alt="">
+                                    <span>Healthy</span>
+                                </div>
+                            </div>
                             <div class="ratings">
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star" aria-hidden="true"></i>
@@ -411,7 +729,7 @@ font-weight: bolder;
     <!-- ##### Best Receipe Area End ##### -->
 
     <!-- ##### CTA Area Start ##### -->
-     <!-- ##### Ai Area Start ##### -->
+    <!-- ##### Ai Area Start ##### -->
     <section class="cta-area bg-img bg-overlay" style="background-image: url(img/bg-img/bg4.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
@@ -663,32 +981,29 @@ font-weight: bolder;
     <!-- ##### Small Receipe Area End ##### -->
 
     <!-- ##### Quote Subscribe Area Start ##### -->
-    <div class="horizontal-box" style="padding-left: 320px; padding-top: 1150px; border-radius: 20px;">
-        <div class="box" style="width: 1400px; height: 400px; background-color: #e7f9ff; border-radius: 20px; ">
-            <div class="vertical-box" >
-    
-                    <p class="Mainsmalltext" style="font-size: 50px;  text-align: center;">Deliciousness to your inbox</p>
-                    <p class="smalltext" style="font-size: 20px;  text-align: center;">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim </p>
-                    <div class="horizontal-box" style="padding-left: 330px; padding-top: 30px; ">
-                        <div class="box" style="width: 500px; height: 100px; background-color: rgb(255, 255, 255); border-radius: 20px; ">
-                            <div class="horizontal-box" style="padding-left: 100px; padding-bottom: 20px; ">
-                                <form class="box" method="post" action="https//www.deitel.com" style="padding-right: 90px;">
-                                    <p>
-                                        <label>
-                                            <input type="email" placeholder="Your email address..." required>
-                                        </label>
-                                    </p>
-                                </form>
-    
-                                    <input type="submit" value="Subscribe">
-    
-                            </div>
-                        </div>
-                    </div>
-                  
+    <div class="contact-box">
+
+        <div class="inner-div">
+            <h2>Deliciousness to your inbox</h2>
+            <p>Lorem ipsum dolor sit amet,
+                consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad
+                minim</p>
+            <!-- <p class="Mainsmalltext" style="font-size: 50px;  text-align: center;"></p>
+                <p class="smalltext" style="font-size: 20px;  text-align: center;"> </p> -->
+            <div class="email-box" style="width: 100%;">
+                <form class="box" method="post" action="https//www.deitel.com">
+                    <label class="label">
+                        <input class=" input-email" type="email" placeholder="Your email address..." required>
+                        <input class="sub" type="submit" value="Subscribe">
+                    </label>
+                </form>
+
+            </div>
+
+            <img class="salad1" src="img/bg-img/salad (1).png" alt="salad">
+            <img class="salad2" src="img/bg-img/salad (2).png" alt="salad">
+
         </div>
-      
-    </div>
     </div>
     <!-- ##### Quote Subscribe Area End ##### -->
 
@@ -703,7 +1018,7 @@ font-weight: bolder;
         </div>
         <!-- Instagram Feeds -->
         <div class="insta-feeds d-flex flex-wrap">
-            <!--1 Single Insta Feeds -->
+            <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
                 <img src="img/bg-img/insta1.jpg" alt="">
                 <!-- Icon -->
@@ -712,7 +1027,7 @@ font-weight: bolder;
                 </div>
             </div>
 
-            <!--2 Single Insta Feeds -->
+            <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
                 <img src="img/bg-img/insta2.jpg" alt="">
                 <!-- Icon -->
@@ -721,7 +1036,7 @@ font-weight: bolder;
                 </div>
             </div>
 
-            <!-- 3 Single Insta Feeds -->
+            <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
                 <img src="img/bg-img/insta3.jpg" alt="">
                 <!-- Icon -->
@@ -730,7 +1045,7 @@ font-weight: bolder;
                 </div>
             </div>
 
-            <!--4  Single Insta Feeds -->
+            <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
                 <img src="img/bg-img/insta4.jpg" alt="">
                 <!-- Icon -->
@@ -739,7 +1054,7 @@ font-weight: bolder;
                 </div>
             </div>
 
-            <!--5 Single Insta Feeds -->
+            <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
                 <img src="img/bg-img/insta5.jpg" alt="">
                 <!-- Icon -->
@@ -748,7 +1063,7 @@ font-weight: bolder;
                 </div>
             </div>
 
-            <!-- 6 Single Insta Feeds -->
+            <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
                 <img src="img/bg-img/insta6.jpg" alt="">
                 <!-- Icon -->
@@ -757,7 +1072,7 @@ font-weight: bolder;
                 </div>
             </div>
 
-            <!--7 Single Insta Feeds -->
+            <!-- Single Insta Feeds -->
             <div class="single-insta-feeds">
                 <img src="img/bg-img/insta7.jpg" alt="">
                 <!-- Icon -->
@@ -770,9 +1085,27 @@ font-weight: bolder;
     <!-- ##### Follow Us Instagram Area End ##### -->
 
     <!-- ##### Footer Area Start ##### -->
-     <footer>
+    <footer class="footer-area">
+        <div class="container h-100">
+            <div class="row h-100">
+                <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
+                    <!-- Footer Social Info -->
+                    <div class="footer-social-info text-right">
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    </div>
+                    <!-- Footer Logo -->
+                    <div class="footer-logo">
+                        <!-- change logo -->
+                        <a class="home-logo" href="index.html"><img src="img/FoodieLand.png" alt=""></a>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
     </footer>
-    <!-- ##### Footer Area end ##### -->
+    <!-- ##### Footer Area Start ##### -->
 
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
@@ -788,50 +1121,98 @@ font-weight: bolder;
     <script>
         // Sample recipe data
         var recipes = [
-            { name: "Sushi Easy Recipe", type: "lunch" },
-            { name: "Homemade Burger", type: "dinner" },
-            { name: "Vegan Smoothie", type: "breakfast" },
+            { name: "Sushi Easy Recipe", type: "lunch", image: "img/bg-img/r1.jpg"},
+            { name: "Homemade Burger", type: "dinner", image: "img/bg-img/r2.jpg"},
+            { name: "Vegan Smoothie", type: "breakfast", image: "img/bg-img/r3.jpg"},
+            { name: "Healthy Soup", type: "dinner", image: "img/bg-img/r4.jpg"},
+            { name: "Homemade Breakfast", type: "breakfast", image: "img/bg-img/r5.jpg"},
+            { name: "Healthy Fruit Desert", type: "lunch", image: "img/bg-img/r6.jpg"},
+            { name: "Healthy Salad", type: "lunch", image: "img/bg-img/insta4.jpg"},
+            { name: "Noodles", type: "dinner", image: "img/bg-img/insta2.jpg"},
+
             // Add more recipes with different types here
         ];
-    
+
         // Function to filter and display recipes based on category
         function filterRecipes(category) {
             var recipeListDiv = document.getElementById("recipeList");
             recipeListDiv.innerHTML = ""; // Clear previous recipes
-    
-            recipes.forEach(function(recipe) {
+
+            recipes.forEach(function (recipe) {
                 if (recipe.type === category) {
                     var recipeItem = document.createElement("div");
-                    recipeItem.classList.add("col-12", "col-sm-6", "col-lg-4");
+                    recipeItem.classList.add("col-12", "col-sm-6", "col-lg-3");
                     recipeItem.innerHTML = `
                         <div class="single-best-receipe-area mb-30">
-                            <h5>${recipe.name}</h5>
-                            <!-- Add more recipe details as needed -->
+                        <img  class="img-fix" src="${recipe.image}" alt="" href="receipe-post.html">
+                        <div class="receipe-content">
+                            <a href="receipe-post.html">
+                                <h5>${recipe.name}</h5>
+                            </a>
+                            <div class="timing d-flex justify-content-between">
+                                <div class="delivey-time">
+                                    <img src="img/core-img/Time (1).png" alt="">
+                                    <span>30 Minutes</span>
+                                </div>
+                                <div class="food-catagory">
+                                    <img src="img/core-img/Time (2).png" alt="">
+                                    <span>Healthy</span>
+                                </div>
+                            </div>
+                            <div class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
                         </div>
+                    </div>
                     `;
                     recipeListDiv.appendChild(recipeItem);
                 }
             });
         }
-    
+
         // Function to show all recipes
         function showAllRecipes() {
             var recipeListDiv = document.getElementById("recipeList");
             recipeListDiv.innerHTML = ""; // Clear previous recipes
-    
-            recipes.forEach(function(recipe) {
+
+            recipes.forEach(function (recipe) {
                 var recipeItem = document.createElement("div");
-                recipeItem.classList.add("col-12", "col-sm-6", "col-lg-4");
+                recipeItem.classList.add("col-12", "col-sm-6", "col-lg-3");
                 recipeItem.innerHTML = `
-                    <div class="single-best-receipe-area mb-30">
-                        <h5>${recipe.name}</h5>
-                        <!-- Add more recipe details as needed -->
+                <div class="single-best-receipe-area mb-30">
+                        <img  class="img-fix"  src="${recipe.image}" alt="" href="receipe-post.html">
+                        <div class="receipe-content">
+                            <a href="receipe-post.html">
+                                <h5>${recipe.name}</h5>
+                            </a>
+                            <div class="timing d-flex justify-content-between">
+                                <div class="delivey-time">
+                                    <img src="img/core-img/Time (1).png" alt="">
+                                    <span>30 Minutes</span>
+                                </div>
+                                <div class="food-catagory">
+                                    <img src="img/core-img/Time (2).png" alt="">
+                                    <span>Healthy</span>
+                                </div>
+                            </div>
+                            <div class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
                     </div>
                 `;
                 recipeListDiv.appendChild(recipeItem);
             });
         }
-    
+
         // Initially show all recipes
         showAllRecipes();
     </script>
