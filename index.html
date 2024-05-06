@@ -1119,76 +1119,43 @@
     <script>
         // Sample recipe data
         var recipes = [
-            { name: "Sushi Easy Recipe", type: "lunch", image: "img/bg-img/r1.jpg"},
-            { name: "Homemade Burger", type: "dinner", image: "img/bg-img/r2.jpg"},
-            { name: "Vegan Smoothie", type: "breakfast", image: "img/bg-img/r3.jpg"},
-            { name: "Healthy Soup", type: "dinner", image: "img/bg-img/r4.jpg"},
-            { name: "Homemade Breakfast", type: "breakfast", image: "img/bg-img/r5.jpg"},
-            { name: "Healthy Fruit Desert", type: "lunch", image: "img/bg-img/r6.jpg"},
-            { name: "Healthy Salad", type: "lunch", image: "img/bg-img/insta4.jpg"},
-            { name: "Noodles", type: "dinner", image: "img/bg-img/insta2.jpg"},
+    { name: "Sushi Easy Recipe", type: "lunch", image: "img/bg-img/r1.jpg"},
+    { name: "Homemade Burger", type: "dinner", image: "img/bg-img/r2.jpg"},
+    { name: "Vegan Smoothie", type: "breakfast", image: "img/bg-img/r3.jpg"},
+    { name: "Healthy Soup", type: "dinner", image: "img/bg-img/r4.jpg"},
+    { name: "Homemade Breakfast", type: "breakfast", image: "img/bg-img/r5.jpg"},
+    { name: "Healthy Fruit Desert", type: "lunch", image: "img/bg-img/r6.jpg"},
+    { name: "Healthy Salad", type: "lunch", image: "img/bg-img/insta4.jpg"},
+    { name: "Noodles", type: "dinner", image: "img/bg-img/insta2.jpg"},
+    // Add more recipes with different types here
+];
 
-            // Add more recipes with different types here
-        ];
+// Variable to keep track of the currently selected category
+var currentCategory = null;
 
-        // Function to filter and display recipes based on category
-        function filterRecipes(category) {
-            var recipeListDiv = document.getElementById("recipeList");
-            recipeListDiv.innerHTML = ""; // Clear previous recipes
+// Function to filter and display recipes based on category
+function filterRecipes(category) {
+    var recipeListDiv = document.getElementById("recipeList");
+    recipeListDiv.innerHTML = ""; // Clear previous recipes
 
-            recipes.forEach(function (recipe) {
-                if (recipe.type === category) {
-                    var recipeItem = document.createElement("div");
-                    recipeItem.classList.add("col-12", "col-sm-6", "col-lg-3");
-                    recipeItem.innerHTML = `
-                        <div class="single-best-receipe-area mb-30">
-                        <img  class="img-fix" src="${recipe.image}" alt="" href="receipe-post.html">
-                        <div class="receipe-content">
-                            <a href="receipe-post.html">
-                                <h5>${recipe.name}</h5>
-                            </a>
-                            <div class="timing d-flex justify-content-between">
-                                <div class="delivey-time">
-                                    <img src="img/core-img/Time (1).png" alt="">
-                                    <span>30 Minutes</span>
-                                </div>
-                                <div class="food-catagory">
-                                    <img src="img/core-img/Time (2).png" alt="">
-                                    <span>Healthy</span>
-                                </div>
-                            </div>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                    `;
-                    recipeListDiv.appendChild(recipeItem);
-                }
-            });
-        }
-
-        // Function to show all recipes
-        function showAllRecipes() {
-            var recipeListDiv = document.getElementById("recipeList");
-            recipeListDiv.innerHTML = ""; // Clear previous recipes
-
-            recipes.forEach(function (recipe) {
+    // Toggle between showing all recipes and category recipes
+    if (currentCategory === category) {
+        showAllRecipes();
+        currentCategory = null;
+    } else {
+        recipes.forEach(function (recipe) {
+            if (recipe.type === category) {
                 var recipeItem = document.createElement("div");
                 recipeItem.classList.add("col-12", "col-sm-6", "col-lg-3");
                 recipeItem.innerHTML = `
-                <div class="single-best-receipe-area mb-30">
-                        <img  class="img-fix"  src="${recipe.image}" alt="" href="receipe-post.html">
+                    <div class="single-best-receipe-area mb-30">
+                        <img class="img-fix" src="${recipe.image}" alt="" href="receipe-post.html">
                         <div class="receipe-content">
                             <a href="receipe-post.html">
                                 <h5>${recipe.name}</h5>
                             </a>
                             <div class="timing d-flex justify-content-between">
-                                <div class="delivey-time">
+                                <div class="delivery-time">
                                     <img src="img/core-img/Time (1).png" alt="">
                                     <span>30 Minutes</span>
                                 </div>
@@ -1208,11 +1175,57 @@
                     </div>
                 `;
                 recipeListDiv.appendChild(recipeItem);
-            });
-        }
+            }
+        });
+        currentCategory = category;
+    }
+}
 
-        // Initially show all recipes
-        showAllRecipes();
+// Function to show all recipes
+function showAllRecipes() {
+    var recipeListDiv = document.getElementById("recipeList");
+    recipeListDiv.innerHTML = ""; // Clear previous recipes
+
+    recipes.forEach(function (recipe) {
+        var recipeItem = document.createElement("div");
+        recipeItem.classList.add("col-12", "col-sm-6", "col-lg-3");
+        recipeItem.innerHTML = `
+            <div class="single-best-receipe-area mb-30">
+                <img class="img-fix" src="${recipe.image}" alt="" href="receipe-post.html">
+                <div class="receipe-content">
+                    <a href="receipe-post.html">
+                        <h5>${recipe.name}</h5>
+                    </a>
+                    <div class="timing d-flex justify-content-between">
+                        <div class="delivery-time">
+                            <img src="img/core-img/Time (1).png" alt="">
+                            <span>30 Minutes</span>
+                        </div>
+                        <div class="food-catagory">
+                            <img src="img/core-img/Time (2).png" alt="">
+                            <span>Healthy</span>
+                        </div>
+                    </div>
+                    <div class="ratings">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        `;
+        recipeListDiv.appendChild(recipeItem);
+    });
+
+    currentCategory = null; // Reset current category
+}
+
+// Initially show all recipes
+showAllRecipes();
+
+    </script>
     </script>
 </body>
 
