@@ -7,159 +7,114 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="stylesheet" href="style.css">
 
-    <!-- Favicon -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Title -->
+    <title>Foodieland - Add Receipe</title>
+
+    <!-- Core Stylesheet -->
     <link rel="icon" href="img/FoodieLand.png">
-
-    <style type="text/css">
-
-.horizontal-box {
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: 60px;
-  padding-top: 20px;
-}
-
-.box {
-  width: 100px;
-  height: 100%; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-  .navhead a {
-      display: inline-block;
-      color: #000000;
-      font-size: 20px;
-      margin-right: 30px;
-      text-decoration: none;
-      font-weight: 700;
-      padding-left: 30px;
-      padding-right: 30px;
-
- }
-        
-.horizontal-line {
-    padding-top: 10px;
-  border-bottom: 1px solid #cacaca; 
-  width: 100%; 
-}
-
-.Maintext {
-    padding: 60px ;
-    font-size: 40px;
-font-weight: bold;
-
-}
-
-.Mainsmalltext {
-font-size: 14px;
-font-weight: bolder;
-}
-
-.smalltext {
-    font-size: 14px;
-    font-weight: 900;
-    color: #919090;
-}
-     /* her style add recipe */
-
-     .login-container {
-    justify-content: center;
-    align-items: center;
-    
-  }
-  input[type="text"],
-  input[type="password"], 
-  input[type="number"],
-  input[type="date"]
-   {
-    width: 23%;
-    height: 40px;
-    padding: 10px;
-    margin: 10px 0;
-    box-sizing: border-box;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    justify-content: left;
-    align-items: left;
-  } 
-  button {
-    background-color: #000000;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 10px;
-    width: 150px;
-    height: 50px;
-  }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+    <!-- ##### Header Area Start ##### -->
+    <!-- Nav Start -->
+<div class="page">
     <div class="horizontal-box">
-        <div class="box" style="padding-left: 60px ; padding-right: 270px;">
-            <img src="img/FoodieLand.png" width ="150" height="50" alt="logo IMg" >
+        <div class="home-logo">
+            <img src="img/FoodieLand.png" alt="logo IMg">
         </div>
-        <div class="box, navhead">
-
+        <div class="box navhead">
             <a href="#">Home<i class="fa" aria-hidden="true"></i></a>
             <a href="#">Recipes<i class="fa" aria-hidden="true"></i></a>
             <a href="#">Blog<i class="fa" aria-hidden="true"></i></a>
             <a href="#">Contact<i class="fa" aria-hidden="true"></i></a>
             <a href="#">About us<i class="fa" aria-hidden="true"></i></a>
         </div>
-        <div class="box" style="padding-left: 300px ;">
-            <a href="#"><img src="img/facebook.png" alt="facebook logo"></i></a>
-            <a href="#"><img src="img/Twitter.png" alt="facebook logo"></i></a>
-            <a href="#"><img src="img/Linkedin.png" alt="facebook logo"></i></a>
+        <div class="social-links ">
+            <a href="https://www.facebook.com"><img src="img/facebook.png" alt="facebook logo"></i></a>
+            <a href="https://twitter.com"><img src="img/Twitter.png" alt="Twitter logo"></i></a>
+            <a href="https://www.linkedin.com/feed/"><img src="img/Linkedin.png" alt="Linkedin logo"></i></a>
         </div>
     </div>
-
     <div class="horizontal-line"></div>
-  <div class="add-recipe-container">
-    <h2>Add Recipe</h2>
-    <form id="addRecipeForm">
-      <input type="file" id="image" accept="image/*">
-      <img id="preview" src="#" alt="Recipe Image Preview" style="display: none; max-width: 200px;">
-      <label for="recipeName">Recipe Name:</label>
-      <input type="text" id="recipeName" placeholder="Enter recipe name" required>
-      <label for="time">Time:</label>
-      <input type="number" id="time"  placeholder="e.g.30 minutes " required>
-      <br>
-      
-      <label for="category">Category:</label>
-      <select id="category" required>
-        <option value="" disabled selected>Select category</option>
-        <option value="breakfast">Breakfast</option>
-        <option value="lunch">Lunch</option>
-        <option value="dinner">Dinner</option>
-      </select>
-      
-     
-   <br>  <br>
-      
-      <button type="submit">Add Recipe</button>
-    </form>
-  </div>
-
-  
-  <div class="vertical-box " style="width: 900px;  padding-left: 270px; padding-top: 300px;">
-    <img src="img/FoodieLand.png" style="width: 200px; height: 70px; ">
-<p style="width: 500px; height: 10px;  padding-left: 20px;">Lorem ipsum dolor sit amet, </p>
-</div>
-<div class="horizontal-line" ></div>
-
-<footer style=" padding-left: 770px; padding-top: 20px;">
-    <p class="Mainsmalltext" style="font-size: 18px;">
-        <span style="color: rgb(0, 0, 0);">©</span> FlowBase. Powered by <span style="color: orange;">FoodieLand</span>
-      </p>
-      </footer>
-      <script src="script.js"></script> 
-
-    </body>
-</html>
 
 
+    <!-- Nav End -->
+    <!-- ##### Header Area End ##### -->
+  <!-- container sin in start -->
+    <div class="content">
+        <div class="container">
+          <div class="row justify-content-center">
+            <!-- <div class="col-md-6 order-md-2">
+              <img src="images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
+            </div> -->
+            <div class="col-md-6 contents">
+              <div class="row justify-content-center">
+                <div class="col-md-12">
+                  <div class="form-block">
+                      <div class="mb-4">
+                      <h3>Add Receipe <strong> in FoodieLand</strong></h3>
+                    </div>
+                    <form action="#" method="post">
+                      <div class="form-group first">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username">
+                      </div>
+                      <div class="form-group first">
+                        <label for="data"></label>
+                        <input type="date" class="form-control" id="username">
+                      </div>
+                    
+                      <label for="catgory">Category:</label>
+                      <select id="category" required>
+                        <option value="" disabled selected>Select category</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                      </select>
+
+                      <input type="submit" value="Add Receipe" class="btn btn-pill text-white btn-block btn-primary">
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       <!-- container sin in end -->
+       <!-- ##### Footer Area start ##### -->
+          <footer class="footer-area">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
+                        <!-- Footer Logo -->
+                        <div class="footer-logo">
+                            <a class="home-logo" href="index.html"><img src="img/FoodieLand.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- ##### Footer Area end ##### -->
+    </div>
+       
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All js -->
+    <script src="js/main.js"></script>
+
+      </body>
+    </html>
