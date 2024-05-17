@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Title -->
+    <title>Foodieland - Add Receipe</title>
+
+    <!-- Core Stylesheet -->
+    <link rel="icon" href="img/FoodieLand.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ##### Header Area Start ##### -->
+    <!-- Nav Start -->
+<div class="page">
+    <div class="horizontal-box , navbar">
+        <div class="home-logo">
+            <img src="img/FoodieLand.png" alt="logo IMg">
+        </div>
+        <div class="box navhead">
+          <a href="index.html">Home<i class="fa" aria-hidden="true"></i></a>
+          <a href="Recipiespage.html">Recipes<i class="fa" aria-hidden="true"></i></a>
+          <a href="Blogpage.html">Blog<i class="fa" aria-hidden="true"></i></a>
+          <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
+          <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a>
+        </div>
+        <div class="social-links ">
+            <a href="https://www.facebook.com"><img src="img/facebook.png" alt="facebook logo"></i></a>
+            <a href="https://twitter.com"><img src="img/Twitter.png" alt="Twitter logo"></i></a>
+            <a href="https://www.linkedin.com/feed/"><img src="img/Linkedin.png" alt="Linkedin logo"></i></a>
+        </div>
+    </div>
+    <div class="horizontal-line"></div>
+
+
+    <!-- Nav End -->
+    <!-- ##### Header Area End ##### -->
+  <!-- container sin in start -->
+  <div class="content">
+    <div class="container">
+      <div class="row justify-content-center">
+        <!-- <div class="col-md-6 order-md-2">
+          <img src="images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
+        </div> -->
+        <div class="col-md-6 contents">
+          <div class="row justify-content-center">
+            <div class="col-md-12">
+              <div class="form-block">
+                <div class="mb-4">
+                  <h3>Add Recipe <strong>in FoodieLand</strong></h3>
+                </div>
+                <form action="#" method="post" enctype="multipart/form-data">
+                  <div class="form-group first">
+                    <label for="recipeName"></label>
+                    <input type="text" class="form-control" id="recipeName" name="recipeName" placeholder="Receipe Name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="category"></label>
+                    <select id="category" required>
+                      <option value="" disabled selected>Select category</option>
+                      <option value="breakfast">Breakfast</option>
+                      <option value="lunch">Lunch</option>
+                      <option value="dinner">Dinner</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="recipeImage"></label>
+                    <input type="file" id="recipeImage"  accept="image/*" required>
+                  </div>
+                  <input type="submit" value="Add Recipe" class="btn btn-pill text-white btn-block btn-primary">
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+       <!-- container sin in end -->
+       <!-- ##### Footer Area start ##### -->
+          <footer class="footer-area">
+            <div class="container h-100">
+                <div class="row h-100">
+                    <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
+                        <!-- Footer Logo -->
+                        <div class="footer-logo">
+                            <a class="home-logo" href="index.html"><img src="img/FoodieLand.png" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    <!-- ##### Footer Area end ##### -->
+    </div>
+       
+    <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- All js -->
+    <script src="js/main.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          const addRecipeForm = document.querySelector('form[action="#"]');
+  
+          addRecipeForm.addEventListener('submit', function(event) {
+              event.preventDefault();
+  
+              // Get the recipe data from the form
+              const recipeName = document.getElementById('recipeName').value;
+              const category = document.getElementById('category').value;
+  
+              // Simulate image upload (replace this with actual image upload logic)
+              const recipeImage = 'placeholder.jpg'; // Assuming single file upload
+  
+              // Create a new recipe object
+              const newRecipe = {
+                  name: recipeName,
+                  category: category,
+                  image: recipeImage
+              };
+  
+              // Fetch existing recipes from JSON file
+              fetch('recipes.json')
+                  .then(response => response.json())
+                  .then(recipes => {
+                      // Add the new recipe to the existing recipes array
+                      recipes.push(newRecipe);
+  
+                      // Update the JSON file with the new recipes data
+                      return fetch('recipes.json', {
+                          method: 'PUT', // or 'POST'
+                          headers: {
+                              'Content-Type': 'application/json',
+                          },
+                          body: JSON.stringify(recipes),
+                      });
+                  })
+                  .then(() => {
+                      // Optionally, you can redirect the user to the home page or another page
+                      window.location.href = 'index.html';
+                  })
+                  .catch(error => console.error('Error adding recipe:', error));
+          });
+      });
+  </script>
+  
+  
+    
+    
+
+      </body>
+    </html>

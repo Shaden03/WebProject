@@ -21,8 +21,8 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 90vh;
-            margin-top: 200px;
+            margin-bottom: 5px;
+            margin-top: 20pxpx;
 
         }
         .inner-div img {
@@ -165,6 +165,17 @@
         }
 
 
+        .boxwhite{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 100px 0;
+            width: 90%;
+            background-color: #b9d1c1;
+            border-radius: 20px;
+            position: relative;
+        }
 
         input[type="search"] {
             width: 300px;
@@ -254,6 +265,15 @@
                 font-weight: 600;
             }
         }
+        .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background-color: #ffffff; 
+        z-index: 1000; 
+    }
     </style>
 </head>
 
@@ -261,16 +281,16 @@
     <!-- ##### Header Area Start ##### -->
     <!-- Nav Start -->
     <div class="page">
-    <div class="horizontal-box">
+    <div class="horizontal-box , navbar">
         <div class="home-logo">
             <img src="img/FoodieLand.png" alt="logo IMg">
         </div>
         <div class="box navhead">
-            <a href="#">Home<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Recipes<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Blog<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Contact<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">About us<i class="fa" aria-hidden="true"></i></a>
+            <a href="index.html">Home<i class="fa" aria-hidden="true"></i></a>
+            <a href="Recipiespage.html">Recipes<i class="fa" aria-hidden="true"></i></a>
+            <a href="Blogpage.html">Blog<i class="fa" aria-hidden="true"></i></a>
+            <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
+            <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a>
         </div>
         <div class="social-links ">
             <a href="https://www.facebook.com"><img src="img/facebook.png" alt="facebook logo"></i></a>
@@ -391,22 +411,19 @@
             <div class="row">
                 <div class="col-12">
                     <div class="section-heading">
-                        <h3>The best Receipies</h3>
                     </div>
                 </div>
             </div>
 
             <div class="row"  id="recipeList">
                 <!-- 1 Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-3"  name="Sushi Easy Recipe"  type="lunch" >
+                <div class="col-12 col-sm-6 col-lg-3" data-title="Sushi Easy Recipe" type="lunch">
                     <div class="single-best-receipe-area mb-30">
-                        <img src="img/bg-img/r1.jpg" alt="" href="Recipiespage.html">
+                        <img src="img/bg-img/r1.jpg" alt="">
                         <div class="receipe-content">
-                            <a href="Recipiespage.html">
-                                <h5>Sushi Easy Receipy</h5>
-                            </a>
+                            <h5>Sushi Easy Receipy</h5>
                             <div class="timing d-flex justify-content-between">
-                                <div class="delivey-time">
+                                <div class="delivery-time">
                                     <img src="img/core-img/Time (1).png" alt="">
                                     <span>30 Minutes</span>
                                 </div>
@@ -425,9 +442,14 @@
                         </div>
                     </div>
                 </div>
+                
+                
 
+               
+                
+                
                 <!-- 2 Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-3"  name="Homemade Burger"  type="dinner">
+                <div class="col-12 col-sm-6 col-lg-3"  data-title="Homemade Burger"  type="dinner">
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r2.jpg" alt="">
                         <div class="receipe-content">
@@ -456,7 +478,7 @@
                 </div>
 
                 <!-- 3 Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-3"  name="Vegan Smoothie"  type="breakfast" >
+                <div class="col-12 col-sm-6 col-lg-3"  data-title="Vegan Smoothie"  type="breakfast" >
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r3.jpg" alt="">
                         <div class="receipe-content">
@@ -485,7 +507,7 @@
                 </div>
 
                 <!-- 4 Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-3" name="Homemade Burger"  type="dinner">
+                <div class="col-12 col-sm-6 col-lg-3" data-title="Homemade Burger"  type="dinner">
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r4.jpg" alt="">
                         <div class="receipe-content">
@@ -514,7 +536,7 @@
                 </div>
 
                 <!-- 5 Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-3"  name="Homemade Breakfast"  type="breakfast">
+                <div class="col-12 col-sm-6 col-lg-3"  data-title="Homemade Breakfast"  type="breakfast">
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r5.jpg" alt="">
                         <div class="receipe-content">
@@ -543,7 +565,7 @@
                 </div>
 
                 <!-- 6 Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-3" name="Healthy Fruit Desert"  type="lunch">
+                <div class="col-12 col-sm-6 col-lg-3" data-title="Healthy Fruit Desert"  type="lunch">
                     <div class="single-best-receipe-area mb-30">
                         <img src="img/bg-img/r6.jpg" alt="">
                         <div class="receipe-content">
@@ -571,7 +593,7 @@
                     </div>
                 </div>
                 <!-- 7 Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-3"  name="Healthy Salad"  type="lunch">
+                <div class="col-12 col-sm-6 col-lg-3"  data-title="Healthy Salad"  type="lunch">
                     <div class="single-best-receipe-area mb-30">
                         <img  class="img-fix"  src="img/bg-img/r6.jpg" alt="">
                         <div class="receipe-content">
@@ -598,8 +620,12 @@
                         </div>
                     </div>
                 </div>
+
+
+                <div id="newRecipeContainer"></div>
+
                 <!-- 8 Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-3"  name="Noodles"  type="dinner">
+                <div class="col-12 col-sm-6 col-lg-3" data-title="Noodles" type="dinner">
                     <div class="single-best-receipe-area mb-30">
                         <img class="img-fix" src="img/bg-img/insta2.jpg" alt="">
                         <div class="receipe-content">
@@ -626,8 +652,86 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
+                <!-- <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const recipeLinks = document.querySelectorAll('.single-best-receipe-area');
+                
+                        recipeLinks.forEach(link => {
+                            link.addEventListener('click', function(event) {
+                                event.preventDefault();
+                                const title = this.getAttribute('data-title');
+                                console.log('Title from data-title attribute:', title);
+                                
+                                // Store the title in localStorage
+                                localStorage.setItem('recipeTitle', title);
+                                
+                                // Redirect to recipe page
+                                window.location.href = 'Recipiespage.html';
+                            });
+                        });
+                    });
+                </script>  -->
+                
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        // Fetch recipes from JSON file
+                        fetch('recipes.json')
+                            .then(response => response.json())
+                            .then(recipes => {
+                                // Create HTML for displaying recipes
+                                const recipesHTML = recipes.map(recipe => `
+                                    <div class="col-12 col-sm-6 col-lg-3">
+                                        <div class="single-best-receipe-area mb-30">
+                                            <img src="img/recipes/${recipe.image}" alt="">
+                                            <div class="receipe-content">
+                                                <h5>${recipe.name}</h5>
+                                                <div class="timing d-flex justify-content-between">
+                                                    <div class="delivey-time">
+                                                        <img src="img/core-img/Time (1).png" alt="">
+                                                        <span>30 Minutes</span>
+                                                    </div>
+                                                    <div class="food-catagory">
+                                                        <img src="img/core-img/Time (2).png" alt="">
+                                                        <span>${recipe.category}</span>
+                                                    </div>
+                                                </div>
+                                                <div class="ratings">
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                `).join('');
+                
+                                // Append recipes HTML to the container
+                                document.getElementById('recipeList').innerHTML += recipesHTML;
+                            })
+                            .catch(error => console.error('Error fetching recipes:', error));
+                    });
+                </script>
+                
+                
+                
+                <!-- <script>
+                    const recipeLink = document.getElementById('recipe-link');
+                    const title = recipeLink.closest('.single-best-receipe-area').getAttribute('data-title');
+                
+                    recipeLink.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        localStorage.setItem('reciTitle', title);
+                        window.location.href = 'Recipiespage.html';
+                    });
+                </script>
+         -->
+        
+        
+        
+        
+        
     </section>
     <!-- ##### Best Receipe Area End ##### -->
     <!-- ##### Ai Area Start ##### -->
@@ -900,7 +1004,54 @@
             <img class="salad2" src="img/bg-img/salad (2).png" alt="salad">
         </div>
     </div>
-    <!-- ##### Quote Subscribe Area End ##### -->
+  
+
+    <div class="contact-box" style="padding-top: 5px; padding-bottom: 5px;">
+        <div class="boxwhite">
+            <h1>Want to Join Us?</h1>
+            <form style="padding-right: 250px;" class="box" method="post" action="signup.html" id="signupForm">
+                <label class="label">
+                    <input class="sub" type="submit" value="Sign up?" id="signupButton">
+                </label>
+            </form>
+    
+            <form style="padding-right: 250px;" class="box" method="post" action="signin.html" id="loginForm">
+                <label class="label">
+                    <input class="sub" type="submit" value="Log in" id="loginButton">
+                </label>
+            </form>
+    
+            <form style="padding-right: 250px;" class="box" method="post" action="AddRecipe.html" id="addRecipeForm">
+                <label class="label">
+                    <input class="sub" type="submit" value="Add Recipe?" id="addRecipeButton">
+                </label>
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        var loggedIn = true; 
+    
+        function handleLoginStatus() {
+            var signupForm = document.getElementById("signupForm");
+            var loginForm = document.getElementById("loginForm");
+            var addRecipeForm = document.getElementById("addRecipeForm");
+    
+            if (loggedIn) {
+                signupForm.style.display = "none";
+                loginForm.style.display = "none";
+                addRecipeForm.style.display = "block";
+            } else {
+                signupForm.style.display = "block";
+                loginForm.style.display = "block";
+                addRecipeForm.style.display = "none";
+            }
+        }
+    
+        handleLoginStatus();
+    </script>
+    
+
 
     <!-- ##### Follow Us Instagram Area Start ##### -->
     <div class="follow-us-instagram">
@@ -1118,6 +1269,7 @@ showAllRecipes();
 
     </script>
     </script>
+    
 </body>
 
 </html>

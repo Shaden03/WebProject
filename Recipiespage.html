@@ -15,6 +15,9 @@
 
     <style type="text/css">
 
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
+
+@import url(css/font-awesome.min.css);
 
 body {
   margin: 0;
@@ -155,23 +158,30 @@ input[type="submit"]:hover {
   background-color: #999;
 }
 
-
+.navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff; 
+        z-index: 1000; 
+    }
     </style>
 </head>
 
 <body>
 
-    <div class="horizontal-box">
+    <div class="horizontal-box , navbar">
         <div class="box" style="padding-left: 60px ; padding-right: 270px;">
             <img src="img/FoodieLand.png" width ="150" height="50" alt="logo IMg" >
         </div>
-        <div class="box, navhead">
+        <div class="box, navhead" style="font-family:'Open Sans', sans-serif;">
 
-            <a href="#">Home<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Recipes<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Blog<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Contact<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">About us<i class="fa" aria-hidden="true"></i></a>
+            <a href="index.html">Home<i class="fa" aria-hidden="true"></i></a>
+            <a href="Recipiespage.html">Recipes<i class="fa" aria-hidden="true"></i></a>
+            <a href="Blogpage.html">Blog<i class="fa" aria-hidden="true"></i></a>
+            <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
+            <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a>
         </div>
         <div class="box" style="padding-left: 300px ;">
             <a href="#"><img src="img/facebook.png" alt="facebook logo"></i></a>
@@ -181,11 +191,30 @@ input[type="submit"]:hover {
     </div>
 
     <div class="horizontal-line"></div>
-
-
-    <div >
-        <p class="Maintext"> Health Japanese Fried Rice</p>
+    
+    <div style="padding-top: 100px;">
+        <p id="recipe-title" class="Maintext"> Health Japanese Fried Rice</p>
     </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const titleVal = localStorage.getItem('recipeTitle');
+            
+            document.getElementById('recipe-title').textContent = titleVal;
+        });
+    </script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
     <div class="horizontal-box">
         <div class="box " style="padding-left: 80px;">
@@ -585,6 +614,8 @@ function applyTextStyle(checkbox) {
 <p style="width: 500px; height: 10px;  padding-left: 20px;">Lorem ipsum dolor sit amet, consectetuipisicing elit, </p>
 </div>
 <div class="horizontal-line" ></div>
+
+
 
 
 </body>

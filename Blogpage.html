@@ -14,6 +14,8 @@
     <link rel="icon" href="img/FoodieLand.png">
 
     <style type="text/css">
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
+
 body {
   margin: 0;
   padding: 0;
@@ -168,23 +170,29 @@ input[type="email"]:required {
         input[type="submit"]:hover {
             background-color: #999; 
         }
- 
+        .navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff; 
+        z-index: 1000; 
+    }
     </style>
 </head>
 
 <body>
 
-    <div class="horizontal-box">
+    <div class="horizontal-box , navbar">
         <div class="box" style="padding-left: 60px ; padding-right: 270px;">
             <img src="img/FoodieLand.png" width ="150" height="50" alt="logo IMg" >
         </div>
-        <div class="box, navhead">
-
-            <a href="#">Home<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Recipes<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Blog<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Contact<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">About us<i class="fa" aria-hidden="true"></i></a>
+        <div class="box, navhead" style="font-family:'Open Sans', sans-serif;">
+            <a href="index.html">Home<i class="fa" aria-hidden="true"></i></a>
+            <a href="Recipiespage.html">Recipes<i class="fa" aria-hidden="true"></i></a>
+            <a href="Blogpage.html">Blog<i class="fa" aria-hidden="true"></i></a>
+            <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
+            <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a>
         </div>
         <div class="box" style="padding-left: 300px ;">
             <a href="#"><img src="img/facebook.png" alt="facebook logo"></i></a>
@@ -197,6 +205,7 @@ input[type="email"]:required {
 
 
 
+    </div>
     
 <div class="horizontal-box" style="padding-left: 180px; padding-top: 200px; border-radius: 20px;">
     <div class="box" style="width: 1400px; height: 400px; background-color: #ffffff; border-radius: 20px; ">
@@ -429,7 +438,7 @@ input[type="email"]:required {
     </div>
 
 
-        </div>
+      
 
 
 <div class="horizontal-box" style="padding-left: 120px; padding-top: 1850px; border-radius: 20px; ">
