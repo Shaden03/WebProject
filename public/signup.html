@@ -2,151 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <link rel="stylesheet" href="style.css">
-
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Title -->
-    <title>Foodieland - Sin Up</title>
-    <!-- Core Stylesheet -->
-    <link rel="icon" href="/public/img/FoodieLand.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <!-- ##### Header Area Start ##### -->
-    <!-- Nav Start -->
-    <div class="page">
-    <div class="horizontal-box">
-        <div class="home-logo">
-            <img src="/public/img/FoodieLand.png" alt="logo IMg">
-        </div>
-        <div class="box navhead">
-            <a href="/index.html">Home<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Recipes<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Blog<i class="fa" aria-hidden="true"></i></a>
-            <a href="/contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
-            <a href="/about.html">About us<i class="fa" aria-hidden="true"></i></a>
-        </div>
-        <div class="social-links ">
-            <a href="https://www.facebook.com"><img src="img/facebook.png" alt="facebook logo"></i></a>
-            <a href="https://twitter.com"><img src="img/Twitter.png" alt="Twitter logo"></i></a>
-            <a href="https://www.linkedin.com/feed/"><img src="img/Linkedin.png" alt="Linkedin logo"></i></a>
-        </div>
-    </div>
-    <div class="horizontal-line"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-mod-3">
+                
+            </div>
+            <div class="col-md-6 main">
+                <form action="/sign_up" method="POST">
+                    <h2> Registration Form</h2>
+                    <input type="text" class="box" id="name" name="name" placeholder="Name" required/>
+                    <br>
+                    <input type="text" class="box" id="age" name="age" placeholder="Age" required/>
+                    <br>
+                    <input type="text" class="box" id="email" name="email" placeholder="EmailId" required/>
+                    <br>
+                    <input type="text" class="box" id="phno" name="phno" placeholder="Mobile" required/>
+                    <br>
+                    <input type="text" class="box" id="gender" name="gender" placeholder="Gender" required/>
+                    <br>
+                    <input type="text" class="box" id="password" name="password" placeholder="Password" required/>
+                    <br>
+                    <input type="submit" value="Submit" id="submit" />
 
-    <!-- Nav End -->
-    <!-- ##### Header Area End ##### -->
-    <!-- container sin up start -->
-    <div class="content">
-        <div class="container">
-          <div class="row justify-content-center">
-            <!-- imag right contener sin up  -->
-            <!-- <div class="col-md-6 order-md-2">
-              <img src="img/womencooks.png" alt="Image" class="img-fluid">
-            </div> -->
-            <div class="col-md-6 contents">
-              <div class="row justify-content-center">
-                <div class="col-md-12">
-                  <div class="form-block">
-                      <div class="mb-4">
-                      <h3>Sign Up to <strong>FoodieLand</strong></h3>
-                    </div>
-                    <form action="/sign_up" method="post">
-                      <div class="form-group first">
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username">
-    
-                      </div>
-                    <form action="/sign_up" method="post">
-                      <div class="form-group first">
-                        <label for="email">email</label>
-                        <input type="email" class="form-control" id="email">
-    
-                      </div>
-                      <div class="form-group last mb-4">
-                        <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password">
-                        
-                      </div>
-                      
-                      <div class="d-flex mb-5 align-items-center">
-                        <span class="ml-auto">
-                        </span> 
-                        <a href="signin.html" class="forgot-pass">Already have an account? Sign in</a>
-                      </div>
-    
-                      <input type="submit" value="sin up" class="btn btn-pill text-white btn-block btn-primary">
-    
-                      <span class="d-block text-center my-4 text-muted"> or sign up with</span>
-                      
-                      <div class="social-login text-center">
-                        <a href="https://www.facebook.com"><img src="img/icon-facebook.png" alt="facebook logo"></i></a>
-                        <span ></span> 
-                      </a>
-                      <a href="https://twitter.com"><img src="img/icon-twitterx.png" alt="Twitter logo"></i></a>
-                        <span></span> 
-                      </a>
-                        <a href="https://accounts.google.com/AddSession/signinchooser"><img src="img/icon-google.png" alt="Twitter logo"></i></a>
-                        <span></span> 
-                      </a>
-                      </div>
                     </form>
-                  </div>
-                </div>
-              </div>      
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- container sin up end -->
-      <!-- ##### Footer Area start ##### -->
-      <footer class="footer-area">
-        <div class="container h-100">
-            <div class="row h-100">
-                <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
-                    <!-- Footer Logo -->
-                    <div class="footer-logo">
-                        <a class="home-logo" href="index.html"><img src="/img/FoodieLand.png" alt=""></a>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
-    </footer>
-    <!-- ##### Footer Area end ##### -->
     </div>
-    <!-- ##### All Javascript Files ##### -->
-    <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- All js -->
-    <script src="js/main.js"></script>
-
-    <!-- <script>
-    document.getElementById("signupForm").addEventListener("submit", function(event) {
-      event.preventDefault(); // Prevent form submission
     
-      // Retrieve form data
-      var name = document.getElementById("name").value;
-      var email = document.getElementById("email").value;
-      var password = document.getElementById("password").value;
-    
-      // Perform form validation (you can add your own validation logic here)
-    
-      // For demonstration, simply log the data to the console
-      console.log("Name: " + name);
-      console.log("Email: " + email);
-      console.log("Password: " + password);
-    
-      // You can perform other actions here, such as sending the data to a server
-    });
-  </script> -->
-      </body>
-    </html>
+</body>
+</html>
