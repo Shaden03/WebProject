@@ -9,10 +9,15 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-
+var db;
+var db = mongoose.connection;
 mongoose.connect('mongodb://localhost:27017/Database', {
     useNewUrlParser: true,
     useUnifiedTopology: true
+});
+db.on('error', () => console.log("Error in connecting to Database"));
+db.once('open', () => {
+    console.log("Connected to Database");
 });
 
 
