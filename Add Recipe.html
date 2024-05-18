@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+  
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,16 +27,16 @@
     <!-- ##### Header Area Start ##### -->
     <!-- Nav Start -->
 <div class="page">
-    <div class="horizontal-box">
+    <div class="horizontal-box , navbar">
         <div class="home-logo">
             <img src="img/FoodieLand.png" alt="logo IMg">
         </div>
         <div class="box navhead">
-            <a href="#">Home<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Recipes<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Blog<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Contact<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">About us<i class="fa" aria-hidden="true"></i></a>
+          <a href="index.html">Home<i class="fa" aria-hidden="true"></i></a>
+          <a href="Recipiespage.html">Recipes<i class="fa" aria-hidden="true"></i></a>
+          <a href="Blogpage.html">Blog<i class="fa" aria-hidden="true"></i></a>
+          <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
+          <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a>
         </div>
         <div class="social-links ">
             <a href="https://www.facebook.com"><img src="img/facebook.png" alt="facebook logo"></i></a>
@@ -49,46 +50,46 @@
     <!-- Nav End -->
     <!-- ##### Header Area End ##### -->
   <!-- container sin in start -->
-    <div class="content">
-        <div class="container">
+  <div class="content">
+    <div class="container">
+      <div class="row justify-content-center">
+  
+      
+        <div class="col-md-6 contents">
           <div class="row justify-content-center">
-            <!-- <div class="col-md-6 order-md-2">
-              <img src="images/undraw_file_sync_ot38.svg" alt="Image" class="img-fluid">
-            </div> -->
-            <div class="col-md-6 contents">
-              <div class="row justify-content-center">
-                <div class="col-md-12">
-                  <div class="form-block">
-                      <div class="mb-4">
-                      <h3>Add Receipe <strong> in FoodieLand</strong></h3>
-                    </div>
-                    <form action="#" method="post">
-                      <div class="form-group first">
-                        <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username">
-                      </div>
-                      <div class="form-group first">
-                        <label for="data"></label>
-                        <input type="date" class="form-control" id="username">
-                      </div>
-                    
-                      <label for="catgory">Category:</label>
-                      <select id="category" required>
-                        <option value="" disabled selected>Select category</option>
-                        <option value="breakfast">Breakfast</option>
-                        <option value="lunch">Lunch</option>
-                        <option value="dinner">Dinner</option>
-                      </select>
-
-                      <input type="submit" value="Add Receipe" class="btn btn-pill text-white btn-block btn-primary">
-                    </form>
-                  </div>
+            <div class="col-md-12">
+              <div class="form-block">
+                <div class="mb-4">
+                  <h3>Add Recipe <strong>in FoodieLand</strong></h3>
                 </div>
+                <form action="#" id="recipeForm" method="post">
+                  <div class="form-group first">
+                    <label for="recipeName"></label>
+                    <input type="text" class="form-control" id="recipeName" name="recipeName" placeholder="Receipe Name" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="category"></label>
+                    <select id="category" required>
+                      <option value="" disabled selected>Select category</option>
+                      <option value="breakfast">Breakfast</option>
+                      <option value="lunch">Lunch</option>
+                      <option value="dinner">Dinner</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="recipeImage"></label>
+                    <input type="file" id="recipeImage"  accept="image/*" required>
+                  </div>
+                  <input type="submit" value="Add Recipe" class="btn btn-pill text-white btn-block btn-primary">
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  
        <!-- container sin in end -->
        <!-- ##### Footer Area start ##### -->
           <footer class="footer-area">
@@ -115,6 +116,72 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- All js -->
     <script src="js/main.js"></script>
+<!-- 
+    <script>
+      const express = require("express");
+       const http = require("http");
+       const app = express();
+       const cors = require("cors");
+      const data = require("recipes.json");
+      const fs = require("fs");
+
+      document.addEventListener('DOMContentLoaded', function() {
+          const addRecipeForm = document.querySelector('form[action="#"]');
+  
+          addRecipeForm.addEventListener('submit', function(event) {
+              event.preventDefault();
+  
+              // Get the recipe data from the form
+              const recipeName = document.getElementById('recipeName').value;
+              const category = document.getElementById('category').value;
+  
+              const recipeImage = 'img/FoodieLand.png'; 
+  
+              // Create a new recipe object
+              const newRecipe = {
+                  name: recipeName,
+                  category: category,
+                  image: recipeImage
+              };
+
+              fs.writeFile("recipes.json", JSON.stringify(newRecipe));
+
+              // Fetch existing recipes from JSON file
+              fetch('recipes.json')
+                  .then(response => response.json())
+                  .then(recipes => {
+                      // Add the new recipe to the existing recipes array
+                      recipes.push(newRecipe);
+  
+                      // Update the JSON file with the new recipes data
+                      return fetch('recipes.json', {
+                          method: 'PUT',
+                          headers: {
+                              'Content-Type': 'recipes/json',
+                          },
+                          body: JSON.stringify(recipes),
+                      });
+                  })
+                  .then(response => {
+                      if (response.ok) {
+                          console.log('Recipe added successfully.');
+                          // redirect the user to the home 
+                          window.location.href = 'index.html';
+                      } else {
+                          console.error('Failed to add recipe:', response.statusText);
+                      }
+                  })
+                  .catch(error => console.error('Error adding recipe:', error));
+          });
+      });
+  </script>
+  
+  
+   -->
+  
+    
+   <script type="module" src="js/main.js"></script>
+
 
       </body>
     </html>

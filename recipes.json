@@ -1,18 +1,17 @@
 [
-    {
-      "name": "Spaghetti Carbonara",
-      "category": "Dinner",
-      "image": "spaghetti_carbonara.jpg"
-    },
-    {
-      "name": "Avocado Toast",
-      "category": "Breakfast",
-      "image": "avocado_toast.jpg"
-    },
-    {
-      "name": "Chicken Curry",
-      "category": "Dinner",
-      "image": "chicken_curry.jpg"
-    }
-  ]
-  
+  {
+      "name": "Sushi Easy Recipe",
+      "category": "lunch",
+      "image": "caluiflower.png"
+  },
+  {
+      "name": "Homemade Burger",
+      "category": "dinner",
+      "image": "caluiflower.png"
+  },
+  {
+      "name": "Vegan Smoothie",
+      "category": "breakfast",
+      "image": "caluiflower.png"
+  }
+]
