@@ -1,0 +1,23 @@
+{
+  "name": "webproject",
+  "version": "1.0.0",
+  "description": "to show all webproject using nodejs and mongodb",
+  "main": "app.js",
+  "scripts": {
+    "start": " node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.2",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "hbs": "^4.2.0",
+    "mongoose": "^5.13.8" ,
+    "mongose": "^0.0.2-security"
+  }
+}

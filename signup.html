@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -10,33 +9,27 @@
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet" href="css/owl.carousel.min.css">
-
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!-- Title -->
     <title>Foodieland - Sin Up</title>
-
     <!-- Core Stylesheet -->
-    <link rel="icon" href="img/FoodieLand.png">
-    <link rel="stylesheet" href="style.css">
-
+    <link rel="icon" href="/img/FoodieLand.png">
 </head>
-
 <body>
-
     <!-- ##### Header Area Start ##### -->
     <!-- Nav Start -->
     <div class="page">
     <div class="horizontal-box">
         <div class="home-logo">
-            <img src="img/FoodieLand.png" alt="logo IMg">
+            <img src="/public/img/FoodieLand.png" alt="logo IMg">
         </div>
         <div class="box navhead">
-            <a href="#">Home<i class="fa" aria-hidden="true"></i></a>
+            <a href="index.html">Home<i class="fa" aria-hidden="true"></i></a>
             <a href="#">Recipes<i class="fa" aria-hidden="true"></i></a>
             <a href="#">Blog<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">Contact<i class="fa" aria-hidden="true"></i></a>
-            <a href="#">About us<i class="fa" aria-hidden="true"></i></a>
+            <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
+            <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a>
         </div>
         <div class="social-links ">
             <a href="https://www.facebook.com"><img src="img/facebook.png" alt="facebook logo"></i></a>
@@ -63,16 +56,16 @@
                       <div class="mb-4">
                       <h3>Sign Up to <strong>FoodieLand</strong></h3>
                     </div>
-                    <form action="#" method="post">
+                    <form action="/sign_up" method="post">
                       <div class="form-group first">
                         <label for="username">Username</label>
                         <input type="text" class="form-control" id="username">
     
                       </div>
-                    <form action="#" method="post">
+                    <form action="/sign_up" method="post">
                       <div class="form-group first">
                         <label for="email">email</label>
-                        <input type="email" class="form-control" id="username">
+                        <input type="email" class="form-control" id="email">
     
                       </div>
                       <div class="form-group last mb-4">
@@ -87,7 +80,7 @@
                         <a href="signin.html" class="forgot-pass">Already have an account? Sign in</a>
                       </div>
     
-                      <input type="submit" value="sin up" class="btn btn-pill text-white btn-block btn-primary">
+                      <input type="submit" value="sin up" id="submit" class="btn btn-pill text-white btn-block btn-primary" >
     
                       <span class="d-block text-center my-4 text-muted"> or sign up with</span>
                       
@@ -118,7 +111,7 @@
                 <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
                     <!-- Footer Logo -->
                     <div class="footer-logo">
-                        <a class="home-logo" href="index.html"><img src="img/FoodieLand.png" alt=""></a>
+                        <a class="home-logo"><img src="/public/img/FoodieLand.png" alt="footer logo"></a>
                     </div>
                 </div>
             </div>
@@ -128,13 +121,13 @@
     </div>
     <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="/js/jquery-3.3.1.min.js"></script>
     <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
+    <script src="/js/popper.min.js"></script>
     <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <!-- All js -->
-    <script src="js/main.js"></script>
+    <script src="/js/active.js"></script>
 
     <script>
     document.getElementById("signupForm").addEventListener("submit", function(event) {
