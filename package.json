@@ -17,11 +17,7 @@
     "ejs": "^3.1.10",
     "express": "^4.19.2",
     "hbs": "^4.2.0",
-<<<<<<< HEAD
     "mongoose": "^5.13.8",
-=======
-    "mongoose": "^5.13.22",
->>>>>>> ab99b5a87f361e41497f52e1fcaaa6aa16f69e69
     "mongose": "^0.0.2-security"
   },
   "keywords": []
