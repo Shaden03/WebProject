@@ -162,18 +162,48 @@ input[type="submit"]:hover {
 
     <div class="horizontal-line"></div>
     
-    <div style="padding-top: 100px;">
-        <p id="recipe-title" class="Maintext"> Health Japanese Fried Rice</p>
+    <div style="padding-top: 100px;" id="recipe-details">
+    <p id="recipe-title" class="Maintext"> Health Japanese Fried Rice</p>
     </div>
     
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const titleVal = localStorage.getItem('recipeTitle');
-            
-            document.getElementById('recipe-title').textContent = titleVal;
-        });
-    </script>
+            // Retrieve recipe name from URL query parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const recipeName = urlParams.get('recipe');
 
+            // Load recipe details based on the recipe name
+            fetch('recipes.json') // Assuming you have a JSON file with recipe details
+                .then(response => response.json())
+                .then(recipes => {
+                    // Find the recipe with the matching name
+                    const recipe = recipes.find(recipe => recipe.name === recipeName);
+                    
+                    // Render recipe details
+                    renderRecipe(recipe);
+                })
+                .catch(error => console.error('Error loading recipe:', error));
+        });
+
+        function renderRecipe(recipe) {
+            const recipeDetailsContainer = document.getElementById('recipe-details');
+            if (recipe) {
+                // Construct HTML for recipe details
+                const recipeHTML = `
+                    <h2>${recipe.name}</h2>
+                    <p>Category: ${recipe.category}</p>
+                    <img src="${recipe.image}" alt="${recipe.name}" width="300" height="200">
+                    <!-- Add more recipe details as needed -->
+                `;
+
+                // Insert recipe details HTML into the container
+                recipeDetailsContainer.innerHTML = recipeHTML;
+            } else {
+                // If recipe not found, display a message
+                recipeDetailsContainer.innerHTML = '<p>Recipe not found.</p>';
+            }
+        }
+    </script>
     <div class="horizontal-box">
         <div class="box " style="padding-left: 80px;">
             <img src="img/profile.png"  width ="50" height="50" alt="profileIMg"  style="padding-right: 10px;" > 
