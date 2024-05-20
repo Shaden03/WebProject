@@ -139,6 +139,9 @@ input[type="submit"]:hover {
 }
     </style>
 </head>
+
+
+
 <body>
 
     <div class="horizontal-box , navbar">
@@ -164,45 +167,74 @@ input[type="submit"]:hover {
     
     <div style="padding-top: 100px;" id="recipe-details">
     <p id="recipe-title" class="Maintext"> Health Japanese Fried Rice</p>
+
     </div>
     
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Retrieve recipe name from URL query parameter
+               document.addEventListener('DOMContentLoaded', function() {
+            // Function to fetch recipe details based on the name
+            function fetchRecipeDetails(recipeName) {
+                // Fetch recipe data from the backend
+                fetch('/recipes')
+                    .then(response => response.json())
+                    .then(data => {
+                        // Find the recipe with the matching name
+                        const recipe = data.find(recipe => recipe.name === recipeName);
+                        
+                        if (recipe) {
+                            document.getElementById('recipe-title').textContent = recipe.name;
+                            document.getElementById('recipe-video').textContent = recipe.recipievideio;
+                            document.getElementById('recipe-desc').textContent = recipe.description;
+                            document.getElementById('recipe-desc').textContent = recipe.description;
+                            const ingredientsContainer = document.getElementById('ingredients-container');
+                            ingredientsContainer.innerHTML = ''; 
+                           recipe.ingredients.forEach(ingredient => {
+                            const ingredientDiv = document.createElement('div');
+                            ingredientDiv.classList.add('horibox', 'horizontal-line');
+                           ingredientDiv.style.height = '40px';
+                           ingredientDiv.style.width = '800px'; 
+                            ingredientDiv.innerHTML = `
+                            <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" onchange="applyTextStyle(this)">
+                            <br>
+                            <p class="smalltext black-text">${ingredient}</p>
+                        `;
+                        ingredientsContainer.appendChild(ingredientDiv);
+                    });
+
+                         // Populate directions
+                         const directionsContainer = document.getElementById('directions-container');
+                        directionsContainer.innerHTML = '';
+                        recipe.directions.forEach(step => {
+                            const stepDiv = document.createElement('div');
+                            stepDiv.classList.add('horibox', 'horizontal-line');
+                            stepDiv.style.height = '180px';
+                            stepDiv.style.width = '800px';
+                            stepDiv.style.paddingTop = '40px';
+                            stepDiv.innerHTML = `
+                                <div class="vertical-box">
+                                    <div class="horibox">
+                                        <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" onchange="applyTextStyle(this)">
+                                        <p class="Mainsmalltext black-text" style="font-size: 24px;">${step.stepNumber}.${step.stepsdirections}</p>
+                                    </div>
+                                    <p class="smalltext" style="font-size: 19px; padding-left: 20px;">${step.stepsdirections}</p>
+                                </div>
+                            `;
+                            directionsContainer.appendChild(stepDiv);
+                        });
+                        } else {
+                            console.error('Recipe not found!');
+                        }
+                    })
+                    .catch(error => console.error('Error fetching recipe:', error));
+            }
+
+            // Extract the recipe name from the URL query parameter
             const urlParams = new URLSearchParams(window.location.search);
             const recipeName = urlParams.get('recipe');
 
-            // Load recipe details based on the recipe name
-            fetch('recipes.json') // Assuming you have a JSON file with recipe details
-                .then(response => response.json())
-                .then(recipes => {
-                    // Find the recipe with the matching name
-                    const recipe = recipes.find(recipe => recipe.name === recipeName);
-                    
-                    // Render recipe details
-                    renderRecipe(recipe);
-                })
-                .catch(error => console.error('Error loading recipe:', error));
+            // Fetch and display recipe details
+            fetchRecipeDetails(recipeName);
         });
-
-        function renderRecipe(recipe) {
-            const recipeDetailsContainer = document.getElementById('recipe-details');
-            if (recipe) {
-                // Construct HTML for recipe details
-                const recipeHTML = `
-                    <h2>${recipe.name}</h2>
-                    <p>Category: ${recipe.category}</p>
-                    <img src="${recipe.image}" alt="${recipe.name}" width="300" height="200">
-                    <!-- Add more recipe details as needed -->
-                `;
-
-                // Insert recipe details HTML into the container
-                recipeDetailsContainer.innerHTML = recipeHTML;
-            } else {
-                // If recipe not found, display a message
-                recipeDetailsContainer.innerHTML = '<p>Recipe not found.</p>';
-            }
-        }
     </script>
     <div class="horizontal-box">
         <div class="box " style="padding-left: 80px;">
@@ -252,13 +284,13 @@ input[type="submit"]:hover {
 
     </div>
 
-    <div class="horizontal-box" style=" padding-top: 260px; padding-left: 10px;  padding-bottom: 250px;">
-        <div class="box" style="padding-left: 60px; width: 840px; height: 500px; ">
-            <video width="1000" height="500" controls style="border-radius: 20px;">
-                <source src="High Protein Fried Rice Made In 20 Minutes.mp3" type="video/mp3">
-                Your browser does not support the video tag.
-            </video>
+
+   
+    <div class="horizontal-box" style="padding-top: 260px; padding-left: 10px; padding-bottom: 250px;">
+        <div class="box" style="padding-left: 60px; width: 840px; height: 500px;">
+            <iframe id="recipe-video" width="1200" height="500" src="https://www.youtube.com/embed/z06u6SBzxs4" frameborder="0" allowfullscreen style="border-radius: 20px;"></iframe>
         </div>
+    
 
         <div class="box" style=" background-color:  #e7f9ff;   width: 400px;   height: 500px; border-radius: 20px;  ">
 
@@ -296,9 +328,10 @@ input[type="submit"]:hover {
             
         </div>
     </div>
+</div>
 
 
-    <div class="horizontal-box" style="padding-top: 50px; padding-left: 80px; padding-right: 120px; width: 1450px; color: #4b4b4b">
+    <div id="recipe-desc" class="horizontal-box" style="padding-top: 50px; padding-left: 80px; padding-right: 120px; width: 1450px; color: #4b4b4b">
 
         <p>Fried rice, a delectable and adaptable culinary creation tracing its roots to China, has transcended cultural boundaries to become a cherished delight enjoyed across the globe. While its origins may lie in the heart of China, 
             this dish has gracefully assimilated into diverse culinary landscapes, finding its place as a beloved staple in numerous Asian cuisines. 
@@ -313,35 +346,8 @@ input[type="submit"]:hover {
                 <p class="Mainsmalltext"  style="font-size: 25px; font-weight: bolder; "> Ingredients</p> 
                 <p class="Mainsmalltext"  style="font-size: 19px; font-weight: bolder; "> For Main dish</p> 
 
-                
+                <div id="ingredients-container"></div>
 
-                
-<div class="horibox horizontal-line" style="height: 40px; width: 800px; " >
-    <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" checked onchange="applyTextStyle(this)">
-    <br>
-    <p class="smalltext line-through"  >Lorem ispsum dolor sit amet</p>
-</div>
-
-<div class="horibox horizontal-line" style="height: 40px; width: 800px;">
-    <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" onchange="applyTextStyle(this)">
-    <br>
-    <p class="smalltext black-text">Lorem ispsum dolor sit amet</p>
-</div>
-<div class="horibox horizontal-line" style="height: 40px; width: 800px;">
-    <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" onchange="applyTextStyle(this)">
-    <br>
-    <p class="smalltext black-text">Lorem ispsum dolor sit amet</p>
-</div>
-<div class="horibox horizontal-line" style="height: 40px; width: 800px;">
-    <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" onchange="applyTextStyle(this)">
-    <br>
-    <p class="smalltext black-text">Lorem ispsum dolor sit amet</p>
-</div>
-<div class="horibox horizontal-line" style="height: 40px; width: 800px;">
-    <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" onchange="applyTextStyle(this)">
-    <br>
-    <p class="smalltext black-text">Lorem ispsum dolor sit amet</p>
-</div>
 
 <script>
     function applyTextStyle(checkbox) {
@@ -357,23 +363,7 @@ input[type="submit"]:hover {
 </script>
 
 
-              <p class="Mainsmalltext"  style="font-size: 19px; font-weight: bolder; padding-top: 60px;"> For The Sause</p> 
-
-
-               <div class="horibox horizontal-line" style="height: 40px; width: 800px;">
-                <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" checked onchange="applyTextStyle(this)">
-                <p class="smalltext line-through" style="margin-left: 10px;">Lorem ispsum dolor sit amet</p>
-            </div>
-            <div class="horibox horizontal-line" style="height: 40px; width: 800px;">
-                <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" onchange="applyTextStyle(this)">
-                <br>
-                <p class="smalltext black-text">Lorem ispsum dolor sit amet</p>
-            </div>
-            <div class="horibox horizontal-line" style="height: 40px; width: 800px;">
-                <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" onchange="applyTextStyle(this)">
-                <br>
-                <p class="smalltext black-text">Lorem ispsum dolor sit amet</p>
-            </div>
+ 
             </div>
         </div>
 
@@ -421,7 +411,8 @@ input[type="submit"]:hover {
         <div class="vertical-box" style="width: 900px; padding-left: 70px; padding-top: 700px;" >
             <p class="Mainsmalltext"  style="font-size: 25px; font-weight: bolder; ">Directions</p> 
 
-            <div class="horibox horizontal-line" style="height: 780px; width: 800px;" >
+            <div id="directions-container"></div>
+            <!-- <div class="horibox horizontal-line" style="height: 780px; width: 800px;" >
                     <div class="vertical-box">
                         <div class="horibox">
                             <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" checked onchange="applyTextStyle(this)">
@@ -462,20 +453,15 @@ input[type="submit"]:hover {
         </div>
      
     </div>
-          
-<script>
-function applyTextStyle(checkbox) {
-    var paragraph = checkbox.parentNode.querySelector('p');
-    if (checkbox.checked) {
-        paragraph.classList.remove('black-text');
-        paragraph.classList.add('line-through');
-    } else {
-        paragraph.classList.remove('line-through');
-        paragraph.classList.add('black-text');
-    }
-}
-</script>
+           -->
+
+
+
+
+
+
         </div>
+
 
 
 <div class="horizontal-box" style="padding-left: 130px; padding-top: 350px;  padding-left: 80px; border-radius: 20px;">
