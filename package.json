@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "bcrypt-nodejs": "^0.0.3",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "cjs": "^0.0.11",
@@ -23,7 +24,12 @@
     "hbs": "^4.2.0",
     "mongoose": "^5.13.8",
     "mongose": "^0.0.2-security",
+<<<<<<< Updated upstream
     "multer": "^1.4.5-lts.1"
+=======
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0"
+>>>>>>> Stashed changes
   },
   "keywords": []
 }

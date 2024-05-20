@@ -3,6 +3,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
+const bcryptNodejs = require("bcrypt-nodejs");
 const path = require("path"); // Import path module
 const recipeRoutes = require('./Routes/recipeRoutes');
 const router = require("./Routes/recipeRoutes");
@@ -21,9 +22,6 @@ app.use('/js', express.static(__dirname + '/js')); // Serve JavaScript files
 
 app.use('/', recipeRoutes);
 
-app.get('/style.css', (req, res) => {
-    res.sendFile(path.join(__dirname, 'style.css'));
-});
 mongoose.connect('mongodb://localhost:27017/Database', {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -34,7 +32,7 @@ db.on('error', console.error.bind(console, "Error in connecting to Database"));
 db.once('open', () => {
     console.log("Connected to Database");
 });
-
+//db
 const userSchema = new mongoose.Schema({
     name: String,
     age: Number,
@@ -45,7 +43,6 @@ const userSchema = new mongoose.Schema({
 });
 
 const User = mongoose.model('User', userSchema);
-
 
 app.post("/sign_up", async (req, res) => {
     try {
@@ -111,6 +108,7 @@ app.post('/login', async (req, res) => {
     }
 });
 
+<<<<<<< Updated upstream
 router.post('/Addrecipe', upload.single('recipeImage'), async (req, res) => {
     try {
         // Check if a file was uploaded
@@ -155,6 +153,27 @@ router.post('/Addrecipe', upload.single('recipeImage'), async (req, res) => {
 
   
 
+=======
+// progile 
+// app.get('/profile',isAuthenticated, (req,res)=> {
+
+//     res.render('public/profile', {
+//         success: req.flash('success')
+//     })
+      
+//     });
+    // logout user
+
+    app.get('/logout', (req,res)=> {
+    // req.logout();
+    res.redirect('public/login');
+    res.redirect('public/profile')
+    req.logout(function(err) {
+      if (err) { return next(err); }
+      res.redirect('/');
+    })
+});
+>>>>>>> Stashed changes
 
 app.get("/", (req, res) => {
     res.set({
@@ -163,6 +182,9 @@ app.get("/", (req, res) => {
     return res.redirect('signup.html');
 });
 
+app.get('/style.css', (req, res) => {
+    res.sendFile(path.join(__dirname, 'style.css'));
+});
 
 app.get('/index.html', (req, res) => {
     res.sendFile(__dirname + '/index.html');

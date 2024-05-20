@@ -275,6 +275,39 @@
         background-color: #ffffff; 
         z-index: 1000; 
     }
+      /* search */
+      .search-box {
+            width: 100px;
+            border: 1px solid white;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+        .search-box input {
+            border: none;
+            outline: none;
+            box-shadow: none; 
+            width: 100%;
+            font-size: 16px;
+            padding: 10px;
+        }
+        #searchInput {
+            width: 300px;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .icon {
+            width: 40px;
+            height: 40px;
+        }
+        .recipe {
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -287,14 +320,19 @@
         </div>
         <div class="box navhead">
             <a href="index.html">Home<i class="fa" aria-hidden="true"></i></a>
-            <a href="Recipiespage.html">Recipes<i class="fa" aria-hidden="true"></i></a>
             <a href="Blogpage.html">Blog<i class="fa" aria-hidden="true"></i></a>
             <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
-            <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a>
-           
+            <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a> 
         </div>
         <a href="signup.html">Sign Up<i class="fa" aria-hidden="true"></i></a>
         <a href="login.html">Log In<i class="fa" aria-hidden="true"></i></a>
+
+     <!-- Search input with icon -->
+    <div class="search-box">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text"  id="searchInput" placeholder="Search for a recipe...">
+    </div>
+
         <div class="social-links ">
             <a href="https://www.facebook.com"><img src="img/facebook.png" alt="facebook logo"></i></a>
             <a href="https://twitter.com"><img src="img/Twitter.png" alt="Twitter logo"></i></a>
@@ -302,7 +340,7 @@
         </div>
     </div>
     <div class="horizontal-line"></div>
-
+     <br> 
     <!-- Nav End -->
     <!-- ##### Header Area End ##### -->
 
@@ -419,12 +457,15 @@
                     </div>
                 </div>
             </div>
+<<<<<<< Updated upstream
             <div class="row mt-4"  id="recipeList">
 
+=======
+            <div class="row" id="recipes">
+>>>>>>> Stashed changes
                 <!-- 1 Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-3 recipe-item" data-title="Sushi Easy Recipe" type="lunch">
-                    <a href="Recipiespage.html?recipe=Sushi%20Easy%20Recipe" class="recipe-link">
-                    <div class="single-best-receipe-area mb-30">
+                <div class="col-12 col-sm-6 col-lg-3 " data-title="Sushi Easy Recipe" type="lunch">
+                    <div class="single-best-receipe-area mb-30 recipe">
                         <img src="img/bg-img/r1.jpg" alt="">
                         <div class="receipe-content">
                             <h5>Sushi Easy Receipy</h5>
@@ -452,7 +493,7 @@
                 
                 <!-- 2 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3"  data-title="Homemade Burger"  type="dinner">
-                    <div class="single-best-receipe-area mb-30">
+                    <div class="single-best-receipe-area mb-30 recipe">
                         <img src="img/bg-img/r2.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -481,7 +522,7 @@
 
                 <!-- 3 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3"  data-title="Vegan Smoothie"  type="breakfast" >
-                    <div class="single-best-receipe-area mb-30">
+                    <div class="single-best-receipe-area mb-30 recipe">
                         <img src="img/bg-img/r3.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -510,7 +551,7 @@
 
                 <!-- 4 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3" data-title="Homemade Burger"  type="dinner">
-                    <div class="single-best-receipe-area mb-30">
+                    <div class="single-best-receipe-area mb-30 recipe">
                         <img src="img/bg-img/r4.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -539,7 +580,7 @@
 
                 <!-- 5 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3"  data-title="Homemade Breakfast"  type="breakfast">
-                    <div class="single-best-receipe-area mb-30">
+                    <div class="single-best-receipe-area mb-30 recipe">
                         <img src="img/bg-img/r5.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -568,7 +609,7 @@
 
                 <!-- 6 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3" data-title="Healthy Fruit Desert"  type="lunch">
-                    <div class="single-best-receipe-area mb-30">
+                    <div class="single-best-receipe-area mb-30 recipe">
                         <img src="img/bg-img/r6.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -594,6 +635,7 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< Updated upstream
                
 
 
@@ -602,6 +644,65 @@
                
                 <div id="recipeList"></div>
 
+=======
+                <!-- 7 Single Best Receipe Area -->
+                <div class="col-12 col-sm-6 col-lg-3"  data-title="Healthy Salad"  type="lunch">
+                    <div class="single-best-receipe-area mb-30 recipe">
+                        <img  class="img-fix"  src="img/bg-img/r6.jpg" alt="">
+                        <div class="receipe-content">
+                            <a href="Recipiespage.html">
+                                <h5>Healthy Salad </h5>
+                            </a>
+                            <div class="timing d-flex justify-content-between">
+                                <div class="delivey-time">
+                                    <img src="img/bg-img/insta4.jpg" alt="">
+                                    <span>30 Minutes</span>
+                                </div>
+                                <div class="food-catagory">
+                                    <img src="img/core-img/Time (2).png" alt="">
+                                    <span>Healthy</span>
+                                </div>
+                            </div>
+                            <div class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8 Single Best Receipe Area -->
+                <div class="col-12 col-sm-6 col-lg-3" data-title="Noodles" type="dinner">
+                    <div class="single-best-receipe-area mb-30 recipe">
+                        <img class="img-fix" src="img/bg-img/insta2.jpg" alt="">
+                        <div class="receipe-content">
+                            <a href="Recipiespage.html">
+                                <h5>Noodles</h5>
+                            </a>
+                            <div class="timing d-flex justify-content-between">
+                                <div class="delivey-time">
+                                    <img src="img/core-img/Time (1).png" alt="">
+                                    <span>30 Minutes</span>
+                                </div>
+                                <div class="food-catagory">
+                                    <img src="img/core-img/Time (2).png" alt="">
+                                    <span>Healthy</span>
+                                </div>
+                            </div>
+                            <div class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-o" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+>>>>>>> Stashed changes
                 <script>
                    document.addEventListener('DOMContentLoaded', function() {
 
@@ -1209,5 +1310,31 @@ showAllRecipes();
     </script>
     <script type="module" src="js/main.js"></script>
 
+    <script>
+        // Function to perform search
+        function performSearch() {
+            // Get the search query
+            var query = document.getElementById('searchInput').value.toLowerCase();
+            // Get all recipe elements
+            var recipes = document.getElementsByClassName('recipe');
+    
+            // Loop through recipes to find matches
+            for (var i = 0; i < recipes.length; i++) {
+                var recipe = recipes[i];
+                var recipeText = recipe.textContent.toLowerCase();
+    
+                // If the recipe contains the search query
+                if (recipeText.includes(query)) {
+                    // Show the recipe
+                    recipe.classList.remove('hidden');
+                } else {
+                    // Hide the recipe
+                    recipe.classList.add('hidden');
+                }
+            }
+        }
+        // Add event listener to trigger search on input change
+        document.getElementById('searchInput').addEventListener('input', performSearch);
+    </script>
 </body>
 </html>
