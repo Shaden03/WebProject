@@ -324,13 +324,18 @@
             <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
             <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a> 
         </div>
-        <a href="signup.html">Sign Up<i class="fa" aria-hidden="true"></i></a>
-        <a href="login.html">Log In<i class="fa" aria-hidden="true"></i></a>
-
+        <div id="userLinks">
+        <a href="/users/signup">Sign Up<i class="fa" aria-hidden="true"></i></a>
+        <a href="/users/login">Log In<i class="fa" aria-hidden="true"></i></a>
+        </div>
+        <div id="loggedInLinks" style="display: none;">
+            <a href="Add Recipe.html">Add Recipe <i class="fa" aria-hidden="true"></i></a>
+            <a href="index.html">logout <i class="fa" aria-hidden="true"></i></a>
+        </div>
      <!-- Search input with icon -->
     <div class="search-box">
     <i class="fa-solid fa-magnifying-glass"></i>
-    <input type="text"  id="searchInput" placeholder="Search for a recipe...">
+    <input type="text" id="searchInput" placeholder="Search for a recipe">
     </div>
 
         <div class="social-links ">
@@ -340,7 +345,24 @@
         </div>
     </div>
     <div class="horizontal-line"></div>
-     <br> 
+    <script>
+        // Assuming user is a JavaScript variable that determines whether the user is logged in or not
+        var user = false; // Set to true if user is logged in
+    
+        // Select the userLinks and loggedInLinks divs
+        var userLinks = document.getElementById("userLinks");
+        var loggedInLinks = document.getElementById("loggedInLinks");
+    
+        // If user is logged in, hide userLinks and show loggedInLinks
+        if (user) {
+            userLinks.style.display = "none";
+            loggedInLinks.style.display = "block";
+        } else {
+            userLinks.style.display = "block";
+            loggedInLinks.style.display = "none";
+        }
+    </script>
+     <br>  <br> 
     <!-- Nav End -->
     <!-- ##### Header Area End ##### -->
 
@@ -457,15 +479,12 @@
                     </div>
                 </div>
             </div>
-<<<<<<< Updated upstream
-            <div class="row mt-4"  id="recipeList">
 
-=======
-            <div class="row" id="recipes">
->>>>>>> Stashed changes
+            <div id= "recipesfilter">  
+            <div class="row mt-4" id="recipeList">                         
                 <!-- 1 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3 " data-title="Sushi Easy Recipe" type="lunch">
-                    <div class="single-best-receipe-area mb-30 recipe">
+                    <div class="single-best-receipe-area mb-30 recipesearch">
                         <img src="img/bg-img/r1.jpg" alt="">
                         <div class="receipe-content">
                             <h5>Sushi Easy Receipy</h5>
@@ -493,7 +512,7 @@
                 
                 <!-- 2 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3"  data-title="Homemade Burger"  type="dinner">
-                    <div class="single-best-receipe-area mb-30 recipe">
+                    <div class="single-best-receipe-area mb-30 recipesearch">
                         <img src="img/bg-img/r2.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -522,7 +541,7 @@
 
                 <!-- 3 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3"  data-title="Vegan Smoothie"  type="breakfast" >
-                    <div class="single-best-receipe-area mb-30 recipe">
+                    <div class="single-best-receipe-area mb-30 recipesearch">
                         <img src="img/bg-img/r3.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -551,7 +570,7 @@
 
                 <!-- 4 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3" data-title="Homemade Burger"  type="dinner">
-                    <div class="single-best-receipe-area mb-30 recipe">
+                    <div class="single-best-receipe-area mb-30 recipesearch">
                         <img src="img/bg-img/r4.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -580,7 +599,7 @@
 
                 <!-- 5 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3"  data-title="Homemade Breakfast"  type="breakfast">
-                    <div class="single-best-receipe-area mb-30 recipe">
+                    <div class="single-best-receipe-area mb-30 recipesearch">
                         <img src="img/bg-img/r5.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -609,7 +628,7 @@
 
                 <!-- 6 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3" data-title="Healthy Fruit Desert"  type="lunch">
-                    <div class="single-best-receipe-area mb-30 recipe">
+                    <div class="single-best-receipe-area mb-30 recipesearch">
                         <img src="img/bg-img/r6.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -635,7 +654,6 @@
                         </div>
                     </div>
                 </div>
-<<<<<<< Updated upstream
                
 
 
@@ -644,65 +662,6 @@
                
                 <div id="recipeList"></div>
 
-=======
-                <!-- 7 Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-3"  data-title="Healthy Salad"  type="lunch">
-                    <div class="single-best-receipe-area mb-30 recipe">
-                        <img  class="img-fix"  src="img/bg-img/r6.jpg" alt="">
-                        <div class="receipe-content">
-                            <a href="Recipiespage.html">
-                                <h5>Healthy Salad </h5>
-                            </a>
-                            <div class="timing d-flex justify-content-between">
-                                <div class="delivey-time">
-                                    <img src="img/bg-img/insta4.jpg" alt="">
-                                    <span>30 Minutes</span>
-                                </div>
-                                <div class="food-catagory">
-                                    <img src="img/core-img/Time (2).png" alt="">
-                                    <span>Healthy</span>
-                                </div>
-                            </div>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 8 Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-3" data-title="Noodles" type="dinner">
-                    <div class="single-best-receipe-area mb-30 recipe">
-                        <img class="img-fix" src="img/bg-img/insta2.jpg" alt="">
-                        <div class="receipe-content">
-                            <a href="Recipiespage.html">
-                                <h5>Noodles</h5>
-                            </a>
-                            <div class="timing d-flex justify-content-between">
-                                <div class="delivey-time">
-                                    <img src="img/core-img/Time (1).png" alt="">
-                                    <span>30 Minutes</span>
-                                </div>
-                                <div class="food-catagory">
-                                    <img src="img/core-img/Time (2).png" alt="">
-                                    <span>Healthy</span>
-                                </div>
-                            </div>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
->>>>>>> Stashed changes
                 <script>
                    document.addEventListener('DOMContentLoaded', function() {
 
@@ -779,6 +738,9 @@
 });
 
                 </script>
+
+            </div>
+           </div>
     </section>
     <!-- ##### Best Receipe Area End ##### -->
     <!-- ##### Ai Area Start ##### -->
@@ -1188,19 +1150,8 @@
      <!-- ##### Footer Area end ##### -->
     </div>
 
-    <!-- ##### All Javascript Files ##### -->
-    <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
     <script>
-        // Sample recipe data
+    // Sample recipe data
         var recipes = [
     { name: "Sushi Easy Recipe", type: "lunch", image: "img/bg-img/r1.jpg"},
     { name: "Homemade Burger", type: "dinner", image: "img/bg-img/r2.jpg"},
@@ -1310,31 +1261,47 @@ showAllRecipes();
     </script>
     <script type="module" src="js/main.js"></script>
 
-    <script>
+     <script>
         // Function to perform search
         function performSearch() {
             // Get the search query
             var query = document.getElementById('searchInput').value.toLowerCase();
             // Get all recipe elements
-            var recipes = document.getElementsByClassName('recipe');
-    
+            var recipesfilter = document.getElementsByClassName('recipesearch');
+
             // Loop through recipes to find matches
-            for (var i = 0; i < recipes.length; i++) {
-                var recipe = recipes[i];
-                var recipeText = recipe.textContent.toLowerCase();
-    
+            for (var i = 0; i < recipesfilter.length; i++) {
+                var recipesearch = recipesfilter[i];
+                var recipeText = recipesearch.textContent.toLowerCase();
+
                 // If the recipe contains the search query
                 if (recipeText.includes(query)) {
                     // Show the recipe
-                    recipe.classList.remove('hidden');
+                    recipesearch.classList.remove('hidden');
                 } else {
                     // Hide the recipe
-                    recipe.classList.add('hidden');
+                    recipesearch.classList.add('hidden');
                 }
             }
         }
         // Add event listener to trigger search on input change
         document.getElementById('searchInput').addEventListener('input', performSearch);
     </script>
+
+
+ <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="/js/active.js"></script>
+    <script defer src="/axios/dist/axios.min.js"></script>
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 </html>

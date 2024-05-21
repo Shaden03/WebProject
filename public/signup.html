@@ -8,7 +8,8 @@
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <link rel="stylesheet" href="../style.css">
 
-    <script src="/js/jquery-3.3.1.min.js"></script>
+    <!-- <script src="/js/jquery-3.3.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <!-- Bootstrap CSS -->
@@ -55,35 +56,31 @@
                           <h3>Sign Up to <strong>FoodieLand</strong></h3>
                         </div>
 
-                        <form action="/sign_up" method="POST">
-                            <label for="username">Username</label>
-                            <input class="form-control" type="text" class="box" id="name" name="name" placeholder="Name" required/>
-                            <br>
-                            <label for="Age">Age</label>
-                            <input  class="form-control" type="text" class="box" id="age" name="age" placeholder="Age" required/>
-                            <br>
-                            <label for="email">Email</label>
-                            <input  class="form-control" type="text" class="box" id="email" name="email" placeholder="Email" required/>
-                            <br>
-                            <label for="Mobile">Mobile</label>
-                            <input  class="form-control" type="text" class="box" id="phno" name="phno" placeholder="Mobile" required/>
-                            <br>
-                            <label for="Gender">Gender</label>
-                            <input  class="form-control" type="text" class="box" id="gender" name="gender" placeholder="Gender" required/>
-                            <br>
-                            <label for="Password">Password</label>
-                            <input class="form-control" type="text" class="box" id="password" name="password" placeholder="Password" required/>
-                            <br>
-                            <input type="submit" value="Sign Up" id="submit"  class="btn btn-pill text-white btn-block btn-primary" />
-        
-                            </form>
-                          <div class="d-flex mb-5 align-items-center">
-                            <span class="ml-auto">
-                            </span> 
-                            <a href="login.html" class="forgot-pass">Already have an account? Sign in</a>
-                          </div>
-        
-        
+                        <form action="/users/signup" method="POST">
+                          <label for="name">Username</label>
+                          <input class="form-control box" type="text" id="name" name="name" placeholder="Name" required/>
+                          <br>
+                          <label for="age">Age</label>
+                          <input class="form-control box" type="text" id="age" name="age" placeholder="Age" required/>
+                          <br>
+                          <label for="email">Email</label>
+                          <input class="form-control box" type="text" id="email" name="email" placeholder="Email" required/>
+                          <br>
+                          <label for="phno">Mobile</label>
+                          <input class="form-control box" type="text" id="phno" name="phno" placeholder="Mobile" required/>
+                          <br>
+                          <label for="gender">Gender</label>
+                          <input class="form-control box" type="text" id="gender" name="gender" placeholder="Gender" required/>
+                          <br>
+                          <label for="password">Password</label>
+                          <input class="form-control box" type="password" id="password" name="password" placeholder="Password" required/>
+                          <br>
+                          <input type="submit" value="Sign Up" id="submit" class="btn btn-pill text-white btn-block btn-primary" />
+                      </form>
+                      <div class="d-flex mb-5 align-items-center">
+                          <span class="ml-auto"></span>
+                          <a href="/public/login.html" class="forgot-pass">Already have an account? Sign in</a>
+                      </div>
                           <span class="d-block text-center my-4 text-muted"> or sign up with</span>
                           
                           <div class="social-login text-center">
@@ -93,7 +90,7 @@
                           <a href="https://twitter.com"><img src="../img/icon-twitterx.png" alt="Twitter logo"></i></a>
                             <span></span> 
                           </a>
-                            <a href="https://accounts.google.com/AddSession/signinchooser"><img src="../img/icon-google.png" alt="Twitter logo"></i></a>
+                            <a href="https://accounts.google.com/AddSession/signinchooser"><img src="../img/icon-google.png" alt="google logo"></i></a>
                             <span></span> 
                           </a>
                           </div>
@@ -122,11 +119,12 @@
         </div>
         <!-- ##### All Javascript Files ##### -->
         <!-- jQuery-2.2.4 js -->
-        <script src="/js/jquery-3.3.1.min.js"></script>
+        <script src="/js/jquery/jquery-2.2.4.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <!-- Popper js -->
-        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap/popper.min.js"></script>
         <!-- Bootstrap js -->
-        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/bootstrap/bootstrap.min.js"></script>
         <!-- All js -->
         <script src="/js/active.js"></script>
 

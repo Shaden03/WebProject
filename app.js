@@ -1,9 +1,10 @@
-
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const bcrypt = require("bcrypt");
-const bcryptNodejs = require("bcrypt-nodejs");
+const passport = require('passport');
+const session = require('express-session');
+const flash = require('connect-flash');
 const path = require("path"); // Import path module
 const recipeRoutes = require('./Routes/recipeRoutes');
 const router = require("./Routes/recipeRoutes");
@@ -12,19 +13,42 @@ const upload = multer({ dest: 'uploads/' }); // Specify the directory to store u
 const Recipe = require('./js/Addrecipie');
 const app = express();
 
+// Body parser middleware
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+// Static file serving
+// Static file serving
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static('public')); 
 app.use(express.static('img'));
 app.use(express.static('js'));
 app.use(express.static(__dirname)); 
-app.use(bodyParser.urlencoded({ extended: true }));
 app.use('/js', express.static(__dirname + '/js')); // Serve JavaScript files
-
 app.use('/', recipeRoutes);
 
+// session and flash config .
+app.use(session({
+    secret: 'lorem ipsum',
+    resave: false,
+    saveUninitialized: false,
+    cookie: {maxAge: 60000 * 15}
+}))
+app.use(flash());
+
+// Passport Configuration
+require('./config/passport-setup');
+app.use(passport.initialize());
+app.use(passport.session());
+
+// bring user routes
+const users = require('./Routes/user-routes');
+app.use('/users', users);
+
+// Database connection
 mongoose.connect('mongodb://localhost:27017/Database', {
     useNewUrlParser: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useCreateIndex: true 
 });
 
 const db = mongoose.connection;
@@ -32,83 +56,8 @@ db.on('error', console.error.bind(console, "Error in connecting to Database"));
 db.once('open', () => {
     console.log("Connected to Database");
 });
-//db
-const userSchema = new mongoose.Schema({
-    name: String,
-    age: Number,
-    email: String,
-    phno: String,
-    gender: String,
-    password: String,
-});
 
-const User = mongoose.model('User', userSchema);
-
-app.post("/sign_up", async (req, res) => {
-    try {
-        const { name, age, email, phno, gender, password } = req.body;
-
-        // Hash the password before saving it
-        const hashedPassword = await bcrypt.hash(password, 10);
-        console.log("Hashed Password before saving:", hashedPassword); // Log hashed password before saving
-
-        const newUser = new User({
-            name,
-            age,
-            email,
-            phno,
-            gender,
-            password: hashedPassword
-        });
-
-        // Save the user to the database
-        const savedUser = await newUser.save();
-        console.log("User created successfully:", savedUser);
-
-        return res.redirect('/index.html');
-    } catch (err) {
-        console.error("Error during sign-up:", err);
-        res.status(500).send("Internal server error");
-    }
-});
-
-
-
-// Login route
-app.post('/login', async (req, res) => {
-    const { email, password } = req.body;
-
-    try {
-        const user = await User.findOne({ email: email });
-
-        if (!user) {
-            return res.status(401).send('Incorrect email.');
-        }
-
-        console.log("Provided Password:", password);
-        console.log("Hashed Password in DB:", user.password);
-
-        const isPasswordValid = await bcrypt.compare(password, user.password);
-
-        if (!isPasswordValid) {
-            return res.status(401).send('Incorrect password.');
-        }
-
-        // If credentials are correct, proceed to the next step (e.g., generate a session or token)
-        // res.redirect('/nextpage'); // Uncomment if using redirect
-
-        // Example response for successful login
-      //  res.status(200).send('signup_successful.html');
-      
-        res.redirect('/index.html');
-
-    } catch (err) {
-        console.error("Error during login:", err);
-        res.status(500).send("Internal server error");
-    }
-});
-
-<<<<<<< Updated upstream
+// post Addrecipe 
 router.post('/Addrecipe', upload.single('recipeImage'), async (req, res) => {
     try {
         // Check if a file was uploaded
@@ -151,39 +100,26 @@ router.post('/Addrecipe', upload.single('recipeImage'), async (req, res) => {
     }
 });
 
-  
+// Test bcrypt functionality
+async function testBcrypt() {
+    try {
+        const password = '12345678';
+        const hashedPassword = await bcrypt.hash(password, 10);
+        console.log("Hashed Password:", hashedPassword);
 
-=======
-// progile 
-// app.get('/profile',isAuthenticated, (req,res)=> {
+        // Compare a hardcoded password with the hashed password
+        const isPasswordValid = await bcrypt.compare('12345678', hashedPassword);
+        console.log("Is Password Valid:", isPasswordValid);
+    } catch (error) {
+        console.error("Error:", error);
+    }
+}
+testBcrypt();
 
-//     res.render('public/profile', {
-//         success: req.flash('success')
-//     })
-      
-//     });
-    // logout user
-
-    app.get('/logout', (req,res)=> {
-    // req.logout();
-    res.redirect('public/login');
-    res.redirect('public/profile')
-    req.logout(function(err) {
-      if (err) { return next(err); }
-      res.redirect('/');
-    })
-});
->>>>>>> Stashed changes
-
+// Home Route
 app.get("/", (req, res) => {
-    res.set({
-        "Allow-access-Allow-Origin": '*'
-    });
-    return res.redirect('signup.html');
-});
-
-app.get('/style.css', (req, res) => {
-    res.sendFile(path.join(__dirname, 'style.css'));
+    res.set({ "Allow-access-Allow-Origin": '*' });
+    res.sendFile(path.join(__dirname, 'public/signup.html'));
 });
 
 app.get('/index.html', (req, res) => {
@@ -209,51 +145,11 @@ app.get('/Recipiespage.html', (req, res) => {
 });
 
 
-
-
 // Start the server
 const port = 3094;
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
 });
-
-
-
-
-async function testBcrypt() {
-    try {
-        const password = '12345678';
-        const hashedPassword = await bcrypt.hash(password, 10);
-        console.log("Hashed Password:", hashedPassword);
-
-        // Compare a hardcoded password with the hashed password
-        const isPasswordValid = await bcrypt.compare('12345678', hashedPassword);
-        console.log("Is Password Valid:", isPasswordValid);
-    } catch (error) {
-        console.error("Error:", error);
-    }
-}
-
-testBcrypt();
-
-
-// var express = require("express");
-// var bodyParser = require("body-parser");
-// var mongoose = require("mongoose");
-// const app = express();
-
-// app.use(bodyParser.json());
-// app.use(express.static('public'));
-// app.use(bodyParser.urlencoded({ extended: true }));
-
-// mongoose.connect('mongodb://localhost:27017/Database', {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true
-// });
-
-// const db = mongoose.connection;
-// db.on('error', () => console.log("Error in connecting to Database"));
-// db.once('open', () => console.log("Connected to Database"));
 
 
 // app.post("/sign_up", (req, res) => {
@@ -311,8 +207,80 @@ testBcrypt();
 //     return res.redirect('signup.html');
 // });
 
-// app.listen(3000, () => console.log("Listening on port 3000"));
 
-// app.listen(3000);
-// console.log("Listening on port 3000");
+// •••••**** this code correct if other code error***********
 
+// const userSchema = new mongoose.Schema({
+//     name: String,
+//     age: Number,
+//     email: String,
+//     phno: String,
+//     gender: String,
+//     password: String,
+// });
+
+// const User = mongoose.model('User', userSchema);
+
+// // post sign_up
+// app.post("/sign_up", async (req, res) => {
+//     try {
+//         const { name, age, email, phno, gender, password } = req.body;
+
+//         // Hash the password before saving it
+//         const hashedPassword = await bcrypt.hashSync(password, bcrypt.genSaltSync(10));
+//         console.log("Hashed Password before saving:", hashedPassword); // Log hashed password before saving
+
+//         const newUser = new User({
+//             name,
+//             age,
+//             email,
+//             phno,
+//             gender,
+//             password: hashedPassword
+//         });
+
+//         // Save the user to the database
+//         const savedUser = await newUser.save();
+//         console.log("User created successfully:", savedUser);
+
+//         return res.redirect('/index.html');
+//     } catch (err) {
+//         console.error("Error during sign-up:", err);
+//         res.status(500).send("Internal server error");
+//     }
+// });
+
+
+// // post Login route
+// app.post('/login', async (req, res) => {
+//     const { email, password } = req.body;
+
+//     try {
+//         const user = await User.findOne({ email: email });
+
+//         if (!user) {
+//             return res.status(401).send('Incorrect email.');
+//         }
+
+//         console.log("Provided Password:", password);
+//         console.log("Hashed Password in DB:", user.password);
+
+//         const isPasswordValid = await bcrypt.compare(password, user.password);
+
+//         if (!isPasswordValid) {
+//             return res.status(401).send('Incorrect password.');
+//         }
+
+//         // If credentials are correct, proceed to the next step (e.g., generate a session or token)
+//         // res.redirect('/nextpage'); // Uncomment if using redirect
+
+//         // Example response for successful login
+//       //  res.status(200).send('signup_successful.html');
+      
+//         res.redirect('/index.html');
+
+//     } catch (err) {
+//         console.error("Error during login:", err);
+//         res.status(500).send("Internal server error");
+//     }
+// });
