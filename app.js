@@ -134,7 +134,9 @@ app.get('/Recipiespage.html', (req, res) => {
     res.sendFile(__dirname + '/Recipiespage.html');
 });
 
-
+app.get('/styleblog.css', (req, res) => {
+    res.sendFile(path.join(__dirname, 'styleblog.css'));
+});
 
 
 // Start the server
