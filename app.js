@@ -118,6 +118,14 @@ async function testBcrypt() {
 }
 testBcrypt();
 
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+// Endpoint to check if the user is authenticated
+app.get('/auth/status', (req, res) => {
+    res.json({ isAuthenticated: req.isAuthenticated() });
+});
+
 // Home Route
 app.get("/", (req, res) => {
     res.set({ "Allow-access-Allow-Origin": '*' });

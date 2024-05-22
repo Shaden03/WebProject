@@ -308,6 +308,21 @@
         .hidden {
             display: none;
         }
+
+        /* logout */
+        #auth-buttons a, #auth-buttons button {
+            display: inline;
+            margin-right: 20px;
+            color: #9f9d9d;
+            cursor: pointer;
+            font-size: medium;;
+        }
+        #auth-buttons a:hover, #auth-buttons button:hover {
+            background-color: #e7f9ff;
+        }
+        #auth-buttons button:hover {
+            background-color: #e7f9ff;
+        }
     </style>
 </head>
 <body>
@@ -324,20 +339,17 @@
             <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
             <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a> 
         </div>
-        <div id="userLinks">
-        <a href="/users/signup">Sign Up<i class="fa" aria-hidden="true"></i></a>
-        <a href="/users/login">Log In<i class="fa" aria-hidden="true"></i></a>
+        <div  class="box navhead" id="auth-buttons">
+            <a href="/users/login" id="loginBtn" style="display: none;">Login<i class="fa" aria-hidden="true"></i></a>
+            <a href="/users/signup" id="signupBtn" style="display: none;">Sign Up<i class="fa" aria-hidden="true"></i></a>
+            <button id="logoutBtn" style="display: none;">Logout<i class="fa" aria-hidden="true"></i></button>
         </div>
-        <div id="loggedInLinks" style="display: none;">
-            <a href="Add Recipe.html">Add Recipe <i class="fa" aria-hidden="true"></i></a>
-            <a href="index.html">logout <i class="fa" aria-hidden="true"></i></a>
-        </div>
+
      <!-- Search input with icon -->
     <div class="search-box">
     <i class="fa-solid fa-magnifying-glass"></i>
     <input type="text" id="searchInput" placeholder="Search for a recipe">
     </div>
-
         <div class="social-links ">
             <a href="https://www.facebook.com"><img src="img/facebook.png" alt="facebook logo"></i></a>
             <a href="https://twitter.com"><img src="img/Twitter.png" alt="Twitter logo"></i></a>
@@ -345,23 +357,6 @@
         </div>
     </div>
     <div class="horizontal-line"></div>
-    <script>
-        // Assuming user is a JavaScript variable that determines whether the user is logged in or not
-        var user = false; // Set to true if user is logged in
-    
-        // Select the userLinks and loggedInLinks divs
-        var userLinks = document.getElementById("userLinks");
-        var loggedInLinks = document.getElementById("loggedInLinks");
-    
-        // If user is logged in, hide userLinks and show loggedInLinks
-        if (user) {
-            userLinks.style.display = "none";
-            loggedInLinks.style.display = "block";
-        } else {
-            userLinks.style.display = "block";
-            loggedInLinks.style.display = "none";
-        }
-    </script>
      <br>  <br> 
     <!-- Nav End -->
     <!-- ##### Header Area End ##### -->
@@ -376,7 +371,7 @@
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Home made Burger</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms"> descrpiton</p>
+                                <p data-animation="fadeInUp" data-delay="700ms">Juicy Burger: Savor Every Mouthwatering Bite!</p>
                                 <a href="Recipiespage.html" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See
                                     Receipe</a>
                             </div>
@@ -391,8 +386,8 @@
                     <div class="row h-100 align-items-center">
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
-                                <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Home made Burger</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms">descrpiton </p>
+                                <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Home made Salad</h2>
+                                <p data-animation="fadeInUp" data-delay="700ms">Fresh Salad: Colorful, and Bursting with Flavor! </p>
                                 <a href="Recipiespage.html" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See
                                     Receipe</a>
                             </div>
@@ -407,8 +402,8 @@
                     <div class="row h-100 align-items-center">
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
-                                <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Homemade Burger</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms">descrpiton</p>
+                                <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Homemade Fresh Juice</h2>
+                                <p data-animation="fadeInUp" data-delay="700ms">Indulge in Our Invigorating Fresh Juice Blend!</p>
                                 <a href="Recipiespage.html" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See
                                     Receipe</a>
                             </div>
@@ -751,7 +746,7 @@
                     <!-- Cta Content -->
                     <div class="cta-content text-center">
                         <h2> Free Receipies Ai </h2>
-                        <p> Ai description</p>
+                        <p>Discover Free AI Recipes: Innovative, Simple, Delicious!</p>
                         <a href="https://www.chatbase.co/chatbot-iframe/2FU7372rwCjRTAwEhQ3lv" class="btn delicious-btn">Discover All the receipies for Ai </a>
                     </div>
                 </div>
@@ -999,7 +994,7 @@
 
         <div class="inner-div">
             <h2>Deliciousness to your inbox</h2>
-            <p>description</p>
+            <p>Delightful Recipes Straight to Your Inbox: Simply Delicious!</p>
             <div class="email-box" style="width: 100%;">
                 <form class="box" method="post" action="https//www.deitel.com">
                     <label class="label">
@@ -1149,9 +1144,33 @@
     </footer>
      <!-- ##### Footer Area end ##### -->
     </div>
-
+    
+<!-- ####### logoutBtn ######### -->
     <script>
-    // Sample recipe data
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/auth/status')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.isAuthenticated) {
+                        document.getElementById('logoutBtn').style.display = 'block';
+                    } else {
+                        document.getElementById('loginBtn').style.display = 'block';
+                        document.getElementById('signupBtn').style.display = 'block';
+                    }
+                });
+
+            document.getElementById('logoutBtn').addEventListener('click', () => {
+                fetch('/users/logout', { method: 'GET' })
+                    .then(response => {
+                        if (response.ok) {
+                            window.location.href = '/users/login';
+                        }
+                    });
+            });
+        });
+    </script>
+<!--Sample recipe data -->
+    <script>
         var recipes = [
     { name: "Sushi Easy Recipe", type: "lunch", image: "img/bg-img/r1.jpg"},
     { name: "Homemade Burger", type: "dinner", image: "img/bg-img/r2.jpg"},
@@ -1159,10 +1178,7 @@
     { name: "Healthy Soup", type: "dinner", image: "img/bg-img/r4.jpg"},
     { name: "Homemade Breakfast", type: "breakfast", image: "img/bg-img/r5.jpg"},
     { name: "Healthy Fruit Desert", type: "lunch", image: "img/bg-img/r6.jpg"},
-   
-    // Add more recipes with different types here
 ];
-
 // Variable to keep track of the currently selected category
 var currentCategory = null;
 
@@ -1256,13 +1272,9 @@ function showAllRecipes() {
 
 // Initially show all recipes
 showAllRecipes();
-
     </script>
-    </script>
-    <script type="module" src="js/main.js"></script>
-
+    <!-- ####### Function to perform search ####### -->
      <script>
-        // Function to perform search
         function performSearch() {
             // Get the search query
             var query = document.getElementById('searchInput').value.toLowerCase();
@@ -1288,7 +1300,6 @@ showAllRecipes();
         document.getElementById('searchInput').addEventListener('input', performSearch);
     </script>
 
-
  <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
     <script src="/js/jquery/jquery-2.2.4.min.js"></script>
@@ -1296,12 +1307,18 @@ showAllRecipes();
     <script src="/js/bootstrap/popper.min.js"></script>
     <!-- Bootstrap js -->
     <script src="/js/bootstrap/bootstrap.min.js"></script>
+     <!-- Bootstrap dist js -->
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- All Plugins js -->
     <script src="/js/plugins/plugins.js"></script>
     <!-- Active js -->
     <script src="/js/active.js"></script>
+    <!-- main js -->
+    <script type="module" src="js/main.js"></script>
+    <!-- dist axios js -->
     <script defer src="/axios/dist/axios.min.js"></script>
+    <!-- dist jquery js -->
     <script src="/jquery/dist/jquery.js"></script>
-    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+   
 </body>
 </html>
