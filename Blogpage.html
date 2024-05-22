@@ -105,7 +105,6 @@ input[type="email"] {
   border-radius: 5px;
   box-sizing: border-box;
 }
-
 input[type="email"]:focus {
   outline: none;
 }
@@ -114,8 +113,7 @@ input[type="email"]::placeholder {
 }
 input[type="email"]:required {
   background-color: #fff;
-}
-       
+}      
 input[type="search"] {
             width: 300px;
             padding: 8px;
@@ -143,7 +141,6 @@ input[type="submit"] {
             width: 200px;
             height: 70px;
         }
-
 input[type="submit"]:hover {
         background-color: #999; 
         }
@@ -157,6 +154,7 @@ input[type="submit"]:hover {
     }
     </style>
 </head>
+
 <body>
     <!-- start navbar -->
     <div class="horizontal-box , navbar">
@@ -165,7 +163,6 @@ input[type="submit"]:hover {
         </div>
         <div class="box, navhead" style="font-family:'Open Sans', sans-serif;">
             <a href="index.html">Home<i class="fa" aria-hidden="true"></i></a>
-            <a href="Recipiespage.html">Recipes<i class="fa" aria-hidden="true"></i></a>
             <a href="Blogpage.html">Blog<i class="fa" aria-hidden="true"></i></a>
             <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
             <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a>
@@ -182,7 +179,6 @@ input[type="submit"]:hover {
 <div class="horizontal-box" style="padding-left: 180px; padding-top: 200px; border-radius: 20px;">
     <div class="box" style="width: 1400px; height: 400px; background-color: #ffffff; border-radius: 20px; ">
         <div class="vertical-box" >
-
                 <p class="Mainsmalltext" style="font-size: 50px;  text-align: center;">Blog & Article</p>
                 <p class="smalltext" style="font-size: 20px;  text-align: center;">description </p>
                 <div class="horizontal-box" style="padding-left: 250px; padding-top: 30px; ">
@@ -195,57 +191,16 @@ input[type="submit"]:hover {
                                     </label>
                                 </p>
                             </form>
-                            <div id="searchResults">
-                                <input type="submit" value="Search">
-                            </div>
-                               
+                         <div id="searchResults">
+                            <input type="submit" value="Search">
+                      </div>    
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>   
-          
-    <div class="horizontal-box" >
-        <!-- Your content -->
-<div id="content">
-    <p>This is some example content. You can search through this text.</p>
-    <p>Another paragraph for searching.</p>
-    <p>Yet another paragraph.</p>
-</div>
-
-<script>
-    // Function to perform search
-    function performSearch() {
-        // Get the search query
-        var query = document.getElementById('searchInput').value.toLowerCase();
-        // Get the content container
-        var content = document.getElementById('content');
-        // Get all paragraphs within the content
-        var paragraphs = content.getElementsByTagName('p');
-        // Container for search results
-        var resultsContainer = document.getElementById('searchResults');
-        // Clear previous search results
-        resultsContainer.innerHTML = '';
-
-        // Loop through paragraphs to find matches
-        for (var i = 0; i < paragraphs.length; i++) {
-            var paragraphText = paragraphs[i].textContent.toLowerCase();
-            // If the paragraph contains the search query
-            if (paragraphText.includes(query)) {
-                // Create a new element to display the result
-                var resultElement = document.createElement('p');
-                resultElement.textContent = paragraphText;
-                // Append the result to the results container
-                resultsContainer.appendChild(resultElement);
-            }
-        }
-    }
-
-    // Add event listener to trigger search on input change
-    document.getElementById('searchInput').addEventListener('input', performSearch);
-</script>
-
+         <div class="horizontal-box" >
        <div class="vertical-box">
         <div class="box" style="  width: 200px;  text-align: left;  padding-right: 30px;   padding-left: 80px; padding-top: 1860px; ">
             
@@ -438,13 +393,41 @@ input[type="submit"]:hover {
 <p style="width: 500px; height: 10px;  padding-left: 20px;"> </p>
 </div>
 <div class="horizontal-line" ></div>
+<!--  Function to perform search -->
+<script>
+    function performSearch() {
+        // Get the search query
+        var query = document.getElementById('searchInput').value.toLowerCase();
+        // Get the content container
+        var content = document.getElementById('content');
+        // Get all paragraphs within the content
+        var paragraphs = content.getElementsByTagName('p');
+        // Container for search results
+        var resultsContainer = document.getElementById('searchResults');
+        // Clear previous search results
+        resultsContainer.innerHTML = '';
+        // Loop through paragraphs to find matches
+        for (var i = 0; i < paragraphs.length; i++) {
+            var paragraphText = paragraphs[i].textContent.toLowerCase();
+            // If the paragraph contains the search query
+            if (paragraphText.includes(query)) {
+                // Create a new element to display the result
+                var resultElement = document.createElement('p');
+                resultElement.textContent = paragraphText;
+                // Append the result to the results container
+                resultsContainer.appendChild(resultElement);
+            }
+        }
+    }
+    // Add event listener to trigger search on input change
+    document.getElementById('searchInput').addEventListener('input', performSearch);
+</script>
 
 </body>
 
 <footer style=" padding-left: 770px; padding-top: 20px;">
     <p class="Mainsmalltext" style="font-size: 18px;">
-        <span style="color: rgb(0, 0, 0);">©</span> FlowBase. Powered by <span style="color: orange;">FoodieLand</span>
-      </p>
-      </footer>
-
+        <span style="color: rgb(0, 0, 0);">©</span> <span style="color: orange;">FoodieLand</span>
+    </p>
+</footer>
 </html>
