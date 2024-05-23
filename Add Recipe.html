@@ -7,8 +7,7 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
     <link rel="stylesheet" href="css/owl.carousel.min.css">
 
@@ -24,8 +23,7 @@
 
 <body>
 
-    <!-- ##### Header Area Start ##### -->
-    <!-- Nav Start -->
+
 <div class="page">
     <div class="horizontal-box , navbar">
         <div class="home-logo">
@@ -62,23 +60,47 @@
                 <div class="mb-4">
                   <h3>Add Recipe <strong>in FoodieLand</strong></h3>
                 </div>
-                <form action="#" id="recipeForm" method="post">
+                <form action="/Addrecipe" id="recipeForm" method="post" enctype="multipart/form-data">>
                   <div class="form-group first">
                     <label for="recipeName"></label>
-                    <input type="text" class="form-control" id="recipeName" name="recipeName" placeholder="Receipe Name" required>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Receipe Name" required>
+                  </div>
+                  <div class="form-group first">
+                    <label for="description"></label>
+                    <!-- <input type="text" class="form-control" id="description" name="Recipe Description" placeholder="Recipe Description" required> -->
+                    <input type="text" class="form-control" id="description" name="description" placeholder="Recipe Description" required>
                   </div>
                   <div class="form-group">
                     <label for="category"></label>
-                    <select id="category" required>
+                    <select id="category" name="category" required>
                       <option value="" disabled selected>Select category</option>
                       <option value="breakfast">Breakfast</option>
                       <option value="lunch">Lunch</option>
                       <option value="dinner">Dinner</option>
                     </select>
                   </div>
+           
+
                   <div class="form-group">
                     <label for="recipeImage"></label>
-                    <input type="file" id="recipeImage"  accept="image/*" required>
+                    <input type="file" name="recipeImage" id="recipeImage" accept="image/*" required>
+                </div>
+
+                  <div class="form-group">
+                    <label for="recipievideio"></label>
+                    <input type="url" class="form-control" id="recipievideio" name="recipievideio" placeholder="YouTube Video URL" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="ingredients"></label>
+                    <textarea class="form-control" id="ingredients" name="ingredients" placeholder="Ingredients (separated by commas)" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="forTheSause"></label>
+                    <textarea class="form-control" id="forTheSause" name="forTheSause" placeholder="Ingredients for the Sauce (separated by commas)" required></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="directions"></label>
+                    <textarea class="form-control" id="directions" name="directions" placeholder="Directions (each step separated by a new line)" required></textarea>
                   </div>
                   <input type="submit" value="Add Recipe" class="btn btn-pill text-white btn-block btn-primary">
                 </form>
@@ -116,72 +138,85 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- All js -->
     <script src="js/main.js"></script>
-<!-- 
-    <script>
-      const express = require("express");
-       const http = require("http");
-       const app = express();
-       const cors = require("cors");
-      const data = require("recipes.json");
-      const fs = require("fs");
 
-      document.addEventListener('DOMContentLoaded', function() {
-          const addRecipeForm = document.querySelector('form[action="#"]');
-  
-          addRecipeForm.addEventListener('submit', function(event) {
-              event.preventDefault();
-  
-              // Get the recipe data from the form
-              const recipeName = document.getElementById('recipeName').value;
-              const category = document.getElementById('category').value;
-  
-              const recipeImage = 'img/FoodieLand.png'; 
-  
-              // Create a new recipe object
-              const newRecipe = {
-                  name: recipeName,
-                  category: category,
-                  image: recipeImage
-              };
-
-              fs.writeFile("recipes.json", JSON.stringify(newRecipe));
-
-              // Fetch existing recipes from JSON file
-              fetch('recipes.json')
-                  .then(response => response.json())
-                  .then(recipes => {
-                      // Add the new recipe to the existing recipes array
-                      recipes.push(newRecipe);
-  
-                      // Update the JSON file with the new recipes data
-                      return fetch('recipes.json', {
-                          method: 'PUT',
-                          headers: {
-                              'Content-Type': 'recipes/json',
-                          },
-                          body: JSON.stringify(recipes),
-                      });
-                  })
-                  .then(response => {
-                      if (response.ok) {
-                          console.log('Recipe added successfully.');
-                          // redirect the user to the home 
-                          window.location.href = 'index.html';
-                      } else {
-                          console.error('Failed to add recipe:', response.statusText);
-                      }
-                  })
-                  .catch(error => console.error('Error adding recipe:', error));
-          });
-      });
-  </script>
-  
-  
-   -->
-  
     
    <script type="module" src="js/main.js"></script>
 
 
       </body>
+
+
+      <body>
+
+        <!-- Navigation Bar -->
+        <!-- Your existing navigation bar code -->
+    
+        <!-- Horizontal Line -->
+        <div class="horizontal-line"></div>
+        
+        <!-- Recipe Title -->
+        <div style="padding-top: 100px; text-align: center;">
+            <p class="Maintext">Health Japanese Fried Rice</p>
+        </div>
+        
+        <!-- Recipe Details -->
+        <div style="padding: 20px;">
+            <!-- Placeholder for recipe details -->
+            <p>Recipe details will go here.</p>
+        </div>
+        
+        <!-- Ingredients Section -->
+        <div style="padding: 20px;">
+            <p class="Mainsmalltext">Ingredients</p>
+            <!-- Placeholder for ingredients -->
+            <div class="horibox horizontal-line" style="height: auto;">
+                <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" checked onchange="applyTextStyle(this)">
+                <p class="smalltext black-text">Ingredient 1</p>
+            </div>
+            <!-- Add more ingredients as needed -->
+        </div>
+        
+        <!-- Directions Section -->
+        <div style="padding: 20px;">
+            <p class="Mainsmalltext">Directions</p>
+            <!-- Placeholder for directions -->
+            <div class="horibox horizontal-line" style="height: auto;">
+                <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" checked onchange="applyTextStyle(this)">
+                <p class="smalltext black-text">Step 1</p>
+            </div>
+            <!-- Add more steps as needed -->
+        </div>
+    
+        <!-- Other Recipes Section -->
+        <div style="padding: 20px;">
+            <!-- Placeholder for other recipes -->
+            <p>You may like these recipes too:</p>
+            <!-- Add other recipe cards as needed -->
+        </div>
+    
+        <!-- Newsletter Subscription Section -->
+        <div style="padding: 20px;">
+            <!-- Placeholder for newsletter subscription form -->
+            <p>Subscribe to our newsletter:</p>
+            <!-- Add subscription form as needed -->
+        </div>
+    
+        <!-- Footer -->
+        <!-- Your existing footer code -->
+    
+        <!-- JavaScript for checkbox functionality -->
+        <script>
+            function applyTextStyle(checkbox) {
+                var paragraph = checkbox.parentNode.querySelector('p');
+                if (checkbox.checked) {
+                    paragraph.classList.remove('black-text');
+                    paragraph.classList.add('line-through');
+                } else {
+                    paragraph.classList.remove('line-through');
+                    paragraph.classList.add('black-text');
+                }
+            }
+        </script>
+    
+    </body>
     </html>

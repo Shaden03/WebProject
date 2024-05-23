@@ -18,11 +18,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
-
-
-
-
-    
       <!-- ##### Header Area Start ##### -->
     <!-- Nav Start -->
     <div class="page">
@@ -44,18 +39,11 @@
             </div>
         </div>
         <div class="horizontal-line"></div>
-    
 
 
-
-
-        <div class="content"  style="background-color: rgb(189, 212, 255);">
+        <div class="content" style="background-color: rgb(189, 212, 255);">
             <div class="container">
               <div class="row justify-content-center">
-                <!-- imag right contener sin up  -->
-                <!-- <div class="col-md-6 order-md-2">
-                  <img src="img/womencooks.png" alt="Image" class="img-fluid">
-                </div> -->
                 <div class="col-md-6 contents">
                   <div class="row justify-content-center">
                     <div class="col-md-12">
@@ -63,22 +51,16 @@
                           <div class="mb-4">
                           <h3>Sign Up to <strong>FoodieLand</strong></h3>
                         </div>
-
-
-                        <form action="/login" method="POST">
-
+                          <form action="/users/login" method="POST">
                             <label for="email">Email</label>
-                            <input class="form-control" class="box" type="email" name="email" placeholder="Email" required />
+                            <input class="form-control box" type="email" name="email" placeholder="Email" required />
                             <br>
-                            <!-- <input type="email" name="email" placeholder="Email" required> -->
                             <label for="password">Password</label>
-                            <input class="form-control" class="box" type="password" name="password" placeholder="Password" required />
+                            <input class="form-control box" type="password" name="password" placeholder="Password" required />
                             <br>
-                            <!-- <input type="password" name="password" placeholder="Password" required> -->
-                            <button type="submit"   class="btn btn-pill text-white btn-block btn-primary">Login</button>
-                            <a href="signup.html" class="box">Already have an account? Sign up</a>
+                            <button type="submit" class="btn btn-pill text-white btn-block btn-primary">Login</button>
+                            <a href="/public/signup.html" class="box">Don't have an account? Sign up</a>
                         </form>
-                      
                       </div>
                     </div>
                   </div>      
@@ -86,16 +68,6 @@
               </div>
             </div>
           </div>
-
-
-
-
-
-
-
-
-
-
           <footer class="footer-area">
             <div class="container h-100">
                 <div class="row h-100">
@@ -112,19 +84,14 @@
         </div>
         <!-- ##### All Javascript Files ##### -->
         <!-- jQuery-2.2.4 js -->
-        <script src="/js/jquery-3.3.1.min.js"></script>
+        <script src="/js/jquery/jquery-2.2.4.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <!-- Popper js -->
-        <script src="/js/popper.min.js"></script>
+        <script src="/js/bootstrap/popper.min.js"></script>
         <!-- Bootstrap js -->
-        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/bootstrap/bootstrap.min.js"></script>
         <!-- All js -->
         <script src="/js/active.js"></script>
-
-
-
-
-
-
    
 </body>
 </html>

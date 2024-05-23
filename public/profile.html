@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Title -->
+    <title>Foodieland - Sin In</title>
+
+    <!-- Core Stylesheet -->
+    <link rel="icon" href="img/FoodieLand.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ##### Header Area Start ##### -->
+    <!-- Nav Start -->
+<div class="page">
+    <div class="horizontal-box , navbar">
+        <div class="home-logo">
+            <img src="img/FoodieLand.png" alt="logo IMg">
+        </div>
+        <div class="box navhead">
+          <a href="index.html">Home<i class="fa" aria-hidden="true"></i></a>
+          <a href="Recipiespage.html">Recipes<i class="fa" aria-hidden="true"></i></a>
+          <a href="Blogpage.html">Blog<i class="fa" aria-hidden="true"></i></a>
+          <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
+          <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a>
+        </div>
+        <div class="social-links ">
+            <a href="https://www.facebook.com"><img src="img/facebook.png" alt="facebook logo"></i></a>
+            <a href="https://twitter.com"><img src="img/Twitter.png" alt="Twitter logo"></i></a>
+            <a href="https://www.linkedin.com/feed/"><img src="img/Linkedin.png" alt="Linkedin logo"></i></a>
+        </div>
+    </div>
+    <div class="horizontal-line"></div>
+
+    <p id="userGreeting" style="display: none;">
+        Welcome .. your email <span id="userEmail"></span>
+    </p>
+</div>
+<script>
+    // Assuming user is a JavaScript variable that determines whether the user is logged in or not
+    var user = { email: "user@example.com" }; // Set to null if user is not logged in
+
+    // Get references to HTML elements
+    var userGreeting = document.getElementById("userGreeting");
+    var userEmail = document.getElementById("userEmail");
+
+    // Check if user is logged in
+    if (user) {
+        // Display user greeting
+        userGreeting.style.display = "block";
+        // Set user email
+        userEmail.textContent = user.email;
+    }
+</script>
+</body>
+</html>

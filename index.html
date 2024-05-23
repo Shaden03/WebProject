@@ -275,6 +275,54 @@
         background-color: #ffffff; 
         z-index: 1000; 
     }
+      /* search */
+      .search-box {
+            width: 100px;
+            border: 1px solid white;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+        }
+        .search-box input {
+            border: none;
+            outline: none;
+            box-shadow: none; 
+            width: 100%;
+            font-size: 16px;
+            padding: 10px;
+        }
+        #searchInput {
+            width: 300px;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .icon {
+            width: 40px;
+            height: 40px;
+        }
+        .recipe {
+            margin-bottom: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+
+        /* logout */
+        #auth-buttons a, #auth-buttons button {
+            display: inline;
+            margin-right: 20px;
+            color: #9f9d9d;
+            cursor: pointer;
+            font-size: medium;;
+        }
+        #auth-buttons a:hover, #auth-buttons button:hover {
+            background-color: #e7f9ff;
+        }
+        #auth-buttons button:hover {
+            background-color: #e7f9ff;
+        }
     </style>
 </head>
 <body>
@@ -287,14 +335,21 @@
         </div>
         <div class="box navhead">
             <a href="index.html">Home<i class="fa" aria-hidden="true"></i></a>
-            <a href="Recipiespage.html">Recipes<i class="fa" aria-hidden="true"></i></a>
             <a href="Blogpage.html">Blog<i class="fa" aria-hidden="true"></i></a>
             <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
-            <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a>
-           
+            <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a> 
         </div>
-        <a href="signup.html">Sign Up<i class="fa" aria-hidden="true"></i></a>
-        <a href="login.html">Log In<i class="fa" aria-hidden="true"></i></a>
+        <div  class="box navhead" id="auth-buttons">
+            <a href="/users/login" id="loginBtn" style="display: none;">Login<i class="fa" aria-hidden="true"></i></a>
+            <a href="/users/signup" id="signupBtn" style="display: none;">Sign Up<i class="fa" aria-hidden="true"></i></a>
+            <button id="logoutBtn" style="display: none;">Logout<i class="fa" aria-hidden="true"></i></button>
+        </div>
+
+     <!-- Search input with icon -->
+    <div class="search-box">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <input type="text" id="searchInput" placeholder="Search for a recipe">
+    </div>
         <div class="social-links ">
             <a href="https://www.facebook.com"><img src="img/facebook.png" alt="facebook logo"></i></a>
             <a href="https://twitter.com"><img src="img/Twitter.png" alt="Twitter logo"></i></a>
@@ -302,7 +357,7 @@
         </div>
     </div>
     <div class="horizontal-line"></div>
-
+     <br>  <br> 
     <!-- Nav End -->
     <!-- ##### Header Area End ##### -->
 
@@ -316,7 +371,7 @@
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
                                 <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Home made Burger</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms"> descrpiton</p>
+                                <p data-animation="fadeInUp" data-delay="700ms">Juicy Burger: Savor Every Mouthwatering Bite!</p>
                                 <a href="Recipiespage.html" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See
                                     Receipe</a>
                             </div>
@@ -331,8 +386,8 @@
                     <div class="row h-100 align-items-center">
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
-                                <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Home made Burger</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms">descrpiton </p>
+                                <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Home made Salad</h2>
+                                <p data-animation="fadeInUp" data-delay="700ms">Fresh Salad: Colorful, and Bursting with Flavor! </p>
                                 <a href="Recipiespage.html" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See
                                     Receipe</a>
                             </div>
@@ -347,8 +402,8 @@
                     <div class="row h-100 align-items-center">
                         <div class="col-12 col-md-9 col-lg-7 col-xl-6">
                             <div class="hero-slides-content" data-animation="fadeInUp" data-delay="100ms">
-                                <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Homemade Burger</h2>
-                                <p data-animation="fadeInUp" data-delay="700ms">descrpiton</p>
+                                <h2 data-animation="fadeInUp" data-delay="300ms">Foodieland Homemade Fresh Juice</h2>
+                                <p data-animation="fadeInUp" data-delay="700ms">Indulge in Our Invigorating Fresh Juice Blend!</p>
                                 <a href="Recipiespage.html" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See
                                     Receipe</a>
                             </div>
@@ -373,7 +428,7 @@
                             <h3>Breakfast</h3>
                             <h6>Simple & Delicios</h6>
                             <a href="#"></a>
-                            <button onclick="filterRecipes('breakfast')" class="btn delicious-btn">Breakfast Recipes</button>
+                            <button onclick="filterRecipes('breakfast')" id="breakfast-btn" class="btn delicious-btn, breakfast-btn">Breakfast Recipes</button>
                         </div>
                     </div>
                 </div>
@@ -386,7 +441,7 @@
                             <h3>Lunch</h3>
                             <h6>Simple & Delicious</h6>
                             <a href="#"></a>
-                            <button onclick="filterRecipes('lunch')" class="btn delicious-btn">Lunch Recipes</button>
+                            <button onclick="filterRecipes('lunch')" id="lunch-btn" class="btn delicious-btn, lunch-btn">Lunch Recipes</button>
                         </div>
                     </div>
                 </div>
@@ -399,29 +454,32 @@
                             <h3>Dinner</h3>
                             <h6>Simple & Delicios</h6>
                             <a href="#"> </a>
-                            <button onclick="filterRecipes('dinner')" class="btn delicious-btn">Dinner Recipes</button>
+                            <button onclick="filterRecipes('dinner')" class="btn delicious-btn, dinner-btn">Dinner Recipes</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+      
+  
     </section>
     <!-- ##### Top Catagory Area End ##### -->
-
+  
     <!-- ##### Best Receipe Area Start ##### -->
     <section class="best-receipe-area">
         <div class="container">
-            <div class="row">
+            <div class="row mt-4">
                 <div class="col-12">
                     <div class="section-heading">
                     </div>
                 </div>
             </div>
-            <div class="row"  id="recipeList">
+
+            <div id= "recipesfilter">  
+            <div class="row mt-4" id="recipeList">                         
                 <!-- 1 Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-3 recipe-item" data-title="Sushi Easy Recipe" type="lunch">
-                    <a href="Recipiespage.html?recipe=Sushi%20Easy%20Recipe" class="recipe-link">
-                    <div class="single-best-receipe-area mb-30">
+                <div class="col-12 col-sm-6 col-lg-3 " data-title="Sushi Easy Recipe" type="lunch">
+                    <div class="single-best-receipe-area mb-30 recipesearch">
                         <img src="img/bg-img/r1.jpg" alt="">
                         <div class="receipe-content">
                             <h5>Sushi Easy Receipy</h5>
@@ -449,7 +507,7 @@
                 
                 <!-- 2 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3"  data-title="Homemade Burger"  type="dinner">
-                    <div class="single-best-receipe-area mb-30">
+                    <div class="single-best-receipe-area mb-30 recipesearch">
                         <img src="img/bg-img/r2.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -478,7 +536,7 @@
 
                 <!-- 3 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3"  data-title="Vegan Smoothie"  type="breakfast" >
-                    <div class="single-best-receipe-area mb-30">
+                    <div class="single-best-receipe-area mb-30 recipesearch">
                         <img src="img/bg-img/r3.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -507,7 +565,7 @@
 
                 <!-- 4 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3" data-title="Homemade Burger"  type="dinner">
-                    <div class="single-best-receipe-area mb-30">
+                    <div class="single-best-receipe-area mb-30 recipesearch">
                         <img src="img/bg-img/r4.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -536,7 +594,7 @@
 
                 <!-- 5 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3"  data-title="Homemade Breakfast"  type="breakfast">
-                    <div class="single-best-receipe-area mb-30">
+                    <div class="single-best-receipe-area mb-30 recipesearch">
                         <img src="img/bg-img/r5.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -565,7 +623,7 @@
 
                 <!-- 6 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3" data-title="Healthy Fruit Desert"  type="lunch">
-                    <div class="single-best-receipe-area mb-30">
+                    <div class="single-best-receipe-area mb-30 recipesearch">
                         <img src="img/bg-img/r6.jpg" alt="">
                         <div class="receipe-content">
                             <a href="Recipiespage.html">
@@ -591,85 +649,93 @@
                         </div>
                     </div>
                 </div>
-                <!-- 7 Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-3"  data-title="Healthy Salad"  type="lunch">
-                    <div class="single-best-receipe-area mb-30">
-                        <img  class="img-fix"  src="img/bg-img/r6.jpg" alt="">
-                        <div class="receipe-content">
-                            <a href="Recipiespage.html">
-                                <h5>Healthy Salad </h5>
-                            </a>
-                            <div class="timing d-flex justify-content-between">
-                                <div class="delivey-time">
-                                    <img src="img/bg-img/insta4.jpg" alt="">
-                                    <span>30 Minutes</span>
-                                </div>
-                                <div class="food-catagory">
-                                    <img src="img/core-img/Time (2).png" alt="">
-                                    <span>Healthy</span>
-                                </div>
-                            </div>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
 
 
-                <div id="newRecipeContainer"></div>
+                <!-- <div id="newRecipeContainer"></div> -->
 
-                <!-- 8 Single Best Receipe Area -->
-                <div class="col-12 col-sm-6 col-lg-3" data-title="Noodles" type="dinner">
-                    <div class="single-best-receipe-area mb-30">
-                        <img class="img-fix" src="img/bg-img/insta2.jpg" alt="">
-                        <div class="receipe-content">
-                            <a href="Recipiespage.html">
-                                <h5>Noodles</h5>
-                            </a>
-                            <div class="timing d-flex justify-content-between">
-                                <div class="delivey-time">
-                                    <img src="img/core-img/Time (1).png" alt="">
-                                    <span>30 Minutes</span>
-                                </div>
-                                <div class="food-catagory">
-                                    <img src="img/core-img/Time (2).png" alt="">
-                                    <span>Healthy</span>
-                                </div>
-                            </div>
-                            <div class="ratings">
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star" aria-hidden="true"></i>
-                                <i class="fa fa-star-o" aria-hidden="true"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
+                <div id="recipeList"></div>
+
                 <script>
-                    document.addEventListener('DOMContentLoaded', function() {
-                        const recipeLinks = document.querySelectorAll('.single-best-receipe-area');
-                
-                        recipeLinks.forEach(link => {
-                            link.addEventListener('click', function(event) {
-                                event.preventDefault();
-                                const title = this.getAttribute('data-title');
-                                console.log('Title from data-title attribute:', title);
-                                
-                                // Store the title in localStorage
-                                localStorage.setItem('recipeTitle', title);
-                                
-                                // Redirect to recipe page
-                                window.location.href = 'Recipiespage.html';
-                            });
-                        });
-                    });
-                </script>    
+                   document.addEventListener('DOMContentLoaded', function() {
+
+
+                    function filterRecipes(category) {
+            const recipeItems = document.querySelectorAll('recipe');
+            recipeItems.forEach(item => {
+                const itemCategory = item.querySelector('category').textContent.toLowerCase();
+                if (category === 'all' || itemCategory === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+    // Fetch recipe data from the backend
+    fetch('/recipes')
+        .then(response => response.json())
+        .then(data => {
+            // Select the container element where recipes will be displayed
+            const recipesContainer = document.getElementById('recipeList'); // Adjusted ID
+
+            // Loop through each recipe and create HTML elements to display them
+            data.forEach(recipe => {
+                // Create a div element for each recipe
+                const recipeDiv = document.createElement('div');
+                recipeDiv.classList.add('recipe-item'); // Adding the class used in HTML
+
+                // Populate the div with recipe information
+                recipeDiv.innerHTML = `
+                <div class="col-12 col-sm-9 ">
+                <div class="single-best-receipe-area mb-30">
+                    <a href="Recipiespage.html?recipe=${encodeURIComponent(recipe.name)}">
+                        <div class="single-best-receipe-area mb-30">
+                            <img class="img-fix" src="${recipe.recipeImage}" alt="${recipe.name}">
+                            <div class="receipe-content">
+                                <h5>${recipe.name}</h5>
+                                <div class="d-flex justify-content-between">
+                                    <div class="delivery-time">
+                                        <img src="img/core-img/Time (1).png" alt="">
+                                        <span>30 Minutes</span>
+                                    </div>
+                                    <div class="food-catagory">
+                                        <img src="img/core-img/Time (2).png" alt="">
+                                        <span>${recipe.category}</span>
+                                    </div>
+                                </div>
+                                <div class="ratings">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star-o" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+                `;
+
+                // Append the recipe div to the recipes container
+                recipesContainer.appendChild(recipeDiv);
+            });
+        })
+        .catch(error => console.error('Error fetching recipes:', error));
+
+        document.getElementById('breakfast-btn').addEventListener('click', () => filterRecipes('breakfast'));
+        document.getElementById('lunch-btn').addEventListener('click', () => filterRecipes('lunch'));
+        document.getElementById('dinner-btn').addEventListener('click', () => filterRecipes('dinner'));
+        document.getElementById('all-btn').addEventListener('click', () => filterRecipes('all'));
+});
+
+                </script>
+
+            </div>
+           </div>
     </section>
     <!-- ##### Best Receipe Area End ##### -->
     <!-- ##### Ai Area Start ##### -->
@@ -680,7 +746,7 @@
                     <!-- Cta Content -->
                     <div class="cta-content text-center">
                         <h2> Free Receipies Ai </h2>
-                        <p> Ai description</p>
+                        <p>Discover Free AI Recipes: Innovative, Simple, Delicious!</p>
                         <a href="https://www.chatbase.co/chatbot-iframe/2FU7372rwCjRTAwEhQ3lv" class="btn delicious-btn">Discover All the receipies for Ai </a>
                     </div>
                 </div>
@@ -928,7 +994,7 @@
 
         <div class="inner-div">
             <h2>Deliciousness to your inbox</h2>
-            <p>description</p>
+            <p>Delightful Recipes Straight to Your Inbox: Simply Delicious!</p>
             <div class="email-box" style="width: 100%;">
                 <form class="box" method="post" action="https//www.deitel.com">
                     <label class="label">
@@ -956,12 +1022,11 @@
                     <input class="sub" type="submit" value="Log in" id="loginButton">
                 </label>
             </form>
-    
-            <form style="padding-right: 250px;" class="box" method="post" action="AddRecipe.html" id="addRecipeForm">
-                <label class="label">
-                    <input class="sub" type="submit" value="Add Recipe?" id="addRecipeButton">
-                </label>
-            </form>
+
+            <div class="mt-4 text-center">
+                <a style=" color: #000; background-color:  #f1fff6;" id="addRecipeForm" class="btn btn-secondary" href="Add Recipe.html">Add Recipe?<i class="box"></i></a>
+              </div>
+                  
         </div>
     </div>
     
@@ -1079,20 +1144,33 @@
     </footer>
      <!-- ##### Footer Area end ##### -->
     </div>
-
-    <!-- ##### All Javascript Files ##### -->
-    <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
+    
+<!-- ####### logoutBtn ######### -->
     <script>
-        // Sample recipe data
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('/auth/status')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.isAuthenticated) {
+                        document.getElementById('logoutBtn').style.display = 'block';
+                    } else {
+                        document.getElementById('loginBtn').style.display = 'block';
+                        document.getElementById('signupBtn').style.display = 'block';
+                    }
+                });
+
+            document.getElementById('logoutBtn').addEventListener('click', () => {
+                fetch('/users/logout', { method: 'GET' })
+                    .then(response => {
+                        if (response.ok) {
+                            window.location.href = '/users/login';
+                        }
+                    });
+            });
+        });
+    </script>
+<!--Sample recipe data -->
+    <script>
         var recipes = [
     { name: "Sushi Easy Recipe", type: "lunch", image: "img/bg-img/r1.jpg"},
     { name: "Homemade Burger", type: "dinner", image: "img/bg-img/r2.jpg"},
@@ -1100,11 +1178,7 @@
     { name: "Healthy Soup", type: "dinner", image: "img/bg-img/r4.jpg"},
     { name: "Homemade Breakfast", type: "breakfast", image: "img/bg-img/r5.jpg"},
     { name: "Healthy Fruit Desert", type: "lunch", image: "img/bg-img/r6.jpg"},
-    { name: "Healthy Salad", type: "lunch", image: "img/bg-img/insta4.jpg"},
-    { name: "Noodles", type: "dinner", image: "img/bg-img/insta2.jpg"},
-    // Add more recipes with different types here
 ];
-
 // Variable to keep track of the currently selected category
 var currentCategory = null;
 
@@ -1165,7 +1239,7 @@ function showAllRecipes() {
         recipeItem.classList.add("col-12", "col-sm-6", "col-lg-3");
         recipeItem.innerHTML = `
             <div class="single-best-receipe-area mb-30">
-                <img class="img-fix" src="${recipe.image}" alt="" href="receipe-post.html">
+                <img  src="${recipe.image}" alt="" href="receipe-post.html">
                 <div class="receipe-content">
                     <a href="receipe-post.html">
                         <h5>${recipe.name}</h5>
@@ -1198,10 +1272,53 @@ function showAllRecipes() {
 
 // Initially show all recipes
 showAllRecipes();
+    </script>
+    <!-- ####### Function to perform search ####### -->
+     <script>
+        function performSearch() {
+            // Get the search query
+            var query = document.getElementById('searchInput').value.toLowerCase();
+            // Get all recipe elements
+            var recipesfilter = document.getElementsByClassName('recipesearch');
 
+            // Loop through recipes to find matches
+            for (var i = 0; i < recipesfilter.length; i++) {
+                var recipesearch = recipesfilter[i];
+                var recipeText = recipesearch.textContent.toLowerCase();
+
+                // If the recipe contains the search query
+                if (recipeText.includes(query)) {
+                    // Show the recipe
+                    recipesearch.classList.remove('hidden');
+                } else {
+                    // Hide the recipe
+                    recipesearch.classList.add('hidden');
+                }
+            }
+        }
+        // Add event listener to trigger search on input change
+        document.getElementById('searchInput').addEventListener('input', performSearch);
     </script>
-    </script>
+
+ <!-- ##### All Javascript Files ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="/js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="/js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="/js/bootstrap/bootstrap.min.js"></script>
+     <!-- Bootstrap dist js -->
+    <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="/js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="/js/active.js"></script>
+    <!-- main js -->
     <script type="module" src="js/main.js"></script>
-
+    <!-- dist axios js -->
+    <script defer src="/axios/dist/axios.min.js"></script>
+    <!-- dist jquery js -->
+    <script src="/jquery/dist/jquery.js"></script>
+   
 </body>
 </html>
