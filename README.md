@@ -118,8 +118,7 @@ Check out the Tempplate [https://www.figma.com/community/file/109337233168270656
 This is the main page interface which has the AI assistant, you can also add recipies after you create an account ![Green Simple Reasons Why Buying Experience is Worth Infographic](https://github.com/Shaden03/WebProject/assets/116809090/8e8b75d8-b589-4e70-81aa-19497bad8705)
 
 ## Website Demo
-![Website Demo]( [https://drive.google.com/file/d/11cJNWok9xEE6EC0rSwN3SnHVVoXgrdTe/view?usp=sharing](https://drive.google.com/file/d/11cJNWok9xEE6EC0rSwN3SnHVVoXgrdTe/view?usp=sharing) )
-
+(https://drive.google.com/file/d/11cJNWok9xEE6EC0rSwN3SnHVVoXgrdTe/view?usp=sharing)
 
 ## Future Work <a name="future-work"></a>
 * Enhanced AI Features: Improve AI responses and add voice interaction capabilities.
