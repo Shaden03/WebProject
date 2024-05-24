@@ -17,6 +17,7 @@ fetch('/recipes')
                 <p>${recipe.category}</p>
                 <img src="${recipe.recipeImage}" alt="${recipe.name}"> <!-- Add the image -->
                 <p>${recipe.description}</p>
+                <p>${recipe.recipievideio}</p>
                 <p><strong>Ingredients:</strong> ${recipe.ingredients.join(', ')}</p>
                 <p><strong>For the Sauce:</strong> ${recipe.forTheSause.join(', ')}</p>
                 <p><strong>Directions:</strong></p>
