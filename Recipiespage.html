@@ -5,237 +5,43 @@
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
+    <!-- Title -->
+    <title>Foodieland - Recipies page</title>
     <!-- Favicon -->
     <link rel="icon" href="img/FoodieLand.png">
-
+    <!-- external css -->
+    <link rel="stylesheet" href="/public/stylerecipiespage.css">
+    <!-- enternal css -->
     <style type="text/css">
-
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
-
-@import url(css/font-awesome.min.css);
-
-body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; 
-}
-.container {
-  width: 100vw; 
-  height: 100vh;
-  overflow-y: auto; 
-  overflow-x: hidden; 
-}
-.horizontal-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  height: 80px;
-
-}
-.horibox{
-
-    display: flex;
-    flex-direction: row;
-    
-}
-.box {
-  display: flex;
-  align-items: center;
-}
-.navhead {
-  display: flex;
-}
-.navhead a {
-  color: #000000;
-  font-size: 20px;
-  text-decoration: none;
-  font-weight: 700;
-  padding: 0 20px;
-}
-.navhead a:last-child {
-  margin-right: 0;
-}
-.navhead a:hover {
-  color: #a1cfdb;
-}
-.horizontal-line {
-  border-bottom: 1px solid #cacaca;
-  width: 100%;
-  margin-top: 10px;
-}
-.Maintext {
-  font-size: 40px;
-  font-weight: bold;
-  padding-left: 66px;
-}
-.vertical-box {
-  display: flex;
-  flex-direction: column;
-}
-.verbox {
-  width: 100px;
-  height: 0.1px;
-}
-.Mainsmalltext {
-  font-size: 14px;
-  font-weight: bolder;
-}
-.smalltext {
-  font-size: 14px;
-  font-weight: 900;
-  color: #919090;
-  text-align: left;
-}
-.verticalline {
-  border-left: 2px solid #c2c2c2;
-  height: 40px;
-}
-.line-through {
-  text-decoration: line-through;
-}
-.black-text {
-  color: #000000;
-}
-input[type="email"] {
-  width: 200px;
-  padding: 8px;
-  border: none;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-input[type="email"]:focus {
-  outline: none;
-}
-input[type="email"]::placeholder {
-  color: #999;
-}
-input[type="email"]:required {
-  background-color: #fff;
-}
-input[type="submit"] {
-  border: none;
-  background-color: #000000;
-  color: #fff;
-  padding: 12px 22px;
-  border-radius: 15px;
-  cursor: pointer;
-  width: 200px;
-  height: 70px;
- 
-}
-input[type="submit"]:hover {
-  background-color: #999;
-}
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #ffffff; 
-  z-index: 1000; 
-}
+        @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
+        @import url(css/font-awesome.min.css);
     </style>
 </head>
-
-
-
 <body>
-
-    <div class="horizontal-box , navbar">
-        <div class="box" style="padding-left: 60px ; padding-right: 270px;">
-            <img src="img/FoodieLand.png" width ="150" height="50" alt="logo IMg" >
-        </div>
-        <div class="box, navhead" style="font-family:'Open Sans', sans-serif;">
-
-            <a href="index.html">Home<i class="fa" aria-hidden="true"></i></a>
-            <a href="Recipiespage.html">Recipes<i class="fa" aria-hidden="true"></i></a>
-            <a href="Blogpage.html">Blog<i class="fa" aria-hidden="true"></i></a>
-            <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
-            <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a>
-        </div>
-        <div class="box" style="padding-left: 300px ;">
-            <a href="https://www.facebook.com"><img src="img/facebook.png" alt="facebook logo"></i></a>
-            <a href="https://twitter.com"><img src="img/Twitter.png" alt="Twitter logo"></i></a>
-            <a href="https://www.linkedin.com/feed/"><img src="img/Linkedin.png" alt="Linkedin logo"></i></a>
-        </div>
+<!-- Nav Start -->
+<div class="horizontal-box , navbar">
+    <div class="box" style="padding-left: 60px ; padding-right: 270px;">
+        <img src="img/FoodieLand.png" width ="150" height="50" alt="logo IMg" >
     </div>
+    <div class="box, navhead" style="font-family:'Open Sans', sans-serif;">
+        <a href="index.html">Home<i class="fa" aria-hidden="true"></i></a>
+        <a href="Blogpage.html">Blog<i class="fa" aria-hidden="true"></i></a>
+        <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
+        <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a>
+    </div>
+    <div class="box" style="padding-left: 300px ;">
+        <a href="https://www.facebook.com"><img src="img/facebook.png" alt="facebook logo"></i></a>
+        <a href="https://twitter.com"><img src="img/Twitter.png" alt="Twitter logo"></i></a>
+        <a href="https://www.linkedin.com/feed/"><img src="img/Linkedin.png" alt="Linkedin logo"></i></a>
+    </div>
+</div>
+<div class="horizontal-line"></div>
 
-    <div class="horizontal-line"></div>
-    
+    <!-- recipe title  -->
     <div style="padding-top: 100px;" id="recipe-details">
     <p id="recipe-title" class="Maintext"> Health Japanese Fried Rice</p>
-
     </div>
-    
-    <script>
-               document.addEventListener('DOMContentLoaded', function() {
-            // Function to fetch recipe details based on the name
-            function fetchRecipeDetails(recipeName) {
-                // Fetch recipe data from the backend
-                fetch('/recipes')
-                    .then(response => response.json())
-                    .then(data => {
-                        // Find the recipe with the matching name
-                        const recipe = data.find(recipe => recipe.name === recipeName);
-                        
-                        if (recipe) {
-                            document.getElementById('recipe-title').textContent = recipe.name;
-                            document.getElementById('recipe-video').textContent = recipe.recipievideio;
-                            document.getElementById('recipe-desc').textContent = recipe.description;
-                            document.getElementById('recipe-desc').textContent = recipe.description;
-                            const ingredientsContainer = document.getElementById('ingredients-container');
-                            ingredientsContainer.innerHTML = ''; 
-                           recipe.ingredients.forEach(ingredient => {
-                            const ingredientDiv = document.createElement('div');
-                            ingredientDiv.classList.add('horibox', 'horizontal-line');
-                           ingredientDiv.style.height = '40px';
-                           ingredientDiv.style.width = '800px'; 
-                            ingredientDiv.innerHTML = `
-                            <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" onchange="applyTextStyle(this)">
-                            <br>
-                            <p class="smalltext black-text">${ingredient}</p>
-                        `;
-                        ingredientsContainer.appendChild(ingredientDiv);
-                    });
-
-                         // Populate directions
-                         const directionsContainer = document.getElementById('directions-container');
-                        directionsContainer.innerHTML = '';
-                        recipe.directions.forEach(step => {
-                            const stepDiv = document.createElement('div');
-                            stepDiv.classList.add('horibox', 'horizontal-line');
-                            stepDiv.style.height = '180px';
-                            stepDiv.style.width = '800px';
-                            stepDiv.style.paddingTop = '40px';
-                            stepDiv.innerHTML = `
-                                <div class="vertical-box">
-                                    <div class="horibox">
-                                        <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" onchange="applyTextStyle(this)">
-                                        <p class="Mainsmalltext black-text" style="font-size: 24px;">${step.stepNumber}.${step.stepsdirections}</p>
-                                    </div>
-                                    <p class="smalltext" style="font-size: 19px; padding-left: 20px;">${step.stepsdirections}</p>
-                                </div>
-                            `;
-                            directionsContainer.appendChild(stepDiv);
-                        });
-                        } else {
-                            console.error('Recipe not found!');
-                        }
-                    })
-                    .catch(error => console.error('Error fetching recipe:', error));
-            }
-
-            // Extract the recipe name from the URL query parameter
-            const urlParams = new URLSearchParams(window.location.search);
-            const recipeName = urlParams.get('recipe');
-
-            // Fetch and display recipe details
-            fetchRecipeDetails(recipeName);
-        });
-    </script>
+    <!--  Profile Image Area Start -->
     <div class="horizontal-box">
         <div class="box " style="padding-left: 80px;">
             <img src="img/profile.png"  width ="50" height="50" alt="profileIMg"  style="padding-right: 10px;" > 
@@ -244,7 +50,7 @@ input[type="submit"]:hover {
                 <p class="verbox smalltext">15 March 2022</p>
             </div>    
         </div>
-
+        <!-- Clocktime Prepare -->
         <div class="box " style="padding-left: 80px; ">
             <img src="img/clock.png"  width ="40" height="40" alt="Clocktime" style="padding-right: 10px; border-left: 2px solid #c2c2c2; height: 40px; padding-left: 20px;" > 
             <div class="vertical-box" >
@@ -252,7 +58,7 @@ input[type="submit"]:hover {
                 <p class="verbox smalltext">15 Minutes</p>
             </div>    
         </div>
-
+        <!-- Clocktime cook -->
         <div class="box" style="padding-left: 80px;">
             <img src="img/clock.png"  width ="40" height="40" alt="Clocktime" style="padding-right: 10px; border-left: 2px solid #c2c2c2; height: 40px; padding-left: 20px;" > 
             <div class="vertical-box">
@@ -260,216 +66,124 @@ input[type="submit"]:hover {
                 <p class="verbox smalltext">15 Minutes</p>
             </div>    
         </div>
-
+        <!-- type food  -->
         <div class="box" style="padding-left: 80px;">
-            <img src="img/Food.png"  width ="40" height="40" alt="Clocktime" style="padding-right: 10px; border-left: 2px solid #c2c2c2; height: 40px; padding-left: 20px;" > 
+            <img src="img/Food.png"  width ="40" height="40" alt="type" style="padding-right: 10px; border-left: 2px solid #c2c2c2; height: 40px; padding-left: 20px;" > 
             <div class="vertical-box">
                 <p class="verbox Mainsmalltext">Chicken</p>
             </div>    
         </div>
-
-        
-       <div class="box" style="padding-left: 30px; padding-bottom: 20px; padding-right: 110px;">
+        <!-- print recipes -->
+        <div class="box" style="padding-left: 30px; padding-bottom: 20px; padding-right: 110px;">
         <div class=" vertical-box" style="padding-right: 20px ;">
-            <img src="img/print.png"  width ="70" height="70" alt="Clocktime" > 
+            <img id="printBtn" src="img/print.png"  width ="70" height="70" alt="PRINT" > 
             <p class="Mainsmalltext" style=" padding-left: 16px;">PRINT</p>
         </div>
+        <!-- share recipes -->
         <div class=" vertical-box">
-            <img src="img/share.png"  width ="70" height="70" alt="Clocktime" > 
+            <img id="shareBtn" src="img/share.png"  width ="70" height="70" alt="SHARE" > 
             <p class="Mainsmalltext" style=" padding-left: 16px;">SHARE</p>
         </div>
-
-       </div>
-
-
-    </div>
-
-
-   
-    <div class="horizontal-box" style="padding-top: 260px; padding-left: 10px; padding-bottom: 250px;">
-        <div class="box" style="padding-left: 60px; width: 840px; height: 500px;">
-            <iframe id="recipe-video" width="1200" height="500" src="https://www.youtube.com/embed/z06u6SBzxs4" frameborder="0" allowfullscreen style="border-radius: 20px;"></iframe>
         </div>
-    
+</div>
 
-        <div class="box" style=" background-color:  #e7f9ff;   width: 400px;   height: 500px; border-radius: 20px;  ">
-
-            <div class="vertical-box" style=" padding-left: 50px;">
+<div class="horizontal-box" style="padding-top: 260px; padding-left: 10px; padding-bottom: 250px;">
+        <!-- recipe video -->
+        <div class="box" style="padding-left: 60px; width: 840px; height: 500px;">
+            <iframe id="recipe-video" width="1200" height="500" src="https://www.youtube.com/embed/IQ_-Boccv9g" frameborder="0" allowfullscreen style="border-radius: 20px;"></iframe>
+        </div>
+        <!--  Nurtrition Information 1-Calories 2-Total Fat 3-Protein 4-Carbohydrate 5-Carbohydrate 6-Cholesterol-->
+        <div class="box" style=" background-color:  #e7f9ff;   width: 400px;   height: 500px; border-radius: 20px;">
+        <div class="vertical-box" style=" padding-left: 50px;">
           <p class="Mainsmalltext"  style="font-size: 20px; font-weight: bolder; padding-right: 120px"> Nurtrition Information</p> 
 
-          <div class="horizontal-box horizontal-line" style=" height: 40px;" >
+        <div class="horizontal-box horizontal-line" style=" height: 40px;" >
             <p class="smalltext"> Calories</p> 
             <p class="Mainsmalltext" style="padding-left: 200px;">219.9 Kcal</p> 
-          </div> 
+        </div> 
 
-          <div class="horizontal-box horizontal-line" style=" height: 40px;">
+        <div class="horizontal-box horizontal-line" style=" height: 40px;">
             <p class="smalltext"> Total Fat</p> 
             <p class="Mainsmalltext" style="padding-left: 230px;">10.7g</p> 
-          </div> 
-          <div class="horizontal-box horizontal-line" style=" height: 40px;">
+        </div> 
+        <div class="horizontal-box horizontal-line" style=" height: 40px;">
             <p class="smalltext"> Protein</p> 
             <p class="Mainsmalltext" style="padding-left: 250px;">7.9g</p> 
-          </div> 
+        </div> 
           <div class="horizontal-box horizontal-line" style=" height: 40px;" >
             <p class="smalltext"> Carbohydrate</p> 
             <p class="Mainsmalltext" style="padding-left: 200px;">22.3g</p> 
-          </div> 
+        </div> 
           <div class="horizontal-box horizontal-line" style=" height: 40px;">
             <p class="smalltext"> Cholesterol</p> 
             <p class="Mainsmalltext" style="padding-left: 200px;">37.4mg</p> 
-          </div> 
-          <div class="horizontal-box" style="padding-top: 50px;   color: #818181; width: 300px; text-align: center;">
-            <p > adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-
+        </div> 
+        <div class="horizontal-box" style="padding-top: 50px;   color: #818181; width: 300px; text-align: center;">
+            <p >Tracking the number of calories consumed daily is an essential part of weight management and maintaining a healthy lifestyle </p>
         </div>
+        </div>   
+        </div>
+</div>
+<!--recipe description  -->
+<div id="recipe-desc" class="horizontal-box" style="padding-top: 50px; padding-left: 80px; padding-right: 120px; width: 1450px; color: #4b4b4b">
 
+    <p>Fried rice, originating in China, has become a global favorite, seamlessly integrating into various Asian cuisines.
+       From Bangkok's bustling streets to Tokyo's vibrant markets, each region adds its unique twist,<br>creating diverse and tantalizing versions.
+       Beyond traditional kitchens, fried rice has also found a place in Western fusion cuisine, where chefs blend its familiar comforts with innovative <br>
+       ingredients and techniques from around the world, crafting culinary masterpieces that push the boundaries of taste and creativity.</p>
+</div>
+<!-- checkbox  -->
+<div class="horizontal-box" style="padding-left: 100px; text-align: left; padding-top: 750; ">
+    <div class="box" style=" text-align: left;">
+        <div class="vertical-box" style="  text-align: left; padding-top: 650px;">
+            <p class="Mainsmalltext"  style="font-size: 25px; font-weight: bolder; "> Ingredients</p> 
+            <p class="Mainsmalltext"  style="font-size: 19px; font-weight: bolder; "> For Main dish</p> 
 
-            </div>
-            
+<div id="ingredients-container"></div>
         </div>
     </div>
+<div class="box"  style=" padding-top: 800px; width: 600px;  text-align: left;">
+        <div class="vertical-box"> <p class="Mainsmalltext verbox"  style="font-size: 25px; font-weight: bolder; width: 300px; "> Other Receipies</p> 
+            <div class=" horizontal-box">
+                <img src="img/Meatball.png" style="width: 200px; height: 100px; border-radius: 10px; padding-top: 60px;">
+                <div class="vertical-box" style="padding-top: 60px; padding-left: 20px;">
+                    <p class="Mainsmalltext"  style="font-size: 19px; font-weight: bolder; width: 200px;">Chicken Meatball with Creamy Chees...</p> 
+                    <p class="smalltext">By Andreas Paula</p> 
+                </div>
+            </div>
+<div class=" horizontal-box" style="padding-top: 60px;">
+            <img src="img/Creamy Chiecken.png" style="width: 200px; height: 100px; border-radius: 10px;  padding-top: 60px;">
+                <div class="vertical-box" style="padding-top: 60px; padding-left: 20px;">
+                    <p class="Mainsmalltext"  style="font-size: 19px; font-weight: bolder; width: 200px;">The Creamiest Creamy Chicken an...</p> 
+                    <p class="smalltext">By Andreas Paula</p> 
+                </div>
+</div>
+<div class=" horizontal-box" style="padding-top: 60px;">
+            <img src="img/Riceandch.png" style="width: 200px; height: 100px; border-radius: 10px; padding-top: 60px;">
+                <div class="vertical-box" style="padding-top: 60px; padding-left: 20px;">
+                    <p class="Mainsmalltext"  style="font-size: 19px; font-weight: bolder; width: 200px;">The Best Easy One Pot Chicken and Rice</p> 
+                    <p class="smalltext">By Andreas Paula</p> 
+    
+                </div>
+</div>
+            <img class="verbox" src="img/Plategreen.png" style="width: 400px; height: 280px; padding-top: 80px; "> 
+        </div>      
+</div>
+</div>
+<!-- Directions -->
+<div class="vertical-box" style="width: 900px; padding-left: 70px; padding-top: 700px;" >
+        <p class="Mainsmalltext"  style="font-size: 25px; font-weight: bolder; ">Directions</p> 
+
+    <div id="directions-container"></div> 
 </div>
 
-
-    <div id="recipe-desc" class="horizontal-box" style="padding-top: 50px; padding-left: 80px; padding-right: 120px; width: 1450px; color: #4b4b4b">
-
-        <p>Fried rice, a delectable and adaptable culinary creation tracing its roots to China, has transcended cultural boundaries to become a cherished delight enjoyed across the globe. While its origins may lie in the heart of China, 
-            this dish has gracefully assimilated into diverse culinary landscapes, finding its place as a beloved staple in numerous Asian cuisines. 
-            From the bustling streets of Bangkok to the vibrant markets of Tokyo, fried rice graces tables in various forms, each region infusing its unique flair and ingredients to create tantalizing renditions that captivate palates far and wide.
-            However, the allure of fried rice extends beyond the confines of traditional kitchens, making its mark in fusion cuisine prevalent in Western countries. Here, culinary adventurers and enthusiasts alike revel in innovative interpretations that fuse the familiar comforts of fried rice with an eclectic array of ingredients, blending flavors and techniques from around the world to craft culinary masterpieces that push the boundaries of taste and creativity.</p>
-    </div>
-
-
-    <div class="horizontal-box" style="padding-left: 100px; text-align: left; padding-top: 750; ">
-        <div class="box" style=" text-align: left;">
-            <div class="vertical-box" style="  text-align: left; padding-top: 650px;">
-                <p class="Mainsmalltext"  style="font-size: 25px; font-weight: bolder; "> Ingredients</p> 
-                <p class="Mainsmalltext"  style="font-size: 19px; font-weight: bolder; "> For Main dish</p> 
-
-                <div id="ingredients-container"></div>
-
-
-<script>
-    function applyTextStyle(checkbox) {
-        var paragraph = checkbox.parentNode.querySelector('p');
-        if (checkbox.checked) {
-            paragraph.classList.remove('black-text');
-            paragraph.classList.add('line-through');
-        } else {
-            paragraph.classList.remove('line-through');
-            paragraph.classList.add('black-text');
-        }
-    }
-</script>
-
-
- 
-            </div>
-        </div>
-
-
-        <div class="box"  style=" padding-top: 800px; width: 600px;  text-align: left;">
-            <div class="vertical-box"> <p class="Mainsmalltext verbox"  style="font-size: 25px; font-weight: bolder; width: 300px; "> Other Receipies</p> 
-                <div class=" horizontal-box">
-                    <img src="img/Meatball.png" style="width: 200px; height: 100px; border-radius: 10px; padding-top: 60px;">
-                    <div class="vertical-box" style="padding-top: 60px; padding-left: 20px;">
-                        <p class="Mainsmalltext"  style="font-size: 19px; font-weight: bolder; width: 200px;">Chicken Meatball with Creamy Chees...</p> 
-                        <p class="smalltext">By Andreas Paula</p> 
-    
-                    </div>
-                </div>
-
-                <div class=" horizontal-box" style="padding-top: 60px;">
-                    <img src="img/Creamy Chiecken.png" style="width: 200px; height: 100px; border-radius: 10px;  padding-top: 60px;">
-                    <div class="vertical-box" style="padding-top: 60px; padding-left: 20px;">
-                        <p class="Mainsmalltext"  style="font-size: 19px; font-weight: bolder; width: 200px;">The Creamiest Creamy Chicken an...</p> 
-                        <p class="smalltext">By Andreas Paula</p> 
-    
-                    </div>
-                </div>
-
-                <div class=" horizontal-box" style="padding-top: 60px;">
-                    <img src="img/Riceandch.png" style="width: 200px; height: 100px; border-radius: 10px; padding-top: 60px;">
-                    <div class="vertical-box" style="padding-top: 60px; padding-left: 20px;">
-                        <p class="Mainsmalltext"  style="font-size: 19px; font-weight: bolder; width: 200px;">The Best Easy One Pot Chicken and Rice</p> 
-                        <p class="smalltext">By Andreas Paula</p> 
-    
-                    </div>
-                </div>
-
-
-
-                <img class="verbox" src="img/Plategreen.png" style="width: 400px; height: 280px; padding-top: 80px; "> 
-
-
-            </div>
-            
-        </div>
-    </div>
-
-
-        <div class="vertical-box" style="width: 900px; padding-left: 70px; padding-top: 700px;" >
-            <p class="Mainsmalltext"  style="font-size: 25px; font-weight: bolder; ">Directions</p> 
-
-            <div id="directions-container"></div>
-            <!-- <div class="horibox horizontal-line" style="height: 780px; width: 800px;" >
-                    <div class="vertical-box">
-                        <div class="horibox">
-                            <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" checked onchange="applyTextStyle(this)">
-                            <p class="Mainsmalltext line-through" style="font-size: 24px;">1.Lorem ipsum dolor sit amet </p>
-
-                        </div>
-                    <p class="smalltext" style="font-size: 19px; padding-left: 20px;">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
-                    <img src="img/womencooks.png" style=" width: 880px; height: 380px;">
-                    <p class="smalltext" style="font-size: 19px; padding-left: 20px;">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
-
-                </div>
-             
-            </div>
-
-
-            <div class="horibox horizontal-line" style="height: 180px; width: 800px; padding-top: 40px;" >
-                <div class="vertical-box">
-                    <div class="horibox">
-                        <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox"  onchange="applyTextStyle(this)">
-                        <p class="Mainsmalltext black-text" style="font-size: 24px;">2.Lorem ipsum dolor sit amet </p>
-
-                    </div>
-                <p class="smalltext" style="font-size: 19px; padding-left: 20px;">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
-
-            </div>
-         
-        </div>
-          
-        <div class="horibox horizontal-line" style="height: 180px; width: 800px; padding-top: 40px;" >
-            <div class="vertical-box">
-                <div class="horibox">
-                    <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox"  onchange="applyTextStyle(this)">
-                    <p class="Mainsmalltext black-text" style="font-size: 24px;">3.Lorem ipsum dolor sit amet </p>
-
-                </div>
-            <p class="smalltext" style="font-size: 19px; padding-left: 20px;">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
-
-        </div>
-     
-    </div>
-           -->
-
-
-
-
-
-
-        </div>
-
-
-
+<!-- Quote Subscribe Area Start -->
 <div class="horizontal-box" style="padding-left: 130px; padding-top: 350px;  padding-left: 80px; border-radius: 20px;">
     <div class="box" style="width: 1400px; height: 400px; background-color: #e7f9ff; border-radius: 20px; ">
         <div class="vertical-box" >
 
                 <p class="Mainsmalltext" style="font-size: 50px; padding-left: 160px; text-align: center;">Deliciousness to your inbox</p>
-                <p class="smalltext" style="font-size: 20px;  padding-left: 160px; text-align: center;">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqut enim ad minim </p>
+                <p class="smalltext" style="font-size: 20px;  padding-left: 160px; text-align: center;">Delightful Recipes Straight to Your Inbox: Simply Delicious!</p>
                 <div class="horizontal-box" style="padding-left: 330px; padding-top: 30px; ">
                     <div class="box" style="width: 500px;  padding-left: 160px; height: 72px; background-color: rgb(255, 255, 255); border-radius: 20px; ">
                         <div class="horizontal-box" style="padding-left: 100px;  padding-bottom: 2px; ">
@@ -480,25 +194,22 @@ input[type="submit"]:hover {
                                     </label>
                                 </p>
                             </form>
-
                                 <input type="submit" value="Subscribe">
-
                         </div>
                     </div>
                 </div>   
     </div>
-  
 </div>
 </div>
-
+<!-- Quote Subscribe Area end -->
 <div class="horizontal-box" style="padding-left: 300px; padding-top: 300px;">
     <p class="Mainsmalltext" style="font-size: 50px; padding-left: 260px; text-align: center;">You may like these recipe too</p>
 </div>
-
 <div class="horizontal-box" style="padding-left: 60px; padding-top: 200px;" >
+ <!-- 1 Single Receipe Area -->
 <div class="box">
     <div class="vertical-box">
-        <img src="img/dragonfruit.png" style=" width: 300px; height:150px;">
+        <a href="Recipiespage.html"><img src="img/dragonfruit.png"style=" width: 300px; height:150px;" alt="dragonfruit"></i></a>
         <p class="Mainsmalltext" style="font-size: 20px;">Mixed Tropical Fruit Salad with Superfood Boosts </p>
         <div class="horizontal-box"> 
             <img src="img/clock.png" style=" width: 30px; height: 30px;">
@@ -508,10 +219,10 @@ input[type="submit"]:hover {
         </div>
     </div>
 </div>
-
+<!-- 2 Single Receipe Area -->
 <div class="box" style="padding-left: 250px;">
     <div class="vertical-box">
-        <img src="img/steak.png" style=" width: 300px; height:150px;">
+        <a href="Recipiespage.html"><img src="img/steak.png" style=" width: 300px; height:150px;" alt="steak"></i></a>
         <p class="Mainsmalltext" style="font-size: 20px;">Mixed Tropical Fruit Salad with Superfood Boosts </p>
         <div class="horizontal-box"> 
             <img src="img/clock.png" style=" width: 30px; height: 30px;">
@@ -521,10 +232,10 @@ input[type="submit"]:hover {
         </div>
     </div>
 </div>
-
+<!-- 3 Single Receipe Area -->
 <div class="box" style="padding-left: 250px;">
     <div class="vertical-box">
-        <img src="img/eggs.png" style=" width: 300px; height:150px;">
+        <a href="Recipiespage.html"><img src="img/eggs.png" style=" width: 300px; height:150px;" alt="eggs"></i></a>
         <p class="Mainsmalltext" style="font-size: 20px;">Mixed Tropical Fruit Salad with Superfood Boosts </p>
         <div class="horizontal-box"> 
             <img src="img/clock.png" style=" width: 30px; height: 30px;">
@@ -534,8 +245,7 @@ input[type="submit"]:hover {
         </div>
     </div>
 </div>
-
-
+<!-- 4 Single Receipe Area -->
 <div class="box" style="padding-left: 250px;" >
     <div class="vertical-box">
         <img src="img/caluiflower.png" style=" width: 300px; height:150px;">
@@ -549,18 +259,125 @@ input[type="submit"]:hover {
     </div>
 </div>
 </div>
-
-<div class="vertical-box " style="width: 900px;  padding-left: 60px; padding-top: 200px;">
-    <img src="img/FoodieLand.png" style="width: 200px; height: 70px; ">
-<p style="width: 500px; height: 10px;  padding-left: 20px;"> </p>
+ <!-- Receipe Area end -->
+<div class="vertical-box " style="width: 900px;  padding-left: 60px; padding-top: 200px;"> 
 </div>
 <div class="horizontal-line" ></div>
 
-</body>
+<!-- js  -->
+<!-- 1 Function to fetch recipe details based on the name -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+ // Function to fetch recipe details based on the name
+ function fetchRecipeDetails(recipeName) {
+     // Fetch recipe data from the backend
+     fetch('/recipes')
+         .then(response => response.json())
+         .then(data => {
+             // Find the recipe with the matching name
+             const recipe = data.find(recipe => recipe.name === recipeName);
+             
+             if (recipe) {
+                 document.getElementById('recipe-title').textContent = recipe.name;
+                 document.getElementById('recipe-video').textContent = recipe.recipievideio;
+                 document.getElementById('recipe-desc').textContent = recipe.description;
+                 document.getElementById('recipe-desc').textContent = recipe.description;
+                 const ingredientsContainer = document.getElementById('ingredients-container');
+                 ingredientsContainer.innerHTML = ''; 
+                recipe.ingredients.forEach(ingredient => {
+                 const ingredientDiv = document.createElement('div');
+                 ingredientDiv.classList.add('horibox', 'horizontal-line');
+                ingredientDiv.style.height = '40px';
+                ingredientDiv.style.width = '800px'; 
+                 ingredientDiv.innerHTML = `
+                 <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" onchange="applyTextStyle(this)">
+                 <br>
+                 <p class="smalltext black-text">${ingredient}</p>
+             `;
+             ingredientsContainer.appendChild(ingredientDiv);
+         });
 
-<footer style=" padding-left: 770px; padding-top: 20px;">
-    <p class="Mainsmalltext" style="font-size: 18px;">
-        <span style="color: rgb(0, 0, 0);">©</span> FlowBase. Powered by <span style="color: orange;">FoodieLand</span>
-      </p>
-      </footer>
+              // Populate directions
+              const directionsContainer = document.getElementById('directions-container');
+             directionsContainer.innerHTML = '';
+             recipe.directions.forEach(step => {
+                 const stepDiv = document.createElement('div');
+                 stepDiv.classList.add('horibox', 'horizontal-line');
+                 stepDiv.style.height = '180px';
+                 stepDiv.style.width = '800px';
+                 stepDiv.style.paddingTop = '40px';
+                 stepDiv.innerHTML = `
+                     <div class="vertical-box">
+                         <div class="horibox">
+                             <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" onchange="applyTextStyle(this)">
+                             <p class="Mainsmalltext black-text" style="font-size: 24px;">${step.stepNumber}.${step.stepsdirections}</p>
+                         </div>
+                         <p class="smalltext" style="font-size: 19px; padding-left: 20px;">${step.stepsdirections}</p>
+                     </div>
+                 `;
+                 directionsContainer.appendChild(stepDiv);
+             });
+             } else {
+                 console.error('Recipe not found!');
+             }
+         })
+         .catch(error => console.error('Error fetching recipe:', error));
+ }
+
+ // Extract the recipe name from the URL query parameter
+ const urlParams = new URLSearchParams(window.location.search);
+ const recipeName = urlParams.get('recipe');
+
+ // Fetch and display recipe details
+ fetchRecipeDetails(recipeName);
+});
+</script>
+
+
+<!--Function to print the page// Function to share the page using the Web Share API-->
+<script>
+    // Function to print the page
+    function printPage() {
+        window.print();
+    }
+    // Function to share the page using the Web Share API
+    function sharePage() {
+        if (navigator.share) {
+            navigator.share({
+                title: document.title,
+                url: window.location.href
+            }).then(() => {
+                console.log('Page shared successfully');
+            }).catch((error) => {
+                console.error('Error sharing the page:', error);
+            });
+        } else {
+            alert('Web Share API is not supported in your browser.');
+        }
+    }
+    // Add event listeners
+    document.getElementById('printBtn').addEventListener('click', printPage);
+    document.getElementById('shareBtn').addEventListener('click', sharePage);
+</script>
+
+
+<!-- fun checkbox -->
+<script>
+    function applyTextStyle(checkbox) {
+        var paragraph = checkbox.parentNode.querySelector('p');
+        if (checkbox.checked) {
+            paragraph.classList.remove('black-text');
+            paragraph.classList.add('line-through');
+        } else {
+            paragraph.classList.remove('line-through');
+            paragraph.classList.add('black-text');
+        }
+    }
+</script> 
+
+</body>
+<footer style=" padding-left: 90px; padding-top: 20px;">
+    <img src="img/FoodieLand.png" style="width: 100px; height: 50px; ">
+    <p style="width: 500px; height: 10px;  padding-left: 20px;"> </p>
+</footer>
 </html>

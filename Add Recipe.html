@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  
     <meta charset="UTF-8">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Title -->
+    <title>Foodieland - Add Receipe</title>
+    <!-- Favicon -->
+    <link rel="icon" href="img/FoodieLand.png">
 
+    <!-- external css -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!-- Title -->
-    <title>Foodieland - Add Receipe</title>
-
-    <!-- Core Stylesheet -->
-    <link rel="icon" href="img/FoodieLand.png">
+    <!-- external css -->
     <link rel="stylesheet" href="style.css">
+
+    <style type="text/css">
+.backbody {
+  background-image: url('/img/food-background2.jpeg');
+  background-size: contain;
+}
+</style>
 </head>
-
 <body>
-
-
+<!-- Nav start -->
 <div class="page">
     <div class="horizontal-box , navbar">
         <div class="home-logo">
@@ -31,7 +35,6 @@
         </div>
         <div class="box navhead">
           <a href="index.html">Home<i class="fa" aria-hidden="true"></i></a>
-          <a href="Recipiespage.html">Recipes<i class="fa" aria-hidden="true"></i></a>
           <a href="Blogpage.html">Blog<i class="fa" aria-hidden="true"></i></a>
           <a href="contact.html">Contact<i class="fa" aria-hidden="true"></i></a>
           <a href="about.html">About us<i class="fa" aria-hidden="true"></i></a>
@@ -42,33 +45,28 @@
             <a href="https://www.linkedin.com/feed/"><img src="img/Linkedin.png" alt="Linkedin logo"></i></a>
         </div>
     </div>
-    <div class="horizontal-line"></div>
-
-
-    <!-- Nav End -->
-    <!-- ##### Header Area End ##### -->
+<div class="horizontal-line"></div>
+<!-- Nav End -->
+<!-- Header Area End  -->
   <!-- container sin in start -->
-  <div class="content">
+  <div class="content backbody">
     <div class="container">
       <div class="row justify-content-center">
-  
-      
         <div class="col-md-6 contents">
           <div class="row justify-content-center">
             <div class="col-md-12">
               <div class="form-block">
                 <div class="mb-4">
-                  <h3>Add Recipe <strong>in FoodieLand</strong></h3>
+                  <h2>Add Recipe <strong>in FoodieLand</strong></h2>
                 </div>
-                <form action="/Addrecipe" id="recipeForm" method="post" enctype="multipart/form-data">>
+                <form action="/Addrecipe" id="recipeForm" method="post" enctype="multipart/form-data">
                   <div class="form-group first">
                     <label for="recipeName"></label>
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Receipe Name" required>
+                    <input type="text" class="form-control"style="font-size: small;" id="name" name="name" placeholder="Receipe Name" required>
                   </div>
                   <div class="form-group first">
                     <label for="description"></label>
-                    <!-- <input type="text" class="form-control" id="description" name="Recipe Description" placeholder="Recipe Description" required> -->
-                    <input type="text" class="form-control" id="description" name="description" placeholder="Recipe Description" required>
+                    <input type="text" class="form-control"style="font-size: small;" id="description" name="description" placeholder="Recipe Description" required>
                   </div>
                   <div class="form-group">
                     <label for="category"></label>
@@ -79,30 +77,27 @@
                       <option value="dinner">Dinner</option>
                     </select>
                   </div>
-           
-
                   <div class="form-group">
                     <label for="recipeImage"></label>
                     <input type="file" name="recipeImage" id="recipeImage" accept="image/*" required>
                 </div>
-
                   <div class="form-group">
                     <label for="recipievideio"></label>
-                    <input type="url" class="form-control" id="recipievideio" name="recipievideio" placeholder="YouTube Video URL" required>
-                  </div>
+                    <input type="url" class="form-control"style="font-size: small;" id="recipievideio" name="recipievideio" placeholder="YouTube Video URL" required>
+                </div>
                   <div class="form-group">
                     <label for="ingredients"></label>
-                    <textarea class="form-control" id="ingredients" name="ingredients" placeholder="Ingredients (separated by commas)" required></textarea>
+                    <textarea class="form-control"style="font-size: small;" id="ingredients" name="ingredients" placeholder="Ingredients (separated by commas)" required></textarea>
                   </div>
                   <div class="form-group">
                     <label for="forTheSause"></label>
-                    <textarea class="form-control" id="forTheSause" name="forTheSause" placeholder="Ingredients for the Sauce (separated by commas)" required></textarea>
+                    <textarea class="form-control" style="font-size: small;" id="forTheSause" name="forTheSause" placeholder="Ingredients for the Sauce (separated by commas)" required></textarea>
                   </div>
                   <div class="form-group">
                     <label for="directions"></label>
-                    <textarea class="form-control" id="directions" name="directions" placeholder="Directions (each step separated by a new line)" required></textarea>
+                    <textarea class="form-control"style="font-size: small;" id="directions" name="directions" placeholder="Directions (each step separated by a new line)" required></textarea>
                   </div>
-                  <input type="submit" value="Add Recipe" class="btn btn-pill text-white btn-block btn-primary">
+                  <input type="submit" value="Add Recipe" class="btn btn-pill text-white btn-block btn-primary"style="font: 1em sans-serif;">
                 </form>
               </div>
             </div>
@@ -111,112 +106,47 @@
       </div>
     </div>
   </div>
-  
-       <!-- container sin in end -->
-       <!-- ##### Footer Area start ##### -->
-          <footer class="footer-area">
-            <div class="container h-100">
-                <div class="row h-100">
-                    <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
-                        <!-- Footer Logo -->
-                        <div class="footer-logo">
-                            <a class="home-logo" href="index.html"><img src="img/FoodieLand.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    <!-- ##### Footer Area end ##### -->
+<!-- container sin in end -->
+
+<!-- Footer Area start  -->
+<footer class="footer-area">
+    <div class="container h-100">
+      <div class="row h-100">
+        <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
+        </div>
+        <!-- Footer Logo -->
+        <div class="footer-logo">
+          <a class="home-logo" href="index.html"><img src="img/FoodieLand.png" alt=""></a>
+        </div>
+      </div>
     </div>
-       
-    <!-- ##### All Javascript Files ##### -->
-    <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- All js -->
-    <script src="js/main.js"></script>
-
-    
-   <script type="module" src="js/main.js"></script>
-
-
-      </body>
-
-
-      <body>
-
-        <!-- Navigation Bar -->
-        <!-- Your existing navigation bar code -->
-    
-        <!-- Horizontal Line -->
-        <div class="horizontal-line"></div>
-        
-        <!-- Recipe Title -->
-        <div style="padding-top: 100px; text-align: center;">
-            <p class="Maintext">Health Japanese Fried Rice</p>
-        </div>
-        
-        <!-- Recipe Details -->
-        <div style="padding: 20px;">
-            <!-- Placeholder for recipe details -->
-            <p>Recipe details will go here.</p>
-        </div>
-        
-        <!-- Ingredients Section -->
-        <div style="padding: 20px;">
-            <p class="Mainsmalltext">Ingredients</p>
-            <!-- Placeholder for ingredients -->
-            <div class="horibox horizontal-line" style="height: auto;">
-                <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" checked onchange="applyTextStyle(this)">
-                <p class="smalltext black-text">Ingredient 1</p>
-            </div>
-            <!-- Add more ingredients as needed -->
-        </div>
-        
-        <!-- Directions Section -->
-        <div style="padding: 20px;">
-            <p class="Mainsmalltext">Directions</p>
-            <!-- Placeholder for directions -->
-            <div class="horibox horizontal-line" style="height: auto;">
-                <input style="border-radius: 50%;" type="checkbox" name="checkbox" value="checkbox" checked onchange="applyTextStyle(this)">
-                <p class="smalltext black-text">Step 1</p>
-            </div>
-            <!-- Add more steps as needed -->
-        </div>
-    
-        <!-- Other Recipes Section -->
-        <div style="padding: 20px;">
-            <!-- Placeholder for other recipes -->
-            <p>You may like these recipes too:</p>
-            <!-- Add other recipe cards as needed -->
-        </div>
-    
-        <!-- Newsletter Subscription Section -->
-        <div style="padding: 20px;">
-            <!-- Placeholder for newsletter subscription form -->
-            <p>Subscribe to our newsletter:</p>
-            <!-- Add subscription form as needed -->
-        </div>
-    
-        <!-- Footer -->
-        <!-- Your existing footer code -->
-    
-        <!-- JavaScript for checkbox functionality -->
-        <script>
-            function applyTextStyle(checkbox) {
-                var paragraph = checkbox.parentNode.querySelector('p');
-                if (checkbox.checked) {
-                    paragraph.classList.remove('black-text');
-                    paragraph.classList.add('line-through');
-                } else {
-                    paragraph.classList.remove('line-through');
-                    paragraph.classList.add('black-text');
-                }
-            }
-        </script>
-    
+</div>
+</footer>
+<!-- Footer Area end -->
+<!-- js  -->
+<!-- ##### All Javascript Files ##### -->
+<!-- jQuery-2.2.4 js -->
+<script src="js/jquery-3.3.1.min.js"></script>
+<!-- Popper js -->
+<script src="js/popper.min.js"></script>
+<!-- Bootstrap js -->
+<script src="js/bootstrap.min.js"></script>
+<!-- main js -->
+<script src="js/main.js"></script>  
+<script type="module" src="js/main.js"></script>
+ 
+<!-- JavaScript for checkbox functionality -->
+<script>
+    function applyTextStyle(checkbox) {
+      var paragraph = checkbox.parentNode.querySelector('p');
+        if (checkbox.checked) {
+          paragraph.classList.remove('black-text');
+          paragraph.classList.add('line-through');
+        } else {
+          paragraph.classList.remove('line-through');
+          paragraph.classList.add('black-text');
+         }
+ }
+ </script> 
     </body>
     </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="">
@@ -8,327 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    
     <!-- Title -->
     <title>Foodieland - Home</title>
-
-    <!-- Core Stylesheet -->
+    <!-- Favicon -->
     <link rel="icon" href="img/FoodieLand.png">
+    <!-- external Stylesheet -->
     <link rel="stylesheet" href="style.css">
-
-    <style type="text/css">
-        .contact-box {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 5px;
-            margin-top: 20pxpx;
-
-        }
-        .inner-div img {
-            position: absolute;
-        }
-
-        .salad1 {
-            left: 2px;
-            bottom: 0;
-        }
-
-        .salad2 {
-            right: 0;
-            bottom: 0;
-
-        }
-
-        .inner-div {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding: 100px 0;
-            width: 90%;
-            background-color: #e7f9ff;
-            border-radius: 20px;
-            position: relative;
-        }
-
-
-        .inner-div h2 {
-            color: #000000;
-            font-size: 48px;
-            font-weight: 600;
-            line-height: 58.09px;
-            letter-spacing: -0.04em;
-            text-align: center;
-
-
-        }
-
-        .inner-div p {
-            width: 50%;
-            font-size: 16px;
-            font-weight: 400;
-            line-height: 28px;
-            text-align: center;
-
-        }
-
-
-        .email-box form .label input {
-            position: absolute;
-        }
-
-        .input-email {
-            padding: 60px;
-            width: 300px;
-        }
-
-        */ .Maintext {
-            padding-left: 60px;
-            font-size: 40px;
-            font-weight: bold;
-        }
-
-        .vertical-box {
-            display: flex;
-            flex-direction: column;
-            padding-bottom: 14px;
-        }
-
-        .verbox {
-            width: 100px;
-            height: 0.1px;
-        }
-
-        .Mainsmalltext {
-            font-size: 14px;
-            font-weight: bolder;
-        }
-
-        .smalltext {
-            font-size: 14px;
-            font-weight: 900;
-            color: #919090;
-        }
-
-        .verticalline {
-            border-left: 2px solid #c2c2c2;
-            height: 40px;
-            padding-left: 120px;
-        }
-
-        .line-through {
-            text-decoration: line-through;
-        }
-
-        .black-text {
-            color: #000000;
-        }
-
-        form,
-        .email-box,
-        .label {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-
-        }
-
-        .label {
-            position: relative;
-            margin: 80px 0;
-
-
-
-        }
-
-        input[type="email"] {
-            width: 465px;
-            padding: 32px;
-            border: none;
-            border-radius: 20px;
-            box-sizing: border-box;
-            position: absolute;
-            z-index: 8;
-        }
-
-        input[type="email"]:focus {
-            outline: none;
-        }
-
-        input[type="email"]::placeholder {
-            color: #999;
-        }
-
-        input[type="email"]:required {
-            background-color: #fff;
-        }
-
-
-        .boxwhite{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            padding: 100px 0;
-            width: 90%;
-            background-color: #b9d1c1;
-            border-radius: 20px;
-            position: relative;
-        }
-
-        input[type="search"] {
-            width: 300px;
-            padding: 8px;
-            border: none;
-            border-radius: 5px;
-            box-sizing: border-box;
-
-        }
-
-        input[type="search"]:focus {
-            outline: none;
-        }
-
-        input[type="search"]::placeholder {
-            color: #999;
-        }
-
-        input[type="search"]:required {
-            background-color: #fff;
-        }
-
-        input[type="submit"] {
-            border: none;
-            background-color: #000000;
-            color: #fff;
-            padding: 10px 20px;
-            border-radius: 15px;
-            cursor: pointer;
-            width: 200px;
-            height: 70px;
-            position: absolute;
-            z-index: 990;
-            left: 21px;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #999;
-        }
-
-        .timing img {
-            margin-right: 8px;
-            border-bottom: none;
-        }
-
-        @media only screen and (max-width: 767px) {
-            .horizontal-box {
-                padding: 40px 20px;
-            }
-
-            .home-logo {
-                width: 120px !important;
-
-            }
-
-            .home-logo img {
-                width: 100% !important;
-            }
-
-            .navhead a {
-                font-size: 12px;
-                font-weight: 700;
-                margin-right: 20px;
-                display: none;
-            }
-
-        }
-
-        @media only screen and (max-width: 687px) {
-            .inner-div {
-                width: 93%;
-            }
-
-            input[type="email"] {
-                width: 349px;
-                padding: 23px;
-            }
-
-            input[type="submit"] {
-                width: 128px;
-                height: 46px;
-                left: 38px;
-            }
-
-            .inner-div h2 {
-                font-size: 35px;
-                font-weight: 600;
-            }
-        }
-        .navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100px;
-        background-color: #ffffff; 
-        z-index: 1000; 
-    }
-      /* search */
-      .search-box {
-            width: 100px;
-            border: 1px solid white;
-            border-radius: 5px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-        }
-        .search-box input {
-            border: none;
-            outline: none;
-            box-shadow: none; 
-            width: 100%;
-            font-size: 16px;
-            padding: 10px;
-        }
-        #searchInput {
-            width: 300px;
-            padding: 5px;
-            margin-left: 10px;
-        }
-        .icon {
-            width: 40px;
-            height: 40px;
-        }
-        .recipe {
-            margin-bottom: 20px;
-        }
-        .hidden {
-            display: none;
-        }
-
-        /* logout */
-        #auth-buttons a, #auth-buttons button {
-            display: inline;
-            margin-right: 20px;
-            color: #9f9d9d;
-            cursor: pointer;
-            font-size: medium;;
-        }
-        #auth-buttons a:hover, #auth-buttons button:hover {
-            background-color: #e7f9ff;
-        }
-        #auth-buttons button:hover {
-            background-color: #e7f9ff;
-        }
-    </style>
+    <link rel="stylesheet" href="/public/styleindex.css">
 </head>
+
 <body>
-    <!-- ##### Header Area Start ##### -->
+<!-- ##### Header Area Start ##### -->
     <!-- Nav Start -->
-    <div class="page">
+<div class="page">
     <div class="horizontal-box , navbar">
         <div class="home-logo">
             <img src="img/FoodieLand.png" alt="logo IMg">
@@ -344,7 +36,6 @@
             <a href="/users/signup" id="signupBtn" style="display: none;">Sign Up<i class="fa" aria-hidden="true"></i></a>
             <button id="logoutBtn" style="display: none;">Logout<i class="fa" aria-hidden="true"></i></button>
         </div>
-
      <!-- Search input with icon -->
     <div class="search-box">
     <i class="fa-solid fa-magnifying-glass"></i>
@@ -357,13 +48,19 @@
         </div>
     </div>
     <div class="horizontal-line"></div>
-     <br>  <br> 
+    <br><br> <br><br> 
     <!-- Nav End -->
+    <!-- Preloader start  -->
+     <div id="preloader">
+        <i class="circle-preloader"></i>
+        <img src="img/FoodieLand.png" alt="">
+    </div>
+    <!-- Preloader End -->
     <!-- ##### Header Area End ##### -->
 
-    <!-- ##### Hero Area Start ##### -->
-    <section class="hero-area">
-        <div class="hero-slides owl-carousel">
+<!-- ##### Hero Area Start ##### -->
+<section class="hero-area">
+    <div class="hero-slides owl-carousel">
             <!--  1 Single Hero Slide -->
             <div class="single-hero-slide bg-img" style="background-image: url(img/bg-img/bg1.jpg);">
                 <div class="container h-100">
@@ -379,7 +76,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- 2 Single Hero Slide -->
             <div class="single-hero-slide bg-img" style="background-image: url(img/bg-img/bg6.jpg);">
                 <div class="container h-100">
@@ -395,7 +91,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- 3 Single Hero Slide -->
             <div class="single-hero-slide bg-img" style="background-image: url(img/bg-img/bg7.jpg);">
                 <div class="container h-100">
@@ -411,12 +106,12 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- ##### Hero Area End ##### -->
+    </div>
+</section>
+<!-- ##### Hero Area End ##### -->
 
-    <!-- ##### Top Catagory Area Start ##### -->
-    <section class="top-catagory-area section-padding-80-0">
+<!-- ##### Top Catagory Area Start ##### -->
+<section class="top-catagory-area section-padding-80-0">
         <div class="container">
             <div class="row">
                 <!-- 1 Top Catagory Area -->
@@ -460,12 +155,10 @@
                 </div>
             </div>
         </div>
-      
+</section>
+<!-- ##### Top Catagory Area End ##### -->
   
-    </section>
-    <!-- ##### Top Catagory Area End ##### -->
-  
-    <!-- ##### Best Receipe Area Start ##### -->
+<!-- ##### Best Receipe Area Start ##### -->
     <section class="best-receipe-area">
         <div class="container">
             <div class="row mt-4">
@@ -474,7 +167,6 @@
                     </div>
                 </div>
             </div>
-
             <div id= "recipesfilter">  
             <div class="row mt-4" id="recipeList">                         
                 <!-- 1 Single Best Receipe Area -->
@@ -503,8 +195,7 @@
                         </div>
                     </div>
                 </a>
-                </div>
-                
+                </div>    
                 <!-- 2 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3"  data-title="Homemade Burger"  type="dinner">
                     <div class="single-best-receipe-area mb-30 recipesearch">
@@ -533,7 +224,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- 3 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3"  data-title="Vegan Smoothie"  type="breakfast" >
                     <div class="single-best-receipe-area mb-30 recipesearch">
@@ -562,7 +252,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- 4 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3" data-title="Homemade Burger"  type="dinner">
                     <div class="single-best-receipe-area mb-30 recipesearch">
@@ -591,7 +280,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- 5 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3"  data-title="Homemade Breakfast"  type="breakfast">
                     <div class="single-best-receipe-area mb-30 recipesearch">
@@ -620,7 +308,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- 6 Single Best Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-3" data-title="Healthy Fruit Desert"  type="lunch">
                     <div class="single-best-receipe-area mb-30 recipesearch">
@@ -649,97 +336,14 @@
                         </div>
                     </div>
                 </div>
-               
+    <div id="recipeList"></div>
+</div>
+</div>
+</section>
+<!-- ##### Best Receipe Area End ##### -->
 
-
-                <!-- <div id="newRecipeContainer"></div> -->
-
-               
-                <div id="recipeList"></div>
-
-                <script>
-                   document.addEventListener('DOMContentLoaded', function() {
-
-
-                    function filterRecipes(category) {
-            const recipeItems = document.querySelectorAll('recipe');
-            recipeItems.forEach(item => {
-                const itemCategory = item.querySelector('category').textContent.toLowerCase();
-                if (category === 'all' || itemCategory === category) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        }
-
-    // Fetch recipe data from the backend
-    fetch('/recipes')
-        .then(response => response.json())
-        .then(data => {
-            // Select the container element where recipes will be displayed
-            const recipesContainer = document.getElementById('recipeList'); // Adjusted ID
-
-            // Loop through each recipe and create HTML elements to display them
-            data.forEach(recipe => {
-                // Create a div element for each recipe
-                const recipeDiv = document.createElement('div');
-                recipeDiv.classList.add('recipe-item'); // Adding the class used in HTML
-
-                // Populate the div with recipe information
-                recipeDiv.innerHTML = `
-                <div class="col-12 col-sm-9 ">
-                <div class="single-best-receipe-area mb-30">
-                    <a href="Recipiespage.html?recipe=${encodeURIComponent(recipe.name)}">
-                        <div class="single-best-receipe-area mb-30">
-                            <img class="img-fix" src="${recipe.recipeImage}" alt="${recipe.name}">
-                            <div class="receipe-content">
-                                <h5>${recipe.name}</h5>
-                                <div class="d-flex justify-content-between">
-                                    <div class="delivery-time">
-                                        <img src="img/core-img/Time (1).png" alt="">
-                                        <span>30 Minutes</span>
-                                    </div>
-                                    <div class="food-catagory">
-                                        <img src="img/core-img/Time (2).png" alt="">
-                                        <span>${recipe.category}</span>
-                                    </div>
-                                </div>
-                                <div class="ratings">
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star" aria-hidden="true"></i>
-                                    <i class="fa fa-star-o" aria-hidden="true"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-
-                `;
-
-                // Append the recipe div to the recipes container
-                recipesContainer.appendChild(recipeDiv);
-            });
-        })
-        .catch(error => console.error('Error fetching recipes:', error));
-
-        document.getElementById('breakfast-btn').addEventListener('click', () => filterRecipes('breakfast'));
-        document.getElementById('lunch-btn').addEventListener('click', () => filterRecipes('lunch'));
-        document.getElementById('dinner-btn').addEventListener('click', () => filterRecipes('dinner'));
-        document.getElementById('all-btn').addEventListener('click', () => filterRecipes('all'));
-});
-
-                </script>
-
-            </div>
-           </div>
-    </section>
-    <!-- ##### Best Receipe Area End ##### -->
-    <!-- ##### Ai Area Start ##### -->
-    <section class="cta-area bg-img bg-overlay" style="background-image: url(img/bg-img/bg4.jpg);">
+<!-- ##### Ai Area Start ##### -->
+<section class="cta-area bg-img bg-overlay" style="background-image: url(img/bg-img/bg4.jpg);">
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
@@ -752,14 +356,13 @@
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ##### Ai CTA Area End ##### -->
+</section>
+<!-- ##### Ai CTA Area End ##### -->
 
-    <!-- ##### Small Receipe Area Start ##### -->
-    <section class="small-receipe-area section-padding-80-0">
+<!-- ##### Small Receipe Area Start ##### -->
+<section class="small-receipe-area section-padding-80-0">
         <div class="container">
             <div class="row">
-
                 <!-- 1 Small Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-small-receipe-area d-flex">
@@ -784,7 +387,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- 2 Small Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-small-receipe-area d-flex">
@@ -809,7 +411,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- 3 Small Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-small-receipe-area d-flex">
@@ -834,7 +435,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- 4 Small Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-small-receipe-area d-flex">
@@ -859,7 +459,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- 5 Small Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-small-receipe-area d-flex">
@@ -880,11 +479,10 @@
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
-                            <p>2 Comments</p>
+                            <p>4 Comments</p>
                         </div>
                     </div>
                 </div>
-
                 <!-- 6 Small Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-small-receipe-area d-flex">
@@ -909,7 +507,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- 7 Small Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-small-receipe-area d-flex">
@@ -930,11 +527,10 @@
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
-                            <p>2 Comments</p>
+                            <p>6 Comments</p>
                         </div>
                     </div>
                 </div>
-
                 <!-- 8 Small Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-small-receipe-area d-flex">
@@ -959,7 +555,6 @@
                         </div>
                     </div>
                 </div>
-
                 <!-- 9 Small Receipe Area -->
                 <div class="col-12 col-sm-6 col-lg-4">
                     <div class="single-small-receipe-area d-flex">
@@ -980,18 +575,17 @@
                                 <i class="fa fa-star" aria-hidden="true"></i>
                                 <i class="fa fa-star-o" aria-hidden="true"></i>
                             </div>
-                            <p>2 Comments</p>
+                            <p>3 Comments</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ##### Small Receipe Area End ##### -->
+</section>
+<!-- ##### Small Receipe Area End ##### -->
 
-    <!-- ##### Quote Subscribe Area Start ##### -->
+<!-- ##### Quote Subscribe Area Start ##### -->
     <div class="contact-box">
-
         <div class="inner-div">
             <h2>Deliciousness to your inbox</h2>
             <p>Delightful Recipes Straight to Your Inbox: Simply Delicious!</p>
@@ -1007,7 +601,7 @@
             <img class="salad2" src="img/bg-img/salad (2).png" alt="salad">
         </div>
     </div>
-  
+    <!-- add recipes start -->
     <div class="contact-box" style="padding-top: 5px; padding-bottom: 5px;">
         <div class="boxwhite">
             <h1>Want to Join Us?</h1>
@@ -1016,43 +610,19 @@
                     <input class="sub" type="submit" value="Sign up?" id="signupButton">
                 </label>
             </form>
-    
             <form style="padding-right: 250px;" class="box" method="post" action="./public/login.html" id="loginForm">
                 <label class="label">
                     <input class="sub" type="submit" value="Log in" id="loginButton">
                 </label>
             </form>
-
             <div class="mt-4 text-center">
                 <a style=" color: #000; background-color:  #f1fff6;" id="addRecipeForm" class="btn btn-secondary" href="Add Recipe.html">Add Recipe?<i class="box"></i></a>
-              </div>
-                  
+              </div>    
         </div>
-    </div>
-    
-    <script>
-        var loggedIn = true; 
-    
-        function handleLoginStatus() {
-            var signupForm = document.getElementById("signupForm");
-            var loginForm = document.getElementById("loginForm");
-            var addRecipeForm = document.getElementById("addRecipeForm");
-    
-            if (loggedIn) {
-                signupForm.style.display = "none";
-                loginForm.style.display = "none";
-                addRecipeForm.style.display = "block";
-            } else {
-                signupForm.style.display = "block";
-                loginForm.style.display = "block";
-                addRecipeForm.style.display = "none";
-            }
-        }
-    
-        handleLoginStatus();
-    </script>
+    </div> 
+<!-- add recipes end -->
 
-    <!-- ##### Follow Us Instagram Area Start ##### -->
+<!-- ##### Follow Us Instagram Area Start ##### -->
     <div class="follow-us-instagram">
         <div class="container">
             <div class="row">
@@ -1071,7 +641,6 @@
                     <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
-
             <!-- 2 Single Insta Feeds -->
             <div class="single-insta-feeds">
                 <img src="img/bg-img/insta2.jpg" alt="">
@@ -1080,7 +649,6 @@
                     <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
-
             <!-- 3 Single Insta Feeds -->
             <div class="single-insta-feeds">
                 <img src="img/bg-img/insta3.jpg" alt="">
@@ -1089,7 +657,6 @@
                     <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
-
             <!-- 4 Single Insta Feeds -->
             <div class="single-insta-feeds">
                 <img src="img/bg-img/insta4.jpg" alt="">
@@ -1098,7 +665,6 @@
                     <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
-
             <!-- 5 Single Insta Feeds -->
             <div class="single-insta-feeds">
                 <img src="img/bg-img/insta5.jpg" alt="">
@@ -1107,7 +673,6 @@
                     <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
-
             <!-- 6 Single Insta Feeds -->
             <div class="single-insta-feeds">
                 <img src="img/bg-img/insta6.jpg" alt="">
@@ -1116,7 +681,6 @@
                     <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
                 </div>
             </div>
-
             <!-- 7 Single Insta Feeds -->
             <div class="single-insta-feeds">
                 <img src="img/bg-img/insta7.jpg" alt="">
@@ -1127,10 +691,10 @@
             </div>
         </div>
     </div>
-    <!-- ##### Follow Us Instagram Area End ##### -->
+<!-- ##### Follow Us Instagram Area End ##### -->
 
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area">
+<!-- ##### Footer Area Start ##### -->
+<footer class="footer-area">
         <div class="container h-100">
             <div class="row h-100">
                 <div class="col-12 h-100 d-flex flex-wrap align-items-center justify-content-between">
@@ -1141,12 +705,13 @@
                 </div>
             </div>
         </div>
-    </footer>
-     <!-- ##### Footer Area end ##### -->
-    </div>
-    
-<!-- ####### logoutBtn ######### -->
-    <script>
+</footer>
+</div>  
+<!-- ##### Footer Area end ##### -->
+
+<!-- js start -->
+<!-- ####### logout Btn ######### -->
+<script>
         document.addEventListener('DOMContentLoaded', () => {
             fetch('/auth/status')
                 .then(response => response.json())
@@ -1168,7 +733,84 @@
                     });
             });
         });
-    </script>
+</script>
+
+<!-- Fetch recipe data from the backend -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+     function filterRecipes(category) {
+const recipeItems = document.querySelectorAll('recipe');
+recipeItems.forEach(item => {
+ const itemCategory = item.querySelector('category').textContent.toLowerCase();
+ if (category === 'all' || itemCategory === category) {
+     item.style.display = 'block';
+ } else {
+     item.style.display = 'none';
+ }
+});
+}
+// Fetch recipe data from the backend
+fetch('/recipes')
+.then(response => response.json())
+.then(data => {
+// Select the container element where recipes will be displayed
+const recipesContainer = document.getElementById('recipeList'); // Adjusted ID
+
+// Loop through each recipe and create HTML elements to display them
+data.forEach(recipe => {
+ // Create a div element for each recipe
+ const recipeDiv = document.createElement('div');
+ recipeDiv.classList.add('recipe-item'); // Adding the class used in HTML
+
+ // Populate the div with recipe information
+ recipeDiv.innerHTML = `
+ <div class="col-12 col-sm-9 ">
+ <div class="single-best-receipe-area mb-30">
+     <a href="Recipiespage.html?recipe=${encodeURIComponent(recipe.name)}">
+         <div class="single-best-receipe-area mb-30">
+             <img class="img-fix" src="${recipe.recipeImage}" alt="${recipe.name}">
+             <div class="receipe-content">
+                 <h5>${recipe.name}</h5>
+                 <div class="d-flex justify-content-between">
+                     <div class="delivery-time">
+                         <img src="img/core-img/Time (1).png" alt="">
+                         <span>30 Minutes</span>
+                     </div>
+                     <div class="food-catagory">
+                         <img src="img/core-img/Time (2).png" alt="">
+                         <span>${recipe.category}</span>
+                     </div>
+                 </div>
+                 <div class="ratings">
+                     <i class="fa fa-star" aria-hidden="true"></i>
+                     <i class="fa fa-star" aria-hidden="true"></i>
+                     <i class="fa fa-star" aria-hidden="true"></i>
+                     <i class="fa fa-star" aria-hidden="true"></i>
+                     <i class="fa fa-star-o" aria-hidden="true"></i>
+                 </div>
+             </div>
+         </div>
+     </a>
+ </div>
+</div>
+
+ `;
+
+ // Append the recipe div to the recipes container
+ recipesContainer.appendChild(recipeDiv);
+});
+})
+.catch(error => console.error('Error fetching recipes:', error));
+
+document.getElementById('breakfast-btn').addEventListener('click', () => filterRecipes('breakfast'));
+document.getElementById('lunch-btn').addEventListener('click', () => filterRecipes('lunch'));
+document.getElementById('dinner-btn').addEventListener('click', () => filterRecipes('dinner'));
+document.getElementById('all-btn').addEventListener('click', () => filterRecipes('all'));
+});
+
+</script>
+
 <!--Sample recipe data -->
     <script>
         var recipes = [
@@ -1299,6 +941,29 @@ showAllRecipes();
         // Add event listener to trigger search on input change
         document.getElementById('searchInput').addEventListener('input', performSearch);
     </script>
+
+<script>
+    var loggedIn = true; 
+
+    function handleLoginStatus() {
+        var signupForm = document.getElementById("signupForm");
+        var loginForm = document.getElementById("loginForm");
+        var addRecipeForm = document.getElementById("addRecipeForm");
+
+        if (loggedIn) {
+            signupForm.style.display = "none";
+            loginForm.style.display = "none";
+            addRecipeForm.style.display = "block";
+        } else {
+            signupForm.style.display = "nonw";
+            loginForm.style.display = "block";
+            addRecipeForm.style.display = "none";
+        }
+    }
+
+    handleLoginStatus();
+</script>
+
 
  <!-- ##### All Javascript Files ##### -->
     <!-- jQuery-2.2.4 js -->
