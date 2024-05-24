@@ -1,3 +1,14 @@
+
+# FoodieLand - Web development Course Project <a name="foodieland"></a>
+
+
+![Beige Feminine Personal LinkedIn Banner](https://github.com/Shaden03/WebProject/assets/116809090/023a544c-885a-4708-a3bd-3f4d4352d5b6)
+
+Foodieland is a website that gathers food lovers and builds a community around culinary delights. It offers a variety of recipes, and users can add their own recipes, navigate through the website, and check the blogs. Additionally, it features an AI assistant that you can ask anything about the website or recipes you want.
+
+## OverView <a name="overview"></a>
+Foodieland is designed to be a one-stop platform for food enthusiasts to discover and save recipes. The key feature of the website is the AI assistant, which can answer user queries, suggest recipes based on ingredients, and provide cooking tips.
+
 # Table of Contents
 
 1. [FoodieLand - Web development Course Project](#foodieland)
@@ -14,15 +25,6 @@
 12. [References](#references)
 13. [Team Members](#team-members)
 
-# FoodieLand - Web development Course Project <a name="foodieland"></a>
-
-
-![Beige Feminine Personal LinkedIn Banner](https://github.com/Shaden03/WebProject/assets/116809090/023a544c-885a-4708-a3bd-3f4d4352d5b6)
-
-Foodieland is a website that gathers food lovers and builds a community around culinary delights. It offers a variety of recipes, and users can add their own recipes, navigate through the website, and check the blogs. Additionally, it features an AI assistant that you can ask anything about the website or recipes you want.
-
-## OverView <a name="overview"></a>
-Foodieland is designed to be a one-stop platform for food enthusiasts to discover and save recipes. The key feature of the website is the AI assistant, which can answer user queries, suggest recipes based on ingredients, and provide cooking tips.
 
 ## Features <a name="features"></a>
 * AI Assistant: Ask questions and get personalized recipe suggestions.
